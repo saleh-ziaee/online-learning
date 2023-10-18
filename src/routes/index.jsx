@@ -1,7 +1,7 @@
 import {
     createBrowserRouter,
 } from "react-router-dom";
-import App from "../../App.jsx";
+import App from "../App.jsx";
 import Home from "../pages/Home.jsx";
 import Auth from "../pages/Auth.jsx";
 import Profile from "../pages/Profile.jsx";

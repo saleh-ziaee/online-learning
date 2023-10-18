@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import Button from "../component/Ui/Button/Button.jsx";
+import Button from "../assets/component/Ui/Button/Button.jsx";
 function Home(props) {
     return (
 <>

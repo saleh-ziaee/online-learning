@@ -11,7 +11,6 @@ function Button({variant,children,size,...props}) {
             sm:"px-4 py-2.5"
         }
     return (
-
         <div className={ `${variants[variant]}  ${sizes[size]} flex items-center mt-4   rounded-[12px] justify-center cursor-pointer  `} {...props}>
             {children}
         </div>
