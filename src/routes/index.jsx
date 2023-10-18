@@ -5,6 +5,7 @@ import App from "../App.jsx";
 import Home from "../pages/Home.jsx";
 import Auth from "../pages/Auth.jsx";
 import Profile from "../pages/Profile.jsx";
+import Ui from "../pages/Ui.jsx";
 
 
 
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
     {
         path: "/profile",
         element:<Profile/>,
+    },
+    {
+        path: "/ui",
+        element:<Ui/>,
     },
 ]);
 
