@@ -6,6 +6,7 @@ import Home from "../pages/Home.jsx";
 import Auth from "../pages/Auth.jsx";
 import Profile from "../pages/Profile.jsx";
 import Ui from "../pages/Ui.jsx";
+import SearchPanel from "../component/SearchPanel/SearchPanel.jsx";
 
 
 
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
     {
         path: "/ui",
         element:<Ui/>,
+    },
+    {
+        path: "/uiP",
+        element:<SearchPanel/>,
     },
 ]);
 
