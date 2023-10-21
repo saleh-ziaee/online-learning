@@ -1,5 +1,4 @@
 import  SearchIcon from "../../../assets/icon/SearchIcon.svg"
-import Button from "@/component/Ui/Button/Button.jsx";
 
 
 function search ({placeholder='جست و جو  '}){
