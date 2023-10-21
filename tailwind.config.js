@@ -10,7 +10,10 @@ export default {
         primary:{
           500:"#9E5CF2"
         }
-      }
+      },
+    fontfamily:{
+        Estedad :["Estedad"]
+    }
     },
   },
   plugins: [],
