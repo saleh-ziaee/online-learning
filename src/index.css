@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face{
+    font-family: "Estedad";
+    src: url("../src/assets/fonts/Estedad[wght,kshd].woff2");
+}
+body{
+    direction: rtl;
+    font-family: "Estedad";
+}
