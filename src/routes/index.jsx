@@ -1,10 +1,12 @@
 import {
     createBrowserRouter,
 } from "react-router-dom";
-import App from "../../App.jsx";
+import App from "../App.jsx";
 import Home from "../pages/Home.jsx";
 import Auth from "../pages/Auth.jsx";
 import Profile from "../pages/Profile.jsx";
+import Ui from "../pages/Ui.jsx";
+import SearchPanel from "../component/SearchPanel/SearchPanel.jsx";
 
 
 
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
     {
         path: "/profile",
         element:<Profile/>,
+    },
+    {
+        path: "/ui",
+        element:<Ui/>,
+    },
+    {
+        path: "/uiP",
+        element:<SearchPanel/>,
     },
 ]);
 
