@@ -23,7 +23,6 @@ function Header(props) {
                             <h2 className={"text-[#080808] font-black uppercase text-[32px]"}>academy</h2>
                             <img src={Logo} alt={"logo"}/>
                             </Link>
-
                     <div className={"flex items-center gap-8"}>
                         <div className={"cursor-pointer mr-[20px] text-[16px] text-[#080808] opacity-80"}>ارتباط با ما</div>
                         <div className={"cursor-pointer text-[16px] text-[#080808] opacity-80"}>فن آوری</div>
@@ -57,10 +56,8 @@ function Header(props) {
                             <img src={notifeImg}/>
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </header>
     );
 }
