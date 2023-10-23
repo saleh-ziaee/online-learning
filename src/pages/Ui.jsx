@@ -2,6 +2,8 @@ import React from 'react';
 import Button from '../component/Ui/Button/Button';
 import Search from '../component/Ui/SearchInput/Search';
 import Header from "../component/Header/Header.jsx";
+import CategoryPanel from "@/component/TopCategory/CategoryPanel/CategoryPanel.jsx";
+import CardTwo from "@/component/CardTwo/CardTwo.jsx";
 // import SearchPanel from '../component/SearchPanel/SearchPanel';
 
 
@@ -12,9 +14,11 @@ function Ui(props) {
         <div>
           {/*  <Button></Button>*/}
           {/*<Search  />*/}
-            <Header></Header>
-          <Search  Button={searchBtn} />
+          {/*  <Header></Header>*/}
+          {/*  <CategoryPanel></CategoryPanel>*/}
+          {/*<Search  Button={searchBtn} />*/}
           {/* <SearchPanel/> */}
+            <CardTwo></CardTwo>
         </div>
     );
 }

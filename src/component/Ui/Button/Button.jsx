@@ -5,7 +5,7 @@ function Button({variant= "fill",children,size="md",...props}) {
         const variants ={
             fill:"hover:bg-primary-500 bg-black text-white",
             outline : "bg-[#E6E6E6] border border-[#F1F1F1]  ",
-            gray:"bg-[#F5F5F5]"
+            gray:"bg-[#F5F5F5] text-[#3E3232BF]"
         }
         const sizes ={
             md:"p-4",

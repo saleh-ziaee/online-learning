@@ -13,5 +13,4 @@ function CategoryItem({variant, children, ...props}) {
         </div>
     );
 }
-
 export default CategoryItem;
