@@ -12,7 +12,8 @@ function Home(props) {
     {/*<Button size="md" variant="outline">ورود</Button>*/}
     {/*<Button size="sm" variant="fill">پروفایل</Button>*/}
     {/*</div>*/}
-    <Header></Header>
+    {/* <Header></Header> */}
+    <TopPanel></TopPanel>
 </>
 
     );
