@@ -1,22 +1,22 @@
 import React from "react";
 import arrow from "../../assets/icon/arrows.svg";
 import Search from "../Ui/SearchInput/Search.jsx";
-import "./searchPanel.css"
 
 function SearchPanel() {
   return (
-    <div className={"SearchPanel mt-8"}>
+    <div className="mt-8">
       <div className="flex flex-col items-center ">
         <div className="">
-          <h1 className="text-3xl">
+          <h1 className="text-3xl font-bold text-center">
             در میان 58340 دوره جستجو کنید و<br></br> دوره مورد علاقه خود را
             بیابید
           </h1>
         </div>
-        <div className="flex items-center m-8">
-          <img src={arrow}  className="-scale-x-100"/>
+        <div className="flex items-center gap-4 m-8">
+          <Button>دسته بندی ها</Button>
           <Search />
-          <p className="text-lg">...یا دوره های زیر را مشاهده کنید</p>
+          <p className="text-lg">یا دوره های زیر را مشاهده کنید...</p>
+          <img src={arrow}  className="-scale-x-100"/>
         </div>
       </div>
     </div>
