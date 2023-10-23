@@ -1,10 +1,11 @@
 import React from "react";
 import arrow from "../../assets/icon/arrows.svg";
 import Search from "../Ui/SearchInput/Search.jsx";
+import "./searchPanel.css"
 
 function SearchPanel() {
   return (
-    <div>
+    <div className={"SearchPanel mt-8"}>
       <div className="flex flex-col items-center ">
         <div className="">
           <h1 className="text-3xl">

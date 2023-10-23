@@ -6,7 +6,7 @@ import  videoIcon from "@/assets/icon/video.svg"
 import nextIcon from "@/assets/icon/v6-icon (free).svg"
 function CategoryPanel(props) {
     return (
-        <div className={"flex items-center justify-center mt-[70px] gap-[30px]"}>
+        <div className={"flex items-center justify-center mt-[130px] w-[100%] gap-[30px]"}>
             <CategoryItem variant=""><img src={nextIcon}/></CategoryItem>
 
             <div className={"flex items-center justify-center gap-4"}>

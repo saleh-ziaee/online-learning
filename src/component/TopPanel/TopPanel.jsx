@@ -1,7 +1,7 @@
 import React from "react";
 import img from "@/assets/images/top-panel.png";
 import Button from "../Ui/Button/Button";
-import arrows2 from "@/assets/icon/arrows2"
+// import arrows2 from "@/assets/icon/arrows2"
 
 function TopPanel() {
   return (

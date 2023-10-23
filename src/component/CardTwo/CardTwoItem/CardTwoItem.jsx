@@ -9,12 +9,12 @@ import nextIcon from "@/assets/icon/next.svg"
 import points from "@/assets/images/points.svg"
 function CardTwoItem(children, props) {
     return (
-        <div className={"flex gap-6 items-center bg-[#FAFAFA] rounded-[12px]  p-4 w-fit"}>
-            <img src={cardImg} className={"rounded-[12px]"} alt={"card-img"}/>
+        <div className={"flex gap-2 items-center bg-[#FAFAFA] rounded-[12px] w-[100%]  p-2 w-fit"}>
+            <img src={cardImg} className={"w-[50%]  rounded-[12px]"} alt={"card-img"}/>
 
-            <div className={"flex flex-col w-[100%] gap-4 h-[100%]"}>
+            <div className={"flex flex-col w-[100%] gap-2 h-[100%]"}>
                 <h2 className={"text-[16px] font-semibold"}>Learn Figma - UI/UX Design Essential Training</h2>
-                <div className={"flex items-center gap-4 justify-between"}>
+                <div className={"flex items-center gap-2 justify-between"}>
                     <div className={"flex items-center gap-2"}>
                         <img src={levelIcon} alt={"level-icon"}/>
                         <span>حرفه ای</span>

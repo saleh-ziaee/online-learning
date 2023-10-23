@@ -26,10 +26,6 @@ const router = createBrowserRouter([
         path: "/ui",
         element:<Ui/>,
     },
-    {
-        path: "/uip",
-        element:<UiP />,
-    },
     // {
     //     path: "/uipanel",
     //     element:<TopPanel/>,
