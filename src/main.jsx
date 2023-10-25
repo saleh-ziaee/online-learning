@@ -5,9 +5,15 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import router from "./routes/index.jsx"
+import {Helmet} from "react-helmet";
+import {HelmetProvider} from "react-helmet-async";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+      <HelmetProvider>
+        <Helmet titleTemplate={"آموزش آنلاین | %s"} />
     <RouterProvider router={router}/>
+      </HelmetProvider>
+
   </React.StrictMode>,
 )

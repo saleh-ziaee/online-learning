@@ -1,6 +1,7 @@
 import React from "react";
 import arrow from "../../assets/icon/arrows.svg";
 import Search from "../Ui/SearchInput/Search.jsx";
+import Button from "@/component/Ui/Button/Button.jsx";
 
 function SearchPanel() {
   return (
@@ -13,7 +14,7 @@ function SearchPanel() {
           </h1>
         </div>
         <div className="flex items-center gap-4 m-8">
-          <Button>دسته بندی ها</Button>
+         <Button>دسته بندی</Button>
           <Search />
           <p className="text-lg">یا دوره های زیر را مشاهده کنید...</p>
           <img src={arrow}  className="-scale-x-100"/>
