@@ -10,6 +10,7 @@ import points from "@/assets/images/points.svg";
 import teacherImg from "@/assets/images/06.png";
 import Button from "@/component/Ui/Button/Button.jsx";
 import nextIcon from "@/assets/icon/next.svg";
+import InfoCard from '@/component/InfoCard/InfoCard';
 
 function Card(props) {
     return (
@@ -26,15 +27,10 @@ function Card(props) {
                     <div className={"flex items-center gap-4 justify-between"}>
 
                         <div className={"flex items-center gap-2"}>
-                            <img src={levelIcon} alt={"level-icon"}/>
-                            <span>حرفه ای</span>
-                            <img src={userIcon} alt={"user-icon"}/>
-                            <span>دانش آموز :</span>
-                            <span>198</span>
-
-                            <img src={lessonIcon} alt={"lesson-icon"}/>
-                            <span>درس :  </span>
-                            <span>6</span>
+                            
+                            <InfoCard src={levelIcon} title="حرفه ای"/>
+                            <InfoCard src={userIcon} title="دانش آموز :198"/>
+                            <InfoCard src={lessonIcon} title="درس : 6"/>
                         </div>
                     </div>
                     <div className={"flex items-center justify-between mt-4"}>

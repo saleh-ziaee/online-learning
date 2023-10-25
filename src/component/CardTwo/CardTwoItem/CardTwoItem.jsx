@@ -7,27 +7,26 @@ import lessonIcon from "@/assets/icon/lesson.svg"
 import cardImg from "@/assets/images/unsplash_7uSKXpksCKg.svg"
 import nextIcon from "@/assets/icon/next.svg"
 import points from "@/assets/images/points.svg"
+import InfoCard from '@/component/InfoCard/InfoCard';
 function CardTwoItem(children, props) {
     return (
-        <div className={"flex gap-2 items-center bg-[#FAFAFA] rounded-[12px] w-[100%]  p-2 w-fit"}>
+        <div className={"flex gap-2 items-center bg-[#FAFAFA] rounded-[12px] w-[100%]  p-2"}>
             <img src={cardImg} className={"w-[50%]  rounded-[12px]"} alt={"card-img"}/>
 
             <div className={"flex flex-col w-[100%] gap-2 h-[100%]"}>
                 <h2 className={"text-[16px] font-semibold"}>Learn Figma - UI/UX Design Essential Training</h2>
                 <div className={"flex items-center gap-2 justify-between"}>
                     <div className={"flex items-center gap-2"}>
-                        <img src={levelIcon} alt={"level-icon"}/>
-                        <span>حرفه ای</span>
+                    <InfoCard src={levelIcon} title="حرفه ای"/>
+                        
                     </div>
                     <div className={"flex items-center gap-2"}>
-                        <img src={userIcon} alt={"user-icon"}/>
-                        <span>دانش آموز :  </span>
-                        <span>198</span>
+                    <InfoCard src={userIcon} title="دانش آموز : 198 "/>
+        
                     </div>
                     <div className={"flex items-center gap-2"}>
-                        <img src={lessonIcon} alt={"lesson-icon"}/>
-                        <span>درس :  </span>
-                        <span>6</span>
+                    <InfoCard src={lessonIcon} title="درس :  6"/>
+                      
                     </div>
                 </div>
                 <img src={points} alt={"points"}/>
