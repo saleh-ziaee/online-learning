@@ -10,7 +10,7 @@ function CardTwo(props) {
                 <h3>دوره های شما</h3>
                 <Button variant={"gray"}>نمایش همه </Button>
             </div>
-            <div className={"grid own-course__section gap-4"}>
+            <div className={"grid own-course__section gap-4 mt-4"}>
                 <CardTwoItem></CardTwoItem>
                 <CardTwoItem></CardTwoItem>
                 <CardTwoItem></CardTwoItem>

@@ -1,11 +1,11 @@
 import React from 'react';
 import logo from "../../assets/images/footer/logo.svg"
-import imagef from "../../assets/images/footer/imagef.png"
+import imagef from "../../assets/images/footer/bigImage.svg"
 
 function Footer(props) {
     return (
-        <div className={"all w-[80%] mx-auto"}>
-            <div className={"flex justify-between"}>
+        <div className={"all w-[100%] mx-auto mt-8 pb-8"}>
+            <div className={"flex justify-between "}>
 
                 <div className={"bg-secondary-500 p-5 rounded-[50px] w-[85%]"}>
                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
