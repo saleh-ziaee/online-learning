@@ -8,6 +8,7 @@ import TopPanel from "@/component/TopPanel/TopPanel.jsx";
 import Title from "@/component/TitlePic/Title.jsx";
 import {Helmet} from "react-helmet";
 import {HelmetProvider} from "react-helmet-async";
+import Login from "@/pages/Login.jsx";
 // import SearchPanel from '../component/SearchPanel/SearchPanel';
 
 
