@@ -7,11 +7,13 @@ import SearchPanel from "@/component/SearchPanel/SearchPanel.jsx";
 import CardTwo from "@/component/CardTwo/CardTwo.jsx";
 import Footer from "@/component/footer/Footer.jsx";
 import Cards from "@/component/Cards/Cards.jsx";
+import Title from "@/component/TitlePic/Title.jsx";
 function Home(props) {
     return (
         <div className={"container w-[85%] mx-auto"}>
             <Header></Header>
             <CategoryPanel></CategoryPanel>
+            <Title></Title>
             <SearchPanel></SearchPanel>
             <Cards></Cards>
             <CardTwo></CardTwo>
