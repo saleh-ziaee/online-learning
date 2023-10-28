@@ -1,0 +1,7 @@
+.own-course__section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+body{
+    background: #F3F5FF;
+}

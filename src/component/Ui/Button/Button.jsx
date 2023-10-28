@@ -1,6 +1,6 @@
 import React, {Children} from 'react';
 import "./Button.css"
-function Button({variant= "fill",children,size="md",...props}) {
+function Button({variant= "fill",className,children,size="md",...props}) {
 
         const variants ={
             fill:"hover:bg-primary-500 bg-black text-white",
@@ -12,7 +12,7 @@ function Button({variant= "fill",children,size="md",...props}) {
             sm:"px-4 py-2.5"
         }
     return (
-        <div className={ `${variants[variant]}  ${sizes[size]} flex items-center justify-between gap-4 rounded-[10px] cursor-pointer  `} {...props}>
+        <div className={ `${className} ${variants[variant]} button  ${sizes[size]} flex items-center justify-between gap-4 rounded-[10px] cursor-pointer  `} {...props}>
             {children}
         </div>
     );

@@ -7,9 +7,21 @@ import Auth from "../pages/Auth.jsx";
 import Profile from "../pages/Profile.jsx";
 import Ui from "../pages/Ui.jsx";
 import UiP from "../pages/UiP.jsx";
+import Header from "@/component/Layout/Header/Header.jsx";
+import Footer from "@/component/InfoCard/footer/Footer.jsx";
 
 
 const router = createBrowserRouter([
+    // {
+    //   index:true,
+    //   element:<Home/>,
+    //     children:[
+    //         {
+    //             <Header></Header>,
+    //         <Footer></Footer>
+    //         }
+    //     ]
+    // },
     {
         path: "/",
         element:<Home/>,
