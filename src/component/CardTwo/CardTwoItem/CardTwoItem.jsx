@@ -32,15 +32,15 @@ function CardTwoItem(children, props) {
                 <img src={points} alt={"points"}/>
 
                     <div className={"flex items-center justify-between"}>
-                        {/*<div className={"flex items-center"}>*/}
-                        {/*    <span>امتیاز :  </span>*/}
-                        {/*    <span>75 / 100</span>*/}
-                        {/*</div>*/}
-                        {/*<div className={"flex items-center"}>*/}
-                        {/*    <span>روز ها : </span>*/}
-                        {/*    <span>256</span>*/}
-                        {/*</div>*/}
-                        <p>100 ساعت از 140 ساعت دیده شده است . </p>
+                        <div className={"flex items-center"}>
+                            <InfoCard title="امتیاز : 75 / 100  "/>
+                            
+                        </div>
+                        <div className={"flex items-center"}>
+                        <InfoCard title="روز ها : 256"/>
+                           
+                        </div>
+
                     </div>
                 <div className={"flex items-center justify-between"}>
 
