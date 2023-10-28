@@ -15,7 +15,6 @@ function Home(props) {
             <CategoryPanel></CategoryPanel>
             <SearchPanel></SearchPanel>
             <Cards></Cards>
-            <NewsLetters></NewsLetters>
             <CardTwo></CardTwo>
             <Footer/>
 

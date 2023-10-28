@@ -8,7 +8,9 @@ export default {
     extend: {
       colors:{
         primary:{
-          500:"#9E5CF2"
+          500:"#9E5CF2",
+          100:"#b176f2",
+          200:"#fac1f1",
         },
         secondary:{
           500:"#F5F2FA",
@@ -21,6 +23,9 @@ export default {
           500:"#fafafa",
           700:"#4F4F4F",
         },
+          800:"#c7c6c6",
+          200:"#dfdfdf"
+        }
       },
     fontfamily:{
         Estedad :["Estedad"]
