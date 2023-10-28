@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '../component/Ui/Button/Button';
 import Search from '../component/Ui/SearchInput/Search';
 import Header from "../component/Header/Header.jsx";
+import CardSmall from '@/component/CardSmall/CardSmall.jsx'
 // import SearchPanel from '../component/SearchPanel/SearchPanel';
 
 
@@ -14,6 +15,7 @@ function Ui(props) {
           {/*<Search  />*/}
             <Header></Header>
           <Search  Button={searchBtn} />
+          <CardSmall />
           {/* <SearchPanel/> */}
         </div>
     );
