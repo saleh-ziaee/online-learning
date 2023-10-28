@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import Logo from "@/assets/images/Header/Group.svg"
 import profileImg from "@/assets/images/Header/Profile.svg"
-import notifeImg from "../../assets/images/Header/nortife.svg"
-import arrow from "../../assets/images/Header/row.svg"
+import notifeImg from "../../../assets/images/Header/nortife.svg"
+import arrow from "../../../assets/images/Header/row.svg"
 import "./Header.css"
-import Search from "../Ui/SearchInput/Search.jsx";
+import Search from "../../Ui/SearchInput/Search.jsx";
 import {Link} from "react-router-dom";
 function Header(props) {
         const [isHovered, setIsHovered] = useState(false)
