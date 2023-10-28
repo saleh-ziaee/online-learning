@@ -5,7 +5,7 @@ import Header from "@/component/Layout/Header/Header.jsx";
 import CategoryPanel from "@/component/TopCategory/CategoryPanel/CategoryPanel.jsx";
 import SearchPanel from "@/component/SearchPanel/SearchPanel.jsx";
 import CardTwo from "@/component/CardTwo/CardTwo.jsx";
-import Footer from "@/component/InfoCard/footer/Footer.jsx";
+import Footer from "@/component/Layout/footer/Footer.jsx";
 import Cards from "@/component/Cards/Cards.jsx";
 import NewsLetters from "@/component/NewsLetters/NewsLetters.jsx";
 function Home(props) {

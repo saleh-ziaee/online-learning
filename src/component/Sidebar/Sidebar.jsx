@@ -6,8 +6,9 @@ import logo from "@/assets/images/logo.svg"
 import exitIcon from "@/assets/images/sidebar/exit.svg"
 function Sidebar(className,...props) {
     return (
-        <div className={`${className} bg-gray w-[20%] bg-white h-[100%] flex  flex-col items-start`}>
-            <div>
+        <div className={" top-0 right-0  h-full overflow-y-auto"}>
+        <div className={`${className} bg-gray w-[100%] bg-white h-[100%] flex  flex-col items-start`}>
+            <div className={"mt-4"}>
             <img src={logo}/>
             </div>
             <div className={"flex flex-col items-start gap-[16px] mt-[40px]"}>
@@ -29,6 +30,8 @@ function Sidebar(className,...props) {
                 </div>
             </div>
         </div>
+        </div>
+
     );
 }
 

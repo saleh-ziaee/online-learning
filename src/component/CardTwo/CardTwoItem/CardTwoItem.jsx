@@ -21,26 +21,26 @@ function CardTwoItem(children, props) {
                         
                     </div>
                     <div className={"flex items-center gap-2"}>
-                    <InfoCard src={userIcon} title="دانش آموز : 198 "/>
+                    <InfoCard src={userIcon} title="شرکت کننده : 198 "/>
         
                     </div>
                     <div className={"flex items-center gap-2"}>
-                    <InfoCard src={lessonIcon} title="درس :  6"/>
+                    <InfoCard src={lessonIcon} title="بخش :  6"/>
                       
                     </div>
                 </div>
                 <img src={points} alt={"points"}/>
 
                     <div className={"flex items-center justify-between"}>
-                        <div className={"flex items-center"}>
-                            <span>امتیاز :  </span>
-                            <span>75 / 100</span>
-                        </div>
-                        <div className={"flex items-center"}>
-                            <span>روز ها : </span>
-                            <span>256</span>
-                        </div>
-
+                        {/*<div className={"flex items-center"}>*/}
+                        {/*    <span>امتیاز :  </span>*/}
+                        {/*    <span>75 / 100</span>*/}
+                        {/*</div>*/}
+                        {/*<div className={"flex items-center"}>*/}
+                        {/*    <span>روز ها : </span>*/}
+                        {/*    <span>256</span>*/}
+                        {/*</div>*/}
+                        <p>100 ساعت از 140 ساعت دیده شده است . </p>
                     </div>
                 <div className={"flex items-center justify-between"}>
 

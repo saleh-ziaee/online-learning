@@ -1,8 +1,8 @@
-import React from 'react';
-import loginpic from "../assets/images/login/loginpic.svg"
-import Button from "@/component/Ui/Button/Button.jsx";
+
 import Input from "@/component/input-login/Input.jsx";
+import Button from "@/component/Ui/Button/Button.jsx";
 import {Link} from "react-router-dom";
+import loginpic from "@/assets/images/logo.svg"
 
 function Login(props) {
     return (
@@ -36,28 +36,7 @@ function Login(props) {
 
                 <div className={"text-center mt-5"}>
 
-<Link> آیا حساب کاربری ندارید ؟ ثبت نام کنید</Link>
-
-function Login(props) {
-    return (
-        <div className={"container w-[85%] mx-auto flex justify-between"}>
-            <div className={"flex flex-col justify-center"}>
-<span>
-    خوش آمدید  👋
-</span>
-                <span>
-                    امروز یه روز جدیده، و روز شماست. روز خود را با
-                </span>
-                <span>ورود و یادگیری به آکادمی بسازید.</span>
-<Button className={"text-center mx-auto"}>
-    <span className={"mx-auto"}>
-    ورود
-</span>
-</Button>
-                <div className={"text-center"}>
-                      <span>
-                    حساب کاربری ندارید ؟
-                </span>
+                <Link> آیا حساب کاربری ندارید ؟ ثبت نام کنید</Link>
                 </div>
 
 
