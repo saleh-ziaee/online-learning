@@ -1,7 +1,12 @@
 .own-course__section{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+
 }
 body{
     /*background: #F3F5FF;*/
+}
+.own-course__section::-webkit-scrollbar{
+    display: none;
+}
+header{
+    /*box-shadow: 1px 1px 0px 0px rgba(0,0,0);*/
 }

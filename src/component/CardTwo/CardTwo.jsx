@@ -10,7 +10,7 @@ function CardTwo(props) {
                 <h3>دوره های شما</h3>
                 <Button variant={"gray"}>نمایش همه </Button>
             </div>
-            <div className={"grid own-course__section gap-4 mt-4"}>
+            <div className={"flex flex-col items-center justify-around w-full md:grid md:grid-cols-1 lg:grid lg:grid-cols-2 lg:gap-4  gap-4 md:gap-4 mx-auto mt-5 flex-wrap"}>
                 <CardTwoItem></CardTwoItem>
                 <CardTwoItem></CardTwoItem>
                 <CardTwoItem></CardTwoItem>

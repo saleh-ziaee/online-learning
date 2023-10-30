@@ -16,19 +16,19 @@ function Header(props) {
             setIsHovered(false);
         };
     return (
-        <header className={"fixed top-0 mx-auto py-8 w-[100%] bg-white mb-8 left-0 right-0 overflow-hidden z-[999999999999]"}>
+        <header className={"fixed top-0 mx-auto py-4 w-[100%] bg-white mb-8 left-0 right-0 overflow-hidden z-[999999999999]"}>
             <div className={"flex items-center mx-auto justify-center w-[100%]  gap-[40px]"}>
                 <div className={"flex"}>
                             <Link to={"/"} className={"flex items-center gap-4"}>
                             <h2 className={"text-[#080808] font-black uppercase text-[32px]"}>academy</h2>
                             <img src={Logo} alt={"logo"}/>
                             </Link>
-                    <div className={"flex items-center gap-8"}>
+                    <div className={"lg:flex lg:items-center hidden lg:gap-4"}>
                         <div className={"cursor-pointer mr-[20px] text-[16px] text-[#080808] opacity-80"}>ارتباط با ما</div>
                         <div className={"cursor-pointer text-[16px] text-[#080808] opacity-80"}>فن آوری</div>
                         <div className={"cursor-pointer text-[16px] text-[#080808] opacity-80"}>درباره ما</div>
                         <div className={"z-40 cursor-pointer text-[16px] flex items-center category relative"} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                            <div className={"cursor-pointer text-[16px]  text-[#080808] opacity-80 text-[16px] capitalize"}>
+                            <div className={"cursor-pointer text-[16px]  text-[#080808] opacity-80  capitalize"}>
                                 دسته بندی
                             </div>
                             <img src={arrow} className={"arrow"}/>
@@ -44,18 +44,23 @@ function Header(props) {
                         </div>
                     </div>
                 </div>
-                <div className={"flex items-center justify-between left-header gap-[40px]"}>
+                <div className={"md:flex md:items-center md:justify-between left-header hidden md:gap-[40px]"}>
                     <Search></Search>
-                    <div className={"flex gap-4 items-center "}>
+                    <div className={"flex gap-4 items-center  "}>
                         <img src={profileImg} alt={"profile-img"} className={"cursor-pointer"}/>
                         <div className={"flex flex-col items-center gap-4"}>
-                            <span className={"text-[#080808]"}>Behzad pashaei</span>
-                            <span className={"text-[#080808] opacity-80"}>ui & ux designer</span>
+                            <span className={"text-dark"}>Behzad pashaei</span>
+                            <span className={"text-dark opacity-80"}>ui & ux designer</span>
                         </div>
                         <div className={"cursor-pointer flex items-center justify-center bg-[#9E5CF20D] rounded-[12px] w-[64px] h-[64px]"}>
                             <img src={notifeImg}/>
                         </div>
                     </div>
+                </div>
+                <div className={"flex flex-col items-center gap-4 md:hidden"}>
+                    <button>
+
+                    </button>
                 </div>
             </div>
         </header>

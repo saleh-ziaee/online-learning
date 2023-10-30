@@ -12,11 +12,17 @@ import PriceCard from "@/component/PriceCard/PriceCard.jsx";
 import Title from "@/component/TitlePic/Title.jsx";
 function Home(props) {
     return (
-        <div className={"container w-[85%] mx-auto"}>
-            <Header></Header>
+        <div className={"container w-[95%] md:w-[85%]  mx-auto"}>
+            {/*<Header></Header>*/}
             <CategoryPanel></CategoryPanel>
             <Title></Title>
             <SearchPanel></SearchPanel>
+            <div className={"flex items-center"}>
+                <div className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}></div>
+                <span className={"text-black ms-3 font-bold text-[20px]"}>
+دوره های جدید
+                </span>
+            </div>
             <Cards></Cards>
             <CardTwo></CardTwo>
             <Footer/>
