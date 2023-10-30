@@ -4,7 +4,7 @@ function InfoCard(props) {
   return (
     <div className="flex gap-2 ml-2 ">
         <img src={props.src}/>
-        <span className='text-sm'>{props.title}</span>
+        <span className>{props.title}</span>
     </div>
   )
 }

@@ -16,7 +16,6 @@ function Login() {
 
   const handleLogin = (event) => {
     event.preventDefault();
-
     console.log(loginForm);
   };
 
