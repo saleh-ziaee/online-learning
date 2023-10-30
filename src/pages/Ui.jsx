@@ -4,6 +4,7 @@ import Button from '../component/Ui/Button/Button';
 import {Helmet} from "react-helmet";
 
 import MyCourses from "@/component/Profile-MyCourses/MyCourses.jsx";
+import PriceCard from "@/component/PriceCard/PriceCard.jsx";
 // import SearchPanel from '../component/SearchPanel/SearchPanel';
 
 
@@ -26,7 +27,8 @@ function Ui(props) {
           {/*  <TopPanel></TopPanel>*/}
           {/*  <Title></Title>*/}
             {/*<Header></Header>*/}
-                <MyCourses></MyCourses>
+            {/*    <MyCourses></MyCourses>*/}
+            <PriceCard></PriceCard>
         </div>
     );
 }
