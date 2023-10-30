@@ -9,6 +9,7 @@ import CategoryPanel from "@/component/TopCategory/CategoryPanel/CategoryPanel.j
 import Header from "@/component/Layout/Header/Header.jsx";
 import Navbar from "@/component/Navbar/Navbar.jsx";
 import PriceCard from "@/component/PriceCard/PriceCard.jsx";
+import Comment from '@/component/Comments/Comment';
 // import SearchPanel from '../component/SearchPanel/SearchPanel';
 
 
@@ -32,6 +33,7 @@ function Ui(props) {
           {/*  <Title></Title>*/}
             {/*<Header></Header>*/}
             {/*    <MyCourses></MyCourses>*/}
+            <Comment/>
 
         </div>
     );
