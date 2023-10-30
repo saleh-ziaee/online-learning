@@ -33,7 +33,7 @@ function Ui(props) {
             {/*    <MyCourses></MyCourses>*/}
             {/*<CategoryPanel></CategoryPanel>*/}
             <Header></Header>
-            <Navbar></Navbar>
+            {/*<Navbar></Navbar>*/}
         </div>
     );
 }

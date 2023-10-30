@@ -5,9 +5,12 @@ import notifeImg from "../../../assets/images/Header/nortife.svg"
 import arrow from "../../../assets/images/Header/row.svg"
 import "./Header.css"
 import Search from "../../Ui/SearchInput/Search.jsx";
+import menuIcon from "@/assets/images/navbar/menu.png"
 import {Link} from "react-router-dom";
+import Navbar from "@/component/Navbar/Navbar.jsx";
 function Header(props) {
         const [isHovered, setIsHovered] = useState(false)
+    const [isClicked, setIsClicked] = useState(false)
         const handleMouseEnter = () => {
             setIsHovered(true);
         };
@@ -58,9 +61,14 @@ function Header(props) {
                     </div>
                 </div>
                 <div className={"flex flex-col items-center gap-4 md:hidden"}>
-                    <button>
-
+                    <button onClick={handleMouseEnter}>
+                    <img src={menuIcon} alt={"menu-icon"} className={"w-[24px] h-[24px]"}/>
                     </button>
+                    {
+                        isHovered&&(
+                            <Navbar></Navbar>
+                        )
+                    }
                 </div>
             </div>
         </header>
