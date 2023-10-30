@@ -5,7 +5,7 @@ import notifeImg from "@/assets/images/Header/nortife.svg";
 import Search from "@/component/Ui/SearchInput/Search.jsx";
 function Navbar(props) {
     return (
-        <nav className="menu--left w-[80%]" role="navigation">
+        <nav className="menu--left w-[80%] absolute left-0 top-0" role="navigation">
             <div className="flex flex-col gap-4 text-center items-center w-[100%]">
                 <div className={"flex gap-4 items-center  "}>
                     <img src={profileImg} alt={"profile-img"} className={"cursor-pointer"}/>

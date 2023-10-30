@@ -35,6 +35,9 @@ function Ui(props) {
             {/*    <MyCourses></MyCourses>*/}
             <Comment/>
 
+            {/*<CategoryPanel></CategoryPanel>*/}
+            <Header></Header>
+            {/*<Navbar></Navbar>*/}
         </div>
     );
 }
