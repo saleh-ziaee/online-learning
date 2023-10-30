@@ -16,7 +16,14 @@ export default {
           200:"#dfdfdf",
           500:"#F5F2FA",
           300:"#F5F5F5",
-          800:"#c7c6c6"
+          800:"#c7c6c6",
+          900:"#989898"
+        },
+        orange:{
+          100:"#ffbe8f",
+          400:"#f87008",
+
+
         },
         lightBlue:"#F6F7FE",
         blue:"#5A69F2",

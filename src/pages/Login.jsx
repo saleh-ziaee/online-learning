@@ -1,26 +1,12 @@
-import loginpic from "../assets/images/login/loginpic.svg";
-import Button from "@/component/Ui/Button/Button.jsx";
-import Input from "@/component/input-login/Input.jsx";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import LoginForm from "@/component/Auth/LoginForm";
+import loginpic from "../assets/images/login/loginpic.svg";
+import RegisterForm from "@/component/Auth/RegisterForm";
 
 
 
 function Login() {
-  const [loginForm, setLoginForm] = useState({
-    username: "",
-    password: "",
-  });
-
-  const handleChangeLoginForm = (e) => {
-    setLoginForm((s) => ({ ...s, [e.target.name]: e.target.value }));
-  };
-
-  const handleLogin = (event) => {
-    event.preventDefault();
-
-    console.log(loginForm);
-  };
+  const [mode, setMode] = useState("login");
 
   return (
     <div
@@ -35,34 +21,18 @@ function Login() {
           آکادمی بسازید.
         </span>
 
-        <form className="flex flex-col gap-5 mt-5" onSubmit={handleLogin}>
-          <Input
-            name="username"
-            label="نام کاربری"
-            value={loginForm.username}
-            onChange={handleChangeLoginForm}
-            placeholder="نام کاربری خود را وارد کنید"
-          />
-
-          <Input
-            label="رمز عبور"
-            type="password"
-            name="password"
-            value={loginForm.password}
-            onChange={handleChangeLoginForm}
-            placeholder="رمز عبور خود را وارد کنید"
-          />
-
-          <Button
-            type="submit"
-            className={"justify-center mx-auto w-full mt-4"}
-          >
-            ورود
-          </Button>
-        </form>
+        {mode === "login" ? <LoginForm /> : <RegisterForm />}
 
         <div className={"text-center mt-5"}>
-          <Link> آیا حساب کاربری ندارید ؟ ثبت نام کنید</Link>
+          {mode === "login" ? (
+            <button onClick={() => setMode("singUp")}>
+              آیا حساب کاربری ندارید ؟ ثبت نام کنید
+            </button>
+          ) : (
+            <button onClick={() => setMode("login")}>
+              حساب کاربری دارید؟ ورود کنید
+            </button>
+          )}
         </div>
       </div>
 

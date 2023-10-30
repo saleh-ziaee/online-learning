@@ -8,11 +8,14 @@ import CardTwo from "@/component/CardTwo/CardTwo.jsx";
 import Footer from "@/component/Layout/footer/Footer.jsx";
 import Cards from "@/component/Cards/Cards.jsx";
 import NewsLetters from "@/component/NewsLetters/NewsLetters.jsx";
+import PriceCard from "@/component/PriceCard/PriceCard.jsx";
+import Title from "@/component/TitlePic/Title.jsx";
 function Home(props) {
     return (
         <div className={"container w-[95%] md:w-[85%]  mx-auto"}>
             {/*<Header></Header>*/}
             <CategoryPanel></CategoryPanel>
+            <Title></Title>
             <SearchPanel></SearchPanel>
             <div className={"flex items-center"}>
                 <div className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}></div>

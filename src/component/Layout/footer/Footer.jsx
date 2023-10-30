@@ -5,9 +5,8 @@ import imagef from "../../../assets/images/footer/bigImage.svg"
 function Footer(props) {
     return (
         <div className={"all w-[100%] mx-auto mt-8 pb-8"}>
-            <div className={"flex justify-between "}>
-
-                <div className={"bg-secondary-500 p-5 rounded-[50px] w-[85%]"}>
+            <div className={"flex md:flex-row flex-col-reverse md:justify-between md:flex"}>
+                <div className={"bg-secondary-500 w-full mt-5 md:mt-0 p-5 rounded-[50px] md:w-[85%]"}>
                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
                     چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
                     نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
@@ -19,12 +18,12 @@ function Footer(props) {
                     حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار
                     گیرد.
                 </div>
-                <div>
+                <div className={"md:mx-0 mx-auto"}>
                     <img src={logo} alt={"logo"}/>
                 </div>
             </div>
-            <div className={"flex mt-[60px]"}>
-                <div className={"section1-footer w-[30%]"}>
+            <div className={"flex flex-col mx-auto md:mx-0 mt-[60px] md:flex md:flex-row"}>
+                <div className={"section1-footer w-full md:w-[30%]"}>
                     <div className={"flex items-center"}>
                         <div className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}></div>
                         <span className={"text-black ms-3 font-bold text-[20px]"}>
@@ -35,7 +34,7 @@ function Footer(props) {
                         <img src={imagef} alt={"image"}/>
                     </div>
                 </div>
-                <div className={"section2-footer ms-[50px] w-[15%]"}>
+                <div className={"section2-footer md:ms-[50px] w-full md:w-[15%]"}>
                     <div className={"flex items-center"}>
                         <div className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}></div>
                         <span className={"text-black ms-3 font-bold text-[20px]"}>
