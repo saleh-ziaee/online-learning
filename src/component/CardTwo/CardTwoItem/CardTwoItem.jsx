@@ -8,9 +8,9 @@ import cardImg from "@/assets/images/unsplash_7uSKXpksCKg.svg"
 import nextIcon from "@/assets/icon/next.svg"
 import points from "@/assets/images/points.svg"
 import InfoCard from '@/component/InfoCard/InfoCard';
-function CardTwoItem(children, props) {
+function CardTwoItem(children,className, props) {
     return (
-        <div className={"flex gap-2 items-center bg-[#FAFAFA] rounded-[12px] w-[100%]  p-2"}>
+        <div className={`${className} flex  flex-col gap-4 md:flex md:flex-row md:gap-2 items-center bg-[#FAFAFA] rounded-[12px] w-[100%]  p-2`}>
             <img src={cardImg} className={"w-[50%]  rounded-[12px]"} alt={"card-img"}/>
 
             <div className={"flex flex-col w-[100%] gap-2 h-[100%]"}>

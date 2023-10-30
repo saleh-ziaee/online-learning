@@ -20,6 +20,7 @@ export default {
         },
         lightBlue:"#F6F7FE",
         blue:"#5A69F2",
+        dark:"#080808",
         gary:{
           500:"#fafafa",
           700:"#4F4F4F",

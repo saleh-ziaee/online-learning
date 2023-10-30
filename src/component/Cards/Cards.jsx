@@ -5,27 +5,18 @@ import imagef from "@/assets/images/footer/bigImage.svg";
 
 function Cards(props) {
     return (
-        <div className={"rounded-[12px]"}>
-            <div className={"flex items-center"}>
-                <div className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}></div>
-                <span className={"text-black ms-3 font-bold text-[20px]"}>
-دوره های جدید
-                </span>
-            </div>
-
-            <div className={"card-all mt-5"}>
+            <div className={" flex flex-col items-center justify-around w-full lg:grid lg:grid-cols-3 lg:gap-4 xl:grid xl:grid-cols-3 xl:gap-4 gap-4 md:gap-4 mx-auto mt-5 flex-wrap"}>
             <Card></Card>
             <Card></Card>
             <Card></Card>
             <Card></Card>
-
             <Card></Card>
             <Card></Card>
             {/*<Card></Card>*/}
             {/*<Card></Card>*/}
 
             </div>
-        </div>
+
     );
 }
 

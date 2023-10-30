@@ -16,7 +16,7 @@ function Header(props) {
             setIsHovered(false);
         };
     return (
-        <header className={"fixed top-0 mx-auto py-8 w-[100%] bg-white mb-8 left-0 right-0 overflow-hidden z-[999999999999]"}>
+        <header className={"fixed top-0 mx-auto py-4 w-[100%] bg-white mb-8 left-0 right-0 overflow-hidden z-[999999999999]"}>
             <div className={"flex items-center mx-auto justify-center w-[100%]  gap-[40px]"}>
                 <div className={"flex"}>
                             <Link to={"/"} className={"flex items-center gap-4"}>
@@ -49,8 +49,8 @@ function Header(props) {
                     <div className={"flex gap-4 items-center "}>
                         <img src={profileImg} alt={"profile-img"} className={"cursor-pointer"}/>
                         <div className={"flex flex-col items-center gap-4"}>
-                            <span className={"text-[#080808]"}>Behzad pashaei</span>
-                            <span className={"text-[#080808] opacity-80"}>ui & ux designer</span>
+                            <span className={"text-dark"}>Behzad pashaei</span>
+                            <span className={"text-dark opacity-80"}>ui & ux designer</span>
                         </div>
                         <div className={"cursor-pointer flex items-center justify-center bg-[#9E5CF20D] rounded-[12px] w-[64px] h-[64px]"}>
                             <img src={notifeImg}/>
