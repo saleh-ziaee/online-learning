@@ -1,6 +1,6 @@
 .left-header{
     border-right: 1px solid #F1F1F1;
-    padding-right: 50px;
+    padding-right: 40px;
 }
 .category:hover .arrow{
     transition: 0.5s;
