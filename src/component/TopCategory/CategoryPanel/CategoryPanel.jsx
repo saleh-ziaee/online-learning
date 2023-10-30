@@ -7,23 +7,23 @@ import nextIcon from "@/assets/icon/v6-icon (free).svg"
 function CategoryPanel(props) {
     return (
         <div className={"flex items-center justify-center mt-[130px] w-[100%] gap-[30px]"}>
-            <CategoryItem variant=""><img src={nextIcon}/></CategoryItem>
+            <CategoryItem variant="" ><img src={nextIcon}/></CategoryItem>
 
-            <div className={"flex items-center justify-center gap-4"}>
+            <div className={"flex items-center min-w-fit justify-center gap-4"}>
                 <CategoryItem   variant="regular">After Effects</CategoryItem>
                 <CategoryItem   variant="regular">Lightroom</CategoryItem>
                 <CategoryItem   variant="regular">Photography</CategoryItem>
                 <CategoryItem   variant="video"><img src={videoIcon}/></CategoryItem>
 
             </div>
-            <div className={"flex items-center justify-center gap-4"}>
+            <div className={"flex items-center min-w-fit justify-center gap-4"}>
                 <CategoryItem   variant="regular">ui & ux</CategoryItem>
                 <CategoryItem   variant="regular">vector</CategoryItem>
                 <CategoryItem variant="graphics"><img src={graphicsIcon}/></CategoryItem>
 
             </div>
 
-            <div className={"flex items-center justify-center gap-4"}>
+            <div className={"flex items-center min-w-fit justify-center gap-4"}>
                 <CategoryItem variant="regular">Python</CategoryItem>
                 <CategoryItem variant="regular">React</CategoryItem>
                 <CategoryItem variant="regular">Unity</CategoryItem>

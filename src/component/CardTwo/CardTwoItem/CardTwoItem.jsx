@@ -21,11 +21,11 @@ function CardTwoItem(children, props) {
                         
                     </div>
                     <div className={"flex items-center gap-2"}>
-                    <InfoCard src={userIcon} title="دانش آموز : 198 "/>
+                    <InfoCard src={userIcon} title="شرکت کننده : 198 "/>
         
                     </div>
                     <div className={"flex items-center gap-2"}>
-                    <InfoCard src={lessonIcon} title="درس :  6"/>
+                    <InfoCard src={lessonIcon} title="بخش :  6"/>
                       
                     </div>
                 </div>
@@ -33,12 +33,12 @@ function CardTwoItem(children, props) {
 
                     <div className={"flex items-center justify-between"}>
                         <div className={"flex items-center"}>
-                            <span>امتیاز :  </span>
-                            <span>75 / 100</span>
+                            <InfoCard title="امتیاز : 75 / 100  "/>
+                            
                         </div>
                         <div className={"flex items-center"}>
-                            <span>روز ها : </span>
-                            <span>256</span>
+                        <InfoCard title="روز ها : 256"/>
+                           
                         </div>
 
                     </div>
