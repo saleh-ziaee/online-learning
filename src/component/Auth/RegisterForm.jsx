@@ -1,21 +1,15 @@
-import { z } from "zod";
 import { useState } from "react";
 import Input from "@/component/Ui/Input";
 import Button from "@/component/Ui/Button/Button";
+import axios from "axios";
+import { useAuthContext } from "@/providers/AuthProvider";
 
-const registerSchema = z.object({
-  username: z
-    .string()
-    .min(4, { message: "نام کاربری باید حداقل ۴ کاراکتر باشد" }),
-  password: z
-    .string()
-    .min(8, { message: "رمز عبور باید حداقل ۸ کاراکتر باشد" }),
-  confirm_password: z
-    .string()
-    .min(8, { message: "تکرار رمز عبور باید حداقل ۸ کاراکتر باشد" }),
-});
+import {registerSchema}  from "./schema.js"
 
 const RegisterForm = () => {
+    const { saveAccessToken } = useAuthContext();
+    const [unlnowError, setUnknownError] = useState(null);
+    const [loading, setLoading] = useState(false);
   const [registerForm, setRegisterForm] = useState({
     username: "",
     password: "",
@@ -29,15 +23,34 @@ const RegisterForm = () => {
     setRegisterForm((s) => ({ ...s, [e.target.name]: e.target.value }));
   };
 
-  const handleRegister = (event) => {
+  const handleRegister = async (event) => {
     event.preventDefault();
 
-    const validation = registerSchema.safeParse(registerForm);
+      if (loading) return;
 
-    if (!validation.success) {
-      setError(validation.error.format());
-    }
+      setUnknownError(null);
 
+      const { success, error, data } = registerSchema.safeParse(registerForm);
+
+      if (!success) {
+          setError(error.flatten().fieldErrors);
+          return;
+      }
+      try {
+          setLoading(true);
+
+          const result = await axios.post(
+              "http://demo2578450.mockable.io/auth/register",
+              data
+          );
+
+          // saveAccessToken(result.data.token.accessToken);
+      } catch (error) {
+          console.log(error);
+          setUnknownError("Something wrong, please try again.");
+      } finally {
+          setLoading(false);
+      }
     console.log(registerForm);
   };
 
@@ -49,7 +62,7 @@ const RegisterForm = () => {
         label="نام کاربری"
         value={registerForm.username}
         onChange={handleChangeLoginForm}
-        error={error.username?._errors?.[0]}
+        error={error.username?.[0]}
         placeholder="نام کاربری خود را وارد کنید"
       />
 
@@ -59,7 +72,7 @@ const RegisterForm = () => {
         name="password"
         value={registerForm.password}
         onChange={handleChangeLoginForm}
-        error={error.password?._errors?.[0]}
+        error={error.password?.[0]}
         placeholder="رمز عبور انتخاب نمایید"
       />
 
@@ -69,7 +82,7 @@ const RegisterForm = () => {
         name="confirm_password"
         onChange={handleChangeLoginForm}
         value={registerForm.confirm_password}
-        error={error.confirm_password?._errors?.[0]}
+        error={error.confirm_password?.[0]}
         placeholder="رمز عبور خود را مجدد وارد کنید"
       />
 

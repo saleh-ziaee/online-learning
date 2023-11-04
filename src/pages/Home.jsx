@@ -13,7 +13,7 @@ import Title from "@/component/TitlePic/Title.jsx";
 function Home(props) {
     return (
         <div className={"container w-[95%] md:w-[85%]  mx-auto"}>
-            {/*<Header></Header>*/}
+            <Header></Header>
             <CategoryPanel></CategoryPanel>
             <Title></Title>
             <SearchPanel></SearchPanel>

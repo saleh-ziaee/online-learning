@@ -15,7 +15,7 @@ import InfoCard from '@/component/InfoCard/InfoCard';
 function Card(props) {
     return (
         <>
-        <div className={'w-[360px] h-[413px] px-[10px] rounded-[12px] pt-[10px] pb-[20px] bg-secondary-300'}>
+        <div className={' px-[10px] rounded-[12px] pt-[10px] pb-[20px] bg-secondary-300'}>
             <img className={"w-[100%] rounded-[10px]"} src={card1} alt=""/>
             <div className={"px-[4px] py-[16px]"}>
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />

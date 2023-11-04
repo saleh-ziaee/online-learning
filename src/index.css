@@ -9,3 +9,9 @@ body{
     direction: rtl;
     font-family: "Estedad";
 }
+:root{
+    overflow: scroll;
+}
+body::--webkit-scrollbar{
+    display: none;
+}
