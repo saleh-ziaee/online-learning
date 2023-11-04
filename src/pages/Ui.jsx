@@ -16,7 +16,7 @@ function Ui(props) {
 
     const searchBtn = <div className="ml-2"><Button  variant="fill">دسته بندی </Button></div>
     return (
-        <div>
+        <div className={"overflow-scroll scrollNone w-fit"}>
             <Helmet>
                 <title>ui</title>
             </Helmet>
@@ -31,8 +31,8 @@ function Ui(props) {
           {/*  <Title></Title>*/}
             {/*<Header></Header>*/}
             {/*    <MyCourses></MyCourses>*/}
-            {/*<CategoryPanel></CategoryPanel>*/}
-            <Header></Header>
+            <CategoryPanel></CategoryPanel>
+            {/*<Header></Header>*/}
             {/*<Navbar></Navbar>*/}
         </div>
     );

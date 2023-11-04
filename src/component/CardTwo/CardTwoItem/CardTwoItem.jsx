@@ -11,9 +11,9 @@ import InfoCard from '@/component/InfoCard/InfoCard';
 function CardTwoItem(children,className, props) {
     return (
         <div className={`${className} flex  flex-col gap-4 md:flex md:flex-row md:gap-2 items-center bg-[#FAFAFA] rounded-[12px] w-[100%]  p-2`}>
-            <img src={cardImg} className={"w-[50%]  rounded-[12px]"} alt={"card-img"}/>
+            <img src={cardImg} className={"w-full md:w-[50%] basis-1/2 rounded-[12px]"} alt={"card-img"}/>
 
-            <div className={"flex flex-col w-[100%] gap-2 h-[100%]"}>
+            <div className={"flex flex-col w-[100%] gap-2 h-[100%] basis-1/2"}>
                 <h2 className={"text-[16px] font-semibold"}>Learn Figma - UI/UX Design Essential Training</h2>
                 <div className={"flex items-center gap-2 justify-between"}>
                     <div className={"flex items-center gap-2"}>
@@ -45,7 +45,7 @@ function CardTwoItem(children,className, props) {
                 <div className={"flex items-center justify-between"}>
 
                     <div className={"flex items-center gap-2"}>
-                        <img src={teacherImg}/>
+                        <img src={teacherImg} />
                         <div className={"text-center"}>
                             <h3 className={"text-[14px] text-center"}>Jon Kantner</h3>
                             <span className={"text-[12px]"}>Design teacher</span>
