@@ -15,7 +15,7 @@ function Sidebar({className,onClick, ...props}) {
         <div className={` bg-gray w-[100%] bg-white h-[100%] flex  flex-col items-start`}>
             <div className={"mt-4 flex items-center justify-between w-[90%]"}>
             <img src={logo} className={"w-[180px] md:w-fit"}/>
-                <button onClick={onClick} className={"min-w-fit"}>
+                <button onClick={onClick} className={"min-w- md:hidden"}>
                     <img src={closeIcon}/>
                 </button>
             </div>

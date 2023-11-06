@@ -5,8 +5,10 @@ import axios from "axios";
 import { useAuthContext } from "@/providers/AuthProvider";
 
 import {registerSchema}  from "./schema.js"
+import {useNavigate} from "react-router";
 
 const RegisterForm = () => {
+    const navigate = useNavigate()
     const { saveAccessToken } = useAuthContext();
     const [unlnowError, setUnknownError] = useState(null);
     const [loading, setLoading] = useState(false);
@@ -44,7 +46,8 @@ const RegisterForm = () => {
               data
           );
 
-          // saveAccessToken(result.data.token.accessToken);
+          navigate("/")
+          saveAccessToken(result.data.token.accessToken);
       } catch (error) {
           console.log(error);
           setUnknownError("Something wrong, please try again.");
