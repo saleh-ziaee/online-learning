@@ -4,16 +4,22 @@ import './index.css'
 import {
     RouterProvider,
 } from "react-router-dom";
+import { AuthProvider } from "./providers/AuthProvider";
+
 import router from "./routes/index.jsx"
 import {Helmet} from "react-helmet";
 import {HelmetProvider} from "react-helmet-async";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-      <HelmetProvider>
-        <Helmet titleTemplate={"آموزش آنلاین | %s"} />
-    <RouterProvider router={router}/>
-      </HelmetProvider>
 
-  </React.StrictMode>,
-)
+    <AuthProvider>
+    <HelmetProvider>
+
+            <RouterProvider router={router}/>,
+
+
+            <Helmet titleTemplate={"آموزش آنلاین | %s"} />
+
+      </HelmetProvider>
+</AuthProvider >
+);

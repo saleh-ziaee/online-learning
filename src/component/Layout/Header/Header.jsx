@@ -8,7 +8,14 @@ import Search from "../../Ui/SearchInput/Search.jsx";
 import menuIcon from "@/assets/images/navbar/menu.png";
 import {Link} from "react-router-dom";
 import Navbar from "@/component/Navbar/Navbar.jsx";
+import {  useNavigate, useParams } from "react-router-dom";
+import { useAuthContext } from "@/providers/AuthProvider";
+import Button from "@/component/Ui/Button/Button.jsx";
+
 function Header(props) {
+    const { isLoggedIn, currentUser, logout } = useAuthContext();
+    const navigate = useNavigate();
+    const { userId } = useParams();
         const [isHovered, setIsHovered] = useState(false)
     const [isClicked, setIsClicked] = useState(false)
         const handleMouseEnter = () => {
@@ -67,11 +74,25 @@ function Header(props) {
                 <div className={"md:flex md:items-center md:justify-between left-header hidden md:gap-[40px]"}>
                     <Search></Search>
                     <div className={"flex gap-4 items-center  "}>
-                        <img src={profileImg} alt={"profile-img"} className={"cursor-pointer"}/>
+                        {isLoggedIn ? (
+                            <>
+
+                                <img src={profileImg} alt={"profile-img"} className={"cursor-pointer"}/>
                         <div className={"flex flex-col items-center gap-4"}>
-                            <span className={"text-dark"}>Behzad pashaei</span>
-                            <span className={"text-dark opacity-80"}>ui & ux designer</span>
+                            {/*<span className={"text-dark"}>Behzad pashaei</span>*/}
+                            {/*<span className={"text-dark opacity-80"}>ui & ux designer</span>*/}
                         </div>
+                            </>
+                            ): (
+                            <div className="ml-auto">
+                                <Link to="/Login">
+                                    <Button size="sm" variant="outline">
+                                        Sign in / Sign Up
+                                    </Button>
+                                </Link>
+                            </div>
+                        )}
+
                         <div className={"cursor-pointer flex items-center justify-center bg-[#9E5CF20D] rounded-[12px] w-[64px] h-[64px]"}>
                             <img src={notifeImg}/>
                         </div>

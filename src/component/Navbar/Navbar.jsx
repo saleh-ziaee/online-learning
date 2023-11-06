@@ -4,8 +4,13 @@ import profileImg from "@/assets/images/Header/Profile.svg";
 import notifeImg from "@/assets/images/Header/nortife.svg";
 import Search from "@/component/Ui/SearchInput/Search.jsx";
 import closeIcon from "@/assets/images/navbar/XCircle.svg"
+import {Link} from "react-router-dom";
+import Button from "@/component/Ui/Button/Button.jsx";
+import {useAuthContext} from "@/providers/AuthProvider.jsx";
 
 function Navbar( {onClick}) {
+    const { isLoggedIn, currentUser, logout } = useAuthContext();
+
     const [isClicked, setIsClicked] = useState(true)
     const closeNav=()=>{
         setIsClicked(false)
@@ -41,12 +46,28 @@ function Navbar( {onClick}) {
             <div id="menuToggle" className={"flex flex-col items-center gap-4"}>
 
                 <div className={"flex gap-4 items-center  "}>
-                    <img src={profileImg} alt={"profile-img"} className={"cursor-pointer"}/>
+                    {isLoggedIn ? (
+                        <>
 
-                    <div className={"flex flex-col items-center gap-4"}>
-                        <span className={"text-dark"}>Behzad pashaei</span>
-                        <span className={"text-dark opacity-80"}>ui & ux designer</span>
-                    </div>
+                            <img src={profileImg} alt={"profile-img"} className={"cursor-pointer"}/>
+                            <div className={"flex flex-col items-center gap-4"}>
+                                {/*<span className={"text-dark"}>Behzad pashaei</span>*/}
+                                {/*<span className={"text-dark opacity-80"}>ui & ux designer</span>*/}
+                            </div>
+                        </>
+                    ): (
+                        <div className="ml-auto">
+                            <Link to="/Login">
+                                <Button size="sm" variant="outline">
+                                    Sign in / Sign Up
+                                </Button>
+                            </Link>
+                        </div>
+                    )}
+                    {/*<div className={"flex flex-col items-center gap-4"}>*/}
+                    {/*    <span className={"text-dark"}>Behzad pashaei</span>*/}
+                    {/*    <span className={"text-dark opacity-80"}>ui & ux designer</span>*/}
+                    {/*</div>*/}
                     {
 
                             <img src={closeIcon} onClick={onClick}/>
