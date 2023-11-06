@@ -38,6 +38,7 @@ function CardTwoItem(children,className, props) {
                         </div>
                         <div className={"flex items-center"}>
                         <InfoCard title="روز ها : 256"/>
+                        
                            
                         </div>
 
