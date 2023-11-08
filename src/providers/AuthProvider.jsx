@@ -32,7 +32,7 @@ const AuthProvider = ({ children }) => {
     const fetchCurrentUser = async () => {
         if (isLoading) return;
         setLoading(true)
-        const result = apiGetCurrentUSer()
+        const result = await apiGetCurrentUSer()
         // const result1 =await apiClient.get("/auth/me",{
         //     headers: {
         //         Authorization: `Bearer ${accessToken}`,
@@ -44,7 +44,7 @@ const AuthProvider = ({ children }) => {
         //     },
         // });
 
-        setCurrentUser(result.data);
+        setCurrentUser(result);
         setLoading(false)
     };
 
