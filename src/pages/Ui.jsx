@@ -10,6 +10,8 @@ import Header from "@/component/Layout/Header/Header.jsx";
 import Navbar from "@/component/Navbar/Navbar.jsx";
 import PriceCard from "@/component/PriceCard/PriceCard.jsx";
 import Comment from '@/component/Comments/Comment';
+import HeaderProduct from '@/component/HeaderProduct/HeaderProduct';
+import CourseInfo from '@/component/CourseInfo/CourseInfo';
 // import SearchPanel from '../component/SearchPanel/SearchPanel';
 
 
@@ -18,7 +20,7 @@ function Ui(props) {
 
     const searchBtn = <div className="ml-2"><Button  variant="fill">دسته بندی </Button></div>
     return (
-        <div className={"overflow-scroll scrollNone w-fit"}>
+        <div>
             <Helmet>
                 <title>ui</title>
             </Helmet>
@@ -35,7 +37,8 @@ function Ui(props) {
             {/*    <MyCourses></MyCourses>*/}
 
             <Comment/>
-
+            <HeaderProduct></HeaderProduct>
+            {/* <CourseInfo></CourseInfo> */}
             {/*<CategoryPanel></CategoryPanel>*/}
             <Header></Header>
             {/*<Navbar></Navbar>*/}
