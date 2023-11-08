@@ -26,7 +26,22 @@ const router = createBrowserRouter([
     // },
     {
         path: "/",
+        element: <Home/>,
+        children:[
+            {
+                index: true,
+                element: <Home/>
+            },
+            // {
+            //     path :"/course/:courseId",
+            //     element : <course/>
+            // }
+        ]
+    },
+    {
+        path: "/",
         element:<Home/>,
+
     },
     {
         path: "/auth",
