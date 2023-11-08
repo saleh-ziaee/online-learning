@@ -59,7 +59,7 @@ function Navbar( {onClick}) {
                         <div className="ml-auto">
                             <Link to="/Login">
                                 <Button size="sm" variant="outline">
-                                    Sign in / Sign Up
+                                    ثبت نام  / ورود
                                 </Button>
                             </Link>
                         </div>
@@ -70,9 +70,10 @@ function Navbar( {onClick}) {
                     {/*</div>*/}
                     {
 
-                            <img src={closeIcon} onClick={onClick}/>
 
                     }
+                    <img src={closeIcon} onClick={onClick}/>
+
                 </div>
                 <div
                     className={"cursor-pointer flex items-center justify-center bg-[#9E5CF20D] rounded-[12px] w-[64px] h-[64px]"}>
