@@ -1,5 +1,5 @@
 import axios from "axios";
-import {instance} from "eslint-plugin-react/lib/util/lifecycleMethods.js";
+// import {instance} from "eslint-plugin-react/lib/util/lifecycleMethods.js";
 
 
 const createRequest = (baseURL)=>{

@@ -33,16 +33,16 @@ const AuthProvider = ({ children }) => {
         if (isLoading) return;
         setLoading(true)
         const result = apiGetCurrentUSer()
-        const result1 =await apiClient.get("/auth/me",{
-            headers: {
-                Authorization: `Bearer ${accessToken}`,
-            },
-        })
-        const result2 = await axios.get(`${baseUrl}/auth/me`, {
-            headers: {
-                Authorization: `Bearer ${accessToken}`,
-            },
-        });
+        // const result1 =await apiClient.get("/auth/me",{
+        //     headers: {
+        //         Authorization: `Bearer ${accessToken}`,
+        //     },
+        // })
+        // const result2 = await axios.get(`${baseUrl}/auth/me`, {
+        //     headers: {
+        //         Authorization: `Bearer ${accessToken}`,
+        //     },
+        // });
 
         setCurrentUser(result.data);
         setLoading(false)
