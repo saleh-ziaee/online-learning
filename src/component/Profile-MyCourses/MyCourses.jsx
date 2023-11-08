@@ -35,7 +35,7 @@ function MyCourses(props) {
             </header>
 
             <div className={
-                "  flex flex-col items-center justify-center w-full md:grid md:grid-cols-1 lg:grid lg:grid-cols-2 lg:gap-4  gap-4 md:gap-4 mx-auto mt-5 pb-24 scrollNone  md:h-[100vh] md:overflow-scroll md:pb-24 md:justify-start  flex-wrap md:scrollNone"}>
+                " coursesSection flex flex-col items-center justify-center w-full md:grid md:grid-cols-1 lg:grid lg:grid-cols-2 lg:gap-4  gap-4 md:gap-4 mx-auto mt-5 pb-24 scrollNone  md:h-[100vh] md:overflow-scroll md:pb-24 md:justify-start  flex-wrap md:scrollNone"}>
                 {/*<h2>دوره های من</h2>*/}
                 <CardTwoItem className={"mt-4"} ></CardTwoItem>
                 <CardTwoItem></CardTwoItem>

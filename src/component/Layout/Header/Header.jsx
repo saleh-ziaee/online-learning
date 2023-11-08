@@ -87,7 +87,7 @@ function Header(props) {
                             <div className="ml-auto">
                                 <Link to="/Login">
                                     <Button size="sm" variant="outline">
-                                        Sign in / Sign Up
+                                        ثبت نام  / ورود
                                     </Button>
                                 </Link>
                             </div>

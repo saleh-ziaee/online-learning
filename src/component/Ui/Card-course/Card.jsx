@@ -12,25 +12,35 @@ import Button from "@/component/Ui/Button/Button.jsx";
 import nextIcon from "@/assets/icon/next.svg";
 import InfoCard from '@/component/InfoCard/InfoCard';
 
-function Card(props) {
+function Card({img,title,student,level,lesson,...props}) {
     return (
         <>
         <div className={' px-[10px] rounded-[12px] pt-[10px] pb-[20px] bg-secondary-300'}>
-            <img className={"w-[100%] rounded-[10px]"} src={card1} alt=""/>
+            <img className={"w-[100%] rounded-[10px]"} src={img} alt=""/>
             <div className={"px-[4px] py-[16px]"}>
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-                <span className={""}>Learn Figma - UI/UX Design Essential Training</span>
+                <span className={""}>{title}</span>
         </div>
-            <div className={"flex items-center rounded-[12px]  p-1 w-fit"}>
+            <div className={"flex items-center rounded-[12px]  p-1 w-[100%]"}>
 
                 <div className={"flex flex-col w-[100%] h-[100%]"}>
                     <div className={"flex items-center gap-4 justify-between"}>
-
                         <div className={"flex items-center gap-2"}>
-                            
-                            <InfoCard src={levelIcon} title="حرفه ای"/>
-                            <InfoCard src={userIcon} title="دانش آموز :198"/>
-                            <InfoCard src={lessonIcon} title="درس : 6"/>
+                            {/*<InfoCard src={levelIcon} title={level}/>*/}
+                            {/*<InfoCard src={userIcon} title={student ` دانش آموز : `}/>*/}
+                            {/*<InfoCard src={lessonIcon}  title={lesson ` درس : `}/>*/}
+                            <div className={"flex gap-2"}>
+                                <img src={levelIcon}/>
+                                <span>{level}</span>
+                            </div>
+                            <div className={"flex gap-2"}>
+                                <img src={userIcon}/>
+                                <span> دانش آموز : {student} </span>
+                            </div>
+                            <div className={"flex gap-2"}>
+                                <img src={lessonIcon}/>
+                                <span> درس : {lesson}  </span>
+                            </div>
                         </div>
                     </div>
                     <div className={"flex items-center justify-between mt-4"}>
