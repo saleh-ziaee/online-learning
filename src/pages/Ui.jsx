@@ -10,6 +10,12 @@ import Header from "@/component/Layout/Header/Header.jsx";
 import Navbar from "@/component/Navbar/Navbar.jsx";
 import PriceCard from "@/component/PriceCard/PriceCard.jsx";
 import Comment from '@/component/Comments/Comment';
+<<<<<<< Updated upstream
+=======
+import HeaderProduct from '@/component/HeaderProduct/HeaderProduct';
+import CourseInfo from '@/component/CourseInfo/CourseInfo';
+import FooterCommentBox from '@/component/FooterCommentBox/FooterCommentBox';
+>>>>>>> Stashed changes
 // import SearchPanel from '../component/SearchPanel/SearchPanel';
 
 
@@ -35,7 +41,13 @@ function Ui(props) {
             {/*    <MyCourses></MyCourses>*/}
 
             <Comment/>
+<<<<<<< Updated upstream
 
+=======
+            <HeaderProduct></HeaderProduct>
+            {/* <FooterCommentBox title="علی" subtitle="چقدر زیبا به نظر می رسد,احساس می کنم باید جالب باشد،"></FooterCommentBox> */}
+            {/* <CourseInfo></CourseInfo> */}
+>>>>>>> Stashed changes
             {/*<CategoryPanel></CategoryPanel>*/}
             <Header></Header>
             {/*<Navbar></Navbar>*/}
