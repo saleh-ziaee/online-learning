@@ -6,6 +6,7 @@ import { useAuthContext } from "@/providers/AuthProvider";
 
 import {registerSchema}  from "./schema.js"
 import {useNavigate} from "react-router";
+import {apiRegisterUSer} from "@/api/user.js";
 
 const RegisterForm = () => {
     const navigate = useNavigate()
@@ -40,8 +41,8 @@ const RegisterForm = () => {
       }
       try {
           setLoading(true);
-
-          const result = await axios.post(
+            const result = await apiRegisterUSer(data)
+          const result2 = await axios.post(
               "http://demo2578450.mockable.io/auth/register",
               data
           );

@@ -1,6 +1,8 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
+import {apiClient} from "@/api/request.js";
+import {apiGetCurrentUSer} from "@/api/user.js";
 
 const authContext = createContext();
 
@@ -8,7 +10,7 @@ const useAuthContext = () => {
     return useContext(authContext);
 };
 const AuthProvider = ({ children }) => {
-    const [idloading,setLoading] = useState(null)
+    const [isLoading,setLoading] = useState(null)
     const [baseUrl , setBaseUrl] = useState("http://demo2578450.mockable.io/")
     const [currentUser, setCurrentUser] = useState(null);
     const [accessToken, setAccessToken] = useState(() =>
@@ -28,13 +30,22 @@ const AuthProvider = ({ children }) => {
     };
 
     const fetchCurrentUser = async () => {
-        const result = await axios.get(`${baseUrl}/auth/me`, {
+        if (isLoading) return;
+        setLoading(true)
+        const result = apiGetCurrentUSer()
+        const result1 =await apiClient.get("/auth/me",{
+            headers: {
+                Authorization: `Bearer ${accessToken}`,
+            },
+        })
+        const result2 = await axios.get(`${baseUrl}/auth/me`, {
             headers: {
                 Authorization: `Bearer ${accessToken}`,
             },
         });
 
         setCurrentUser(result.data);
+        setLoading(false)
     };
 
     useEffect(() => {
@@ -49,7 +60,7 @@ const AuthProvider = ({ children }) => {
         currentUser,
         saveAccessToken,
         baseUrl,
-        idloading
+        isLoading
     };
 
     return <authContext.Provider value={values}>{children}</authContext.Provider>;
