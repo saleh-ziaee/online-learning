@@ -12,7 +12,7 @@ function Search(props) {
         SetClick(true);
     };
 
-    const q = searchParams.get("q");
+    // const q = searchParams.get("q");
 
 
     return (

@@ -12,11 +12,11 @@ import Button from "@/component/Ui/Button/Button.jsx";
 import nextIcon from "@/assets/icon/next.svg";
 import InfoCard from '@/component/InfoCard/InfoCard';
 
-function Card({img,title,student,level,lesson,...props}) {
+function Card({image,title,student,level,lesson,...props}) {
     return (
         <>
         <div className={' px-[10px] rounded-[12px] pt-[10px] pb-[20px] bg-secondary-300'}>
-            <img className={"w-[100%] rounded-[10px]"} src={img} alt=""/>
+            <img className={"w-[100%] rounded-[10px]"} src={image} alt=""/>
             <div className={"px-[4px] py-[16px]"}>
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
                 <span className={""}>{title}</span>
