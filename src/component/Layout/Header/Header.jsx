@@ -42,12 +42,10 @@ function Header(props) {
                 </div>
                 <div className={"flex"}>
                     {
-
                             <Link to={"/"} className={"flex items-center gap-4"}>
                                 <h2 className={"text-[#080808] font-black uppercase text-[32px]"}>academy</h2>
                                 <img src={Logo} alt={"logo"}/>
                             </Link>
-
                     }
 
                     <div className={"lg:flex lg:items-center hidden lg:gap-4"}>

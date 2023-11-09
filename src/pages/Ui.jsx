@@ -49,7 +49,8 @@ function Ui(props) {
             {/* <CourseInfo></CourseInfo> */}
 >>>>>>> Stashed changes
             {/*<CategoryPanel></CategoryPanel>*/}
-            <Header></Header>
+            {/*<Header></Header>*/}
+
             {/*<Navbar></Navbar>*/}
         </div>
     );
