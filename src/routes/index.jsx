@@ -11,7 +11,7 @@ import Header from "@/component/Layout/Header/Header.jsx";
 import Footer from "@/component/Layout/footer/Footer.jsx";
 import React from "react";
 import Login from "@/pages/Login.jsx";
-
+import Search from "@/pages/Search.jsx";
 
 const router = createBrowserRouter([
     // {
@@ -26,7 +26,26 @@ const router = createBrowserRouter([
     // },
     {
         path: "/",
+        element: <Home/>,
+        children:[
+            {
+                index: true,
+                element: <Home/>
+            },
+            // {
+            //     path :"/course/:courseId",
+            //     element : <course/>
+            // }
+        ]
+    },
+    {
+        path: "/",
         element:<Home/>,
+
+    },
+    {
+      path:"/search",
+      element:<Search/>
     },
     {
         path: "/auth",
