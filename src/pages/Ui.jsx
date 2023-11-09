@@ -1,7 +1,11 @@
 import React from 'react';
 import Button from '../component/Ui/Button/Button';
-
 import {Helmet} from "react-helmet";
+import CourseDetail from "@/pages/CourseDetail.jsx";
+import InfoCard from "@/component/InfoCard/InfoCard.jsx";
+import CourseInfo from "@/component/CourseInfo/CourseInfo.jsx";
+import HeaderProduct from "@/component/HeaderProduct/HeaderProduct.jsx";
+
 
 import MyCourses from "@/component/Profile-MyCourses/MyCourses.jsx";
 import TopCategory from "@/component/TopCategory/TopCategory.jsx";
@@ -10,12 +14,10 @@ import Header from "@/component/Layout/Header/Header.jsx";
 import Navbar from "@/component/Navbar/Navbar.jsx";
 import PriceCard from "@/component/PriceCard/PriceCard.jsx";
 import Comment from '@/component/Comments/Comment';
-<<<<<<< Updated upstream
-=======
+
 import HeaderProduct from '@/component/HeaderProduct/HeaderProduct';
 import CourseInfo from '@/component/CourseInfo/CourseInfo';
 import FooterCommentBox from '@/component/FooterCommentBox/FooterCommentBox';
->>>>>>> Stashed changes
 // import SearchPanel from '../component/SearchPanel/SearchPanel';
 
 
@@ -40,18 +42,8 @@ function Ui(props) {
             {/*<Header></Header>*/}
             {/*    <MyCourses></MyCourses>*/}
 
-            <Comment/>
-<<<<<<< Updated upstream
-
-=======
-            <HeaderProduct></HeaderProduct>
-            {/* <FooterCommentBox title="علی" subtitle="چقدر زیبا به نظر می رسد,احساس می کنم باید جالب باشد،"></FooterCommentBox> */}
-            {/* <CourseInfo></CourseInfo> */}
->>>>>>> Stashed changes
-            {/*<CategoryPanel></CategoryPanel>*/}
-            {/*<Header></Header>*/}
-
             {/*<Navbar></Navbar>*/}
+            {/*<HeaderProduct></HeaderProduct>*/}
         </div>
     );
 }

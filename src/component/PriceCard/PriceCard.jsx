@@ -9,8 +9,8 @@ import Button from "@/component/Ui/Button/Button.jsx";
 
 function PriceCard(props) {
     return (
-        <div className={"flex py-[24px] rounded-xl gap-[24px] p-5 mx-auto"}>
-            <div className={"basis-1/5 flex-col card-price"}>
+        <div className={"flex py-[24px] rounded-xl gap-[24px] border-2 p-5 mx-auto"}>
+            <div className={"flex-col card-price"}>
                 <div className={"flex gap-1 justify-center"}>
                     <span>۱۰,۵۰۰,۰۰۰ تومان</span>
                     <del className={"text-secondary-200 text-sm ms-2"}>۱۲,۰۰۰,۰۰۰ تومان</del>
@@ -38,7 +38,7 @@ function PriceCard(props) {
                     </div>
                 </div>
                 <div className="mt-5 w-full line-sep"></div>
-                <div className={"mt-5 flex-col"}>
+                <div className={"mt-5 flex flex-col gap-6"}>
                     <Button size={"md"}>ثبت نام و خرید</Button>
                     <span
                         className={"text-secondary-900 text-sm"}>همه دوره ها شامل ۳۰ روز گارانتی بازگشت وجه می‌باشند.</span>

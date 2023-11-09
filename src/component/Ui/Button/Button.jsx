@@ -2,11 +2,6 @@ import React from 'react';
 import "./Button.css"
 import PropTypes from "prop-types";
 
-const variants = {
-  fill: "hover:bg-primary-500 bg-black text-white",
-  outline: "bg-[#E6E6E6] border border-[#F1F1F1]  ",
-  gray: "bg-[#F5F5F5] text-[#3E3232BF]",
-};
 
 const variants = {
   fill: "hover:bg-primary-500 bg-black text-white",
@@ -15,7 +10,7 @@ const variants = {
 };
 
 const sizes = {
-  md: "p-4",
+  md: "p-4 px-16",
   sm: "px-4 py-2.5",
 };
 
