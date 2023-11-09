@@ -1,7 +1,10 @@
-import {useId, useState} from "react";
+import { useState } from "react";
 import LoginForm from "@/component/Auth/LoginForm";
 import loginpic from "../assets/images/login/loginpic.svg";
 import RegisterForm from "@/component/Auth/RegisterForm";
+
+
+
 function Login() {
   const [mode, setMode] = useState("login");
 
@@ -34,7 +37,7 @@ function Login() {
       </div>
 
       <div>
-        <img className={"h-[800px] w-[800px]"} src={loginpic} alt="" />
+        <img className={"h-[400px] w-[400px] md:w-[800px] md:h-[800px]"} src={loginpic} alt="" />
       </div>
     </div>
   );

@@ -1,18 +1,11 @@
 import React from 'react';
 import Button from '../component/Ui/Button/Button';
-
 import {Helmet} from "react-helmet";
+import CourseDetail from "@/pages/CourseDetail.jsx";
+import InfoCard from "@/component/InfoCard/InfoCard.jsx";
+import CourseInfo from "@/component/CourseInfo/CourseInfo.jsx";
+import HeaderProduct from "@/component/HeaderProduct/HeaderProduct.jsx";
 
-import MyCourses from "@/component/Profile-MyCourses/MyCourses.jsx";
-import TopCategory from "@/component/TopCategory/TopCategory.jsx";
-import CategoryPanel from "@/component/TopCategory/CategoryPanel/CategoryPanel.jsx";
-import Header from "@/component/Layout/Header/Header.jsx";
-import Navbar from "@/component/Navbar/Navbar.jsx";
-import PriceCard from "@/component/PriceCard/PriceCard.jsx";
-import Comment from '@/component/Comments/Comment';
-import HeaderProduct from '@/component/HeaderProduct/HeaderProduct';
-import CourseInfo from '@/component/CourseInfo/CourseInfo';
-// import SearchPanel from '../component/SearchPanel/SearchPanel';
 
 
 
@@ -35,13 +28,13 @@ function Ui(props) {
           {/*  <Title></Title>*/}
             {/*<Header></Header>*/}
             {/*    <MyCourses></MyCourses>*/}
-
-            <Comment/>
-            <HeaderProduct></HeaderProduct>
-            {/* <CourseInfo></CourseInfo> */}
             {/*<CategoryPanel></CategoryPanel>*/}
-            <Header></Header>
+            {/*<Header></Header>*/}
+            <CourseDetail></CourseDetail>
+            {/*<InfoCard></InfoCard>*/}
+            {/*<CourseInfo></CourseInfo>*/}
             {/*<Navbar></Navbar>*/}
+            {/*<HeaderProduct></HeaderProduct>*/}
         </div>
     );
 }

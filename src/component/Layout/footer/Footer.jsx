@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from "../../../assets/images/footer/logo.svg"
 import imagef from "../../../assets/images/footer/bigImage.svg"
+import LinksFooter from "@/component/Link-Footer/LinksFooter.jsx";
 
 function Footer(props) {
     return (
@@ -41,20 +42,8 @@ function Footer(props) {
                                 دسته بندی
                 </span>
                     </div>
-                    <div className={"flex flex-col gap-2"}>
-
-                        <span className={"mt-5"}>طراحی</span>
-                        <span>برنامه نویسی</span>
-                        <span>گرافیک</span>
-                        <span>فرانت اند</span>
-                        <span>فرانت اند</span>
-                        <span>فرانت اند</span>
-                        <span>فرانت اند</span>
-                        <span>فرانت اند</span>
-                        <span>فرانت اند</span>
-                        <span>فرانت اند</span>
-                        <span>فرانت اند</span>
-                        <span>فرانت اند</span>
+                    <div className={"mt-5"}>
+                        <LinksFooter></LinksFooter>
                     </div>
                 </div>
                 <div className={"section3-footer ms-[50px] w-[15%]"}>
@@ -64,20 +53,8 @@ function Footer(props) {
                                 دسته بندی
                 </span>
                     </div>
-                    <div className={"flex flex-col gap-2"}>
-
-                        <span className={"mt-5"}>طراحی</span>
-                        <span>برنامه نویسی</span>
-                        <span>گرافیک</span>
-                        <span>فرانت اند</span>
-                        <span>فرانت اند</span>
-                        <span>فرانت اند</span>
-                        <span>فرانت اند</span>
-                        <span>فرانت اند</span>
-                        <span>فرانت اند</span>
-                        <span>فرانت اند</span>
-                        <span>فرانت اند</span>
-                        <span>فرانت اند</span>
+                    <div className={"mt-5"}>
+                        <LinksFooter></LinksFooter>
                     </div>
                 </div>
                 <div className={"w-[35%]"}>

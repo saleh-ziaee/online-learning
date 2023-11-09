@@ -13,7 +13,7 @@ function Title(props) {
     <span className={"md:text-left text-center"}>I Am Sofia And We Want To Start</span>
     <span className={"md:text-left text-center"}>A <span className={"bg-gradient-to-r text-left from-primary-200 to-primary-100 inline-block text-transparent bg-clip-text"}>Web Design</span>Course Together </span>
         <span className={"md:text-left text-center"}>?😍  Do You Like It Too  </span>
-        <div className={"mt-5 md:mt-20 flex self-end w-[75%] mx-auto md:mx-0 text-center"}>
+        <div className={"mt-5 md:mt-20 flex self-end w-[75%] md:me-0 text-center"}>
             <Button size={"md"} className={""}><img  src={nextIcon }  className={""}/><span className={"text-xl md:text-2xl"}>Start New Course</span></Button>
         </div>
     </div>
