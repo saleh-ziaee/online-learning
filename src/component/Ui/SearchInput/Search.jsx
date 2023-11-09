@@ -10,12 +10,12 @@ function search ({placeholder= 'جست و جو  ' , children ,className,icon}){
 
     const handleSearch=(event)=>{
         event.preventDefault();
+        navigate("/search")
 
         searchParams.set("q",query)
         setSearchParams((s)=>({...s,q:query}))
 
         console.log(query)
-        navigate("/search")
     }
 
   return (

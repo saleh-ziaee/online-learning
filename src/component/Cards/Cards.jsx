@@ -4,19 +4,23 @@ import "./Cards.css"
 import imagef from "@/assets/images/footer/bigImage.svg";
 import {product} from "@/fake-array/product.js";
 import {apiSearchPost} from  "@/api/search.js"
+import {useSearchParams} from "react-router-dom";
 
 function Cards({className, props}) {
     const [searchData, setSearchData] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
+    const [searchParams] = useSearchParams();
 
 
     // const data = await apiSearchPost()
     // setSearchData(data)
+    const q = searchParams.get("q");
+
     const getSearchData = async ()=>{
         try {
             setIsLoading(true);
-            const data = await apiSearchPost();
+            const data = await apiSearchPost({ q });
 
             setSearchData(data);
         } catch (error) {
@@ -27,7 +31,7 @@ function Cards({className, props}) {
     }
     useEffect(() => {
         getSearchData();
-    }, );
+    }, [q]);
     // console.log(getSearchData)
 
     return (
@@ -38,7 +42,6 @@ function Cards({className, props}) {
                         key={item.id}
                         {...item}
                         />
-
                     ))
                 }
             {/*<Card></Card>*/}

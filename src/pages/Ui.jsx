@@ -37,7 +37,8 @@ function Ui(props) {
             <Comment/>
 
             {/*<CategoryPanel></CategoryPanel>*/}
-            <Header></Header>
+            {/*<Header></Header>*/}
+
             {/*<Navbar></Navbar>*/}
         </div>
     );

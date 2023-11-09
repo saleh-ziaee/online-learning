@@ -12,6 +12,7 @@ import Button from "@/component/Ui/Button/Button.jsx";
 import nextIcon from "@/assets/icon/next.svg";
 import InfoCard from '@/component/InfoCard/InfoCard';
 
+
 function Card({image,title,student,level,lesson,...props}) {
     return (
         <>
@@ -20,31 +21,18 @@ function Card({image,title,student,level,lesson,...props}) {
             <div className={"px-[4px] py-[16px]"}>
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
                 <span className={""}>{title}</span>
-        </div>
+              </div>
             <div className={"flex items-center rounded-[12px]  p-1 w-[100%]"}>
-
                 <div className={"flex flex-col w-[100%] h-[100%]"}>
                     <div className={"flex items-center gap-4 justify-between"}>
                         <div className={"flex items-center gap-2"}>
-                            {/*<InfoCard src={levelIcon} title={level}/>*/}
-                            {/*<InfoCard src={userIcon} title={student ` دانش آموز : `}/>*/}
-                            {/*<InfoCard src={lessonIcon}  title={lesson ` درس : `}/>*/}
-                            <div className={"flex gap-2"}>
-                                <img src={levelIcon}/>
-                                <span>{level}</span>
-                            </div>
-                            <div className={"flex gap-2"}>
-                                <img src={userIcon}/>
-                                <span> دانش آموز : {student} </span>
-                            </div>
-                            <div className={"flex gap-2"}>
-                                <img src={lessonIcon}/>
-                                <span> درس : {lesson}  </span>
-                            </div>
+                            <InfoCard src={levelIcon} title={`${level} `}/>
+                            <InfoCard src={userIcon} title={`   شرکت کننده :${student} `}/>
+                            <InfoCard src={lessonIcon}  title={`درس ها :  ${lesson}` }/>
                         </div>
                     </div>
                     <div className={"flex items-center justify-between mt-4"}>
-                        <Button variant={"fill"}>   شروع دوره  <img  src={nextIcon }  className={"rotate-180"}/> </Button>
+                        <Button variant={"fill"}>   شروع دوره  <img  src={nextIcon }  className={"rotate-180"}/></Button>
                         <img src={Score} alt=""/>
                     </div>
                 </div>
