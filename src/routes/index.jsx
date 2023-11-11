@@ -12,6 +12,7 @@ import Footer from "@/component/Layout/footer/Footer.jsx";
 import React from "react";
 import Login from "@/pages/Login.jsx";
 import Search from "@/pages/Search.jsx";
+import CourseDetail from "@/pages/CourseDetail.jsx";
 
 const router = createBrowserRouter([
     // {
@@ -54,6 +55,14 @@ const router = createBrowserRouter([
     {
         path: "/profile",
         element:<Profile/>,
+    },
+    {
+      path:"/course/",
+        element:<CourseDetail/>,
+    },
+    {
+        path:"/course/:id",
+        element:<CourseDetail/>,
     },
     {
         path: "/ui",

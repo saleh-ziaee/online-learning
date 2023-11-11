@@ -7,15 +7,20 @@ import HeaderProduct from "@/component/HeaderProduct/HeaderProduct.jsx";
 import Description from "@/component/Ui/CourseDescription/Description.jsx";
 import AccordionCourse from "@/component/Accordion/AccordionCourse.jsx";
 import Comment from "@/component/Comments/Comment.jsx";
-
-function CourseDetail(props) {
-
+import {product} from "@/fake-array/product.js"
+function CourseDetail({id , props}) {
+    console.log(product[0].name)
     return (
+
+
+
         <div className={""}>
-                 <Header></Header>
-            <div className={"container w-[65%] mx-auto flex flex-row justify-between"}>
+
+            <div className={"container w-[85%] mx-auto flex flex-row justify-between"}>
                 <div className={"mt-24 basis-2/3"}>
-                    <HeaderProduct></HeaderProduct>
+
+                    <HeaderProduct id={id}
+                    />
                     <img className={"mx-auto mt-10 w-full"} src={Trailer} alt=""/>
                     <div className={"flex justify-between mt-16"}>
                         <a href={"#section1"} className={""}>توضیحات</a>
@@ -23,7 +28,15 @@ function CourseDetail(props) {
                         <a href={"#section3"}>مدرس </a>
                         <a href={"#section3"} >نظرات</a>
                     </div>
-                    <Description></Description>
+                    {
+                        product.map((item) => (
+
+                            <Description
+                                {...item}
+                            />
+
+                        ))}
+
                     <div className={"mt-12"}>
                         <div className={"flex flex-row justify-between"}>
                             <span className={"text-xl font-bold"}>سرفصل‌ها</span>
@@ -34,7 +47,13 @@ function CourseDetail(props) {
                             </div>
                         </div>
                         <div className={"mt-8"}>
-                            <AccordionCourse title={"شروع ماجراجویی توسعه وب با HTML/CSS"}></AccordionCourse>
+                            {
+                                product[0].sections.map((item) => (
+
+                                    <AccordionCourse {...item}
+                                    />
+
+                                ))}
 
                         </div>
                     </div>
@@ -44,10 +63,19 @@ function CourseDetail(props) {
                     </div>
                 </div>
                 <div className={"mt-44"}>
-                    <PriceCard></PriceCard>
+                    {
+                        product.map((item) => (
+
+                            <PriceCard
+                                {...item}
+                            />
+
+
+                        ))}
                 </div>
             </div>
         </div>
+
     );
 }
 

@@ -11,9 +11,10 @@ import teacherImg from "@/assets/images/06.png";
 import Button from "@/component/Ui/Button/Button.jsx";
 import nextIcon from "@/assets/icon/next.svg";
 import InfoCard from '@/component/InfoCard/InfoCard';
+import { Link } from 'react-router-dom';
 
 
-function Card({image,title,student,level,lesson,...props}) {
+function Card({image,title,student,level,lesson,id,...props}) {
     return (
         <>
         <div className={' px-[10px] rounded-[12px] pt-[10px] pb-[20px] bg-secondary-300'}>
@@ -32,7 +33,10 @@ function Card({image,title,student,level,lesson,...props}) {
                         </div>
                     </div>
                     <div className={"flex items-center justify-between mt-4"}>
+                        {/*<button>{button}</button>*/}
+                        <Link to={`/course/${id}`}>
                         <Button variant={"fill"}>   شروع دوره  <img  src={nextIcon }  className={"rotate-180"}/></Button>
+                        </Link>
                         <img src={Score} alt=""/>
                     </div>
                 </div>
