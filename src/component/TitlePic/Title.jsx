@@ -1,22 +1,29 @@
 import React from 'react';
-import banerpic from "../../assets/images/baner/banerpic.png"
+import "./Title.css"
+// import banerpic from "../../assets/images/baner/banerpic.png"
+import classroom from "../../assets/images/baner/classroom.svg"
 import Button from "@/component/Ui/Button/Button.jsx";
 import chart from "../../assets/images/baner/chart.png"
 import nextIcon from "@/assets/icon/next.svg";
+import arrow from "@/assets/icon/arrows.svg";
 function Title(props) {
     return (
         <div>
-<div className={"md:flex md:flex-row flex-col-reverse justify-between mt-14 items-center font-bold"}>
-    <img src={banerpic} alt=""/>
-    <div className={"flex flex-col md:me-[150px] leading-loose md:text-[30px] text-2xl"}>
-        <span className={"md:text-left text-center"}> Hello Friends 🙌</span>
-    <span className={"md:text-left text-center"}>I Am Sofia And We Want To Start</span>
-    <span className={"md:text-left text-center"}>A <span className={"bg-gradient-to-r text-left from-primary-200 to-primary-100 inline-block text-transparent bg-clip-text"}>Web Design</span>Course Together </span>
-        <span className={"md:text-left text-center"}>?😍  Do You Like It Too  </span>
-        <div className={"mt-5 md:mt-20 flex self-end w-[75%] md:me-0 text-center"}>
-            <Button size={"md"} className={""}><img  src={nextIcon }  className={""}/><span className={"text-xl md:text-2xl"}>Start New Course</span></Button>
+<div className={"md:flex md:flex-row flex flex-col-reverse justify-between mt-2 items-center font-bold"}>
+    <div className={"flex flex-col w-[100%] md:me-[150px] leading-loose md:text-[30px] text-2xl"}>
+  <div className={"typing-demo text-gray-800 md:text-[40px] text-[25px]"}>ما به هر قیمتی
+دوره تولید نمی کنیم!
+  </div>
+        <div>
+            <span className={"text-gray-500 text-[18px] md:text-2xl"}> یادگیری آرزو نیست، فقط نیاز هست، تلاش و تمرین داشته باشید، بقیه‌اش با ما :)</span>
+
+        </div>
+        <div className={"mt-14 md:mt-20 mx-auto w-[75%] md:mx-auto text-center"}>
+            <Button size={"sm"} className={"mx-auto"}><img  src={nextIcon}  className={""}/><span className={"text-xl md:text-2xl"}>از اینجا شروع کن</span></Button>
         </div>
     </div>
+    <img className={"w-full md:w-[50%]"} src={classroom} alt=""/>
+
 
 
 </div>
