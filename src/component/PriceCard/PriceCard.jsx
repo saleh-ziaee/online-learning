@@ -7,30 +7,30 @@ import time from "@/assets/icon/time.svg"
 import Button from "@/component/Ui/Button/Button.jsx";
 
 
-function PriceCard(props) {
+function PriceCard({offPrice,off,price,student,deadline,level,props}) {
     return (
         <div className={"flex py-[24px] rounded-xl gap-[24px] border-2 p-5 mx-auto"}>
             <div className={"flex-col card-price"}>
                 <div className={"flex gap-1 justify-center"}>
-                    <span>۱۰,۵۰۰,۰۰۰ تومان</span>
-                    <del className={"text-secondary-200 text-sm ms-2"}>۱۲,۰۰۰,۰۰۰ تومان</del>
+                    <span>{offPrice} تومان</span>
+                    <del className={"text-secondary-200 text-sm ms-2"}>{price} تومان</del>
                     <div className={"bg-orange-200 flex justify-center rounded-[8px] p-1 w-[100px]"}>
-                        <span className={"text-sm text-orange-400"}>۱۲% تخفیف</span>
+                        <span className={"text-sm text-orange-400"}>{off} تخفیف</span>
                     </div>
                 </div>
                 <div className="mt-5 w-full line-sep"></div>
                 <div className={"mt-4 flex-col"}>
                     <div className={"flex flex-row justify-between mt-3"}>
                         <InfoCard src={time} title="زمان دوره"></InfoCard>
-                        <span className={"text-secondary-900"}>۳ ماه </span>
+                        <span className={"text-secondary-900"}>{deadline} ماه </span>
                     </div>
                     <div className={"flex flex-row justify-between mt-3"}>
                         <InfoCard src={levelIcon} title="سطح دوره"></InfoCard>
-                        <span className={"text-secondary-900"}>مقدماتی </span>
+                        <span className={"text-secondary-900"}>{level} </span>
                     </div>
                     <div className={"flex flex-row justify-between mt-3"}>
                         <InfoCard src={userIcon} title="شرکت کنندگان"></InfoCard>
-                        <span className={"text-secondary-900"}>۱۷ نفر </span>
+                        <span className={"text-secondary-900"}>{student} نفر </span>
                     </div>
                     <div className={"flex flex-row justify-between mt-3"}>
                         <InfoCard src={userIcon} title="زبان "></InfoCard>
