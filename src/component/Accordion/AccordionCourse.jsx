@@ -38,7 +38,6 @@ export default function AccordionCourse({title,videos,watchTime},...props) {
                 <AccordionDetails>
                     <Typography>
                         <div className={"flex flex-col gap-y-4"}>
-
                         {
                             product[0].sections[0].subsections.map((item) => (
                                 <div className={"flex justify-between"} key={item.id}>
