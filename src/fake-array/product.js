@@ -1,7 +1,7 @@
 import img1 from "@/assets/images/product/learning-education-ideas-insight-intelligence-study-concept.png"
 import img2 from "@/assets/images/product/unsplash_5QgIuuBxKwM.png";
 import img3 from "@/assets/images/product/unsplash_5J3G5E6Brgg.png";
-import teacherImage from "@/assets/images/CourseDetail/IMG_03999 1.png"
+import teacherImage from "@/assets/images/CourseDetail/4597b4e10ba34611af39b83d5ade2c32.jpg"
 export const product =[
     {
         id:1,
@@ -19,9 +19,18 @@ export const product =[
         offPrice:1100000,
         off:10,
         watchTime :124,
-        teacher:"ماش همدانی",
+        teaches:"ماش همدانی",
         comment:400,
-        teacherImg:teacherImage,
+        // teacherImg:teacherImage,
+        teachers:[
+            {
+                name: 'ماش همدانی',
+                teacherImage:teacherImage,
+                category:"مدرس فرانت‌اند",
+                comment:400,
+                description:"\"مدرس فرانت‌اند با بیش از هفت سال تجربه. علاقه‌مند به ارائه دانش و توانایی‌های خود در توسعه وب و برنامه‌نویسی. هدفم ارائه یادگیری مفید و کاربردی برای دانشجویان به شکلی ساده و قابل فهم است.\""
+            }
+        ],
 
         sections: [
             {

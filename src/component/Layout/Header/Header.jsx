@@ -19,6 +19,7 @@ function Header(props) {
     const [isHovered, setIsHovered] = useState(false)
     const [isClicked, setIsClicked] = useState(false)
     const handleMouseEnter = () => {
+
         setIsHovered(true);
     };
     const toggleMenu = () => {
@@ -49,26 +50,26 @@ function Header(props) {
                         </Link>
                     }
 
-                    <div className={"lg:flex lg:items-center hidden lg:gap-24"}>
+                    <div className={"lg:flex lg:items-center hidden lg:gap-16"}>
                         <div className={"cursor-pointer mr-[20px] text-[16px] text-[#080808] opacity-80"}>ارتباط با ما
                         </div>
-                        <div className={"cursor-pointer text-[16px] text-[#080808] opacity-80"}>فن آوری</div>
-                        <div className={"cursor-pointer text-[16px] text-[#080808] opacity-80"}>درباره ما</div>
-                        <div className={"z-40 cursor-pointer text-[16px] flex items-center category relative"}
+                        <div className={"cursor-pointer min-w-fit text-[16px] text-[#080808] opacity-80"}>فن آوری</div>
+                        <div className={"cursor-pointer min-w-fit text-[16px] text-[#080808] opacity-80"}>درباره ما</div>
+                        <div className={"z-40 cursor-pointer min-w-fit text-[16px] flex items-center category relative"}
                              onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                            <div className={"cursor-pointer text-[16px]  text-[#080808] opacity-80  capitalize"}>
+                            <div className={"cursor-pointer min-w-fit text-[16px]  text-[#080808] opacity-80  capitalize"}>
                                 دسته بندی
                             </div>
                             <img src={arrow} className={"arrow"}/>
                             {
                                 isHovered && (
                                     <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
-                                         className={"p-[20px] flex flex-col nested-category__section items-center justify-center absolute top-[25px] gap-[20px] w-100"}>
-                                        <div className="nested-item text-[13px] text-[#080808BF] opacity-75">Development
+                                         className={"p-[20px] flex flex-col nested-category__section items-center bg-white justify-center rounded-2xl absolute top-[25px] gap-[20px] w-100"}>
+                                        <div className="nested-item text-[13px] text-[#080808BF] hover:text-primary-500">Development
                                         </div>
-                                        <div className="nested-item text-[13px] text-[#080808BF] opacity-75">Development
+                                        <div className="nested-item text-[13px] text-[#080808BF] hover:text-primary-500">Development
                                         </div>
-                                        <div className="nested-item text-[13px] text-[#080808BF] opacity-75">Development
+                                        <div className="nested-item text-[13px] text-[#080808BF] hover:text-primary-500 ">Development
                                         </div>
                                     </div>
                                 )

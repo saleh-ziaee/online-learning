@@ -11,13 +11,13 @@ import CourseInfo from "@/component/CourseInfo/CourseInfo.jsx";
 import folderIcon from "@/assets/images/CourseDetail/folder.png";
 import videoIcon from "@/assets/images/CourseDetail/videos.png";
 import  watchIcon from "@/assets/images/CourseDetail/watch.png"
+import TeacherCards from "@/component/teacherCards/TeacherCards.jsx";
 
 function CourseDetail() {
     const {id} = useParams();
     const [loading, setLoading] = useState(false)
     const [courseDetail, setCourseDetail] = useState(null)
 
-    console.log(courseDetail);
 
 
     const getCourse = async () => {
@@ -42,23 +42,32 @@ function CourseDetail() {
             getCourse(id)
         }
     }, [id]);
+    {
+        console.log(courseDetail);
 
+    }
     return (
         <div className={""}>
             {loading || !courseDetail ? (
                 <div>loading ...</div>
             ) : (
-                <div className={"container w-[85%] mx-auto flex flex-row justify-between"}>
+                <div className={"container w-[85%] mx-auto flex flex-col-reverse md:flex-row justify-between"}>
                     <div className={"mt-24 basis-2/3"}>
                         <HeaderProduct
                         title={courseDetail.title}
                         subTitle={courseDetail.subTitle}
                         />
-                        <CourseInfo
-                        teacher={courseDetail.teacher}
-                        comment={courseDetail.comment}
-                        teacherImg={courseDetail.teacherImg}
-                        />
+                        {
+                            courseDetail.teachers?.map((item)=>(
+                                <CourseInfo {...item}
+                                />
+                            ))
+                        }
+                        {/*<CourseInfo*/}
+                        {/*// teacher={courseDetail.teacher}*/}
+                        {/*// comment={courseDetail.comment}*/}
+                        {/*// teacherImg={courseDetail.teacherImg}*/}
+                        {/*/>*/}
                         <img className={"mx-auto mt-10 w-full"} src={Trailer} alt=""/>
                         <div className={"flex justify-between mt-16"}>
                             <a href={"#section1"} className={""}>توضیحات</a>
@@ -67,8 +76,6 @@ function CourseDetail() {
                             <a href={"#section3"}>نظرات</a>
                         </div>
                         <Description description={courseDetail.description}/>
-
-
                         <div className={"mt-12"}>
                             <div className={"flex flex-row justify-between"}>
                                 <span className={"text-xl font-bold"}>سرفصل‌ها</span>
@@ -97,6 +104,16 @@ function CourseDetail() {
 
                             </div>
                         </div>
+                        <div className={" w-full md:w-[40%] mt-12"}>
+                                    <h2 className={"text-[#1D2026] text-[24px] w-full font-bold mb-8"}> مدرس دوره</h2>
+                        {
+                            courseDetail.teachers?.map((item)=>(
+                                <TeacherCards {...item}
+                                />
+                            ))
+                        }
+                        </div>
+
                         <div id="section4" className={"mt-10"}>
                             <span className={"font-bold text-xl"}>نظرات شرکت کنندگان</span>
                             <Comment></Comment>

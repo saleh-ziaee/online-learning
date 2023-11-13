@@ -20,7 +20,7 @@ function search ({placeholder= 'جست و جو  ' , children ,className,icon}){
 
   return (
     <div className={`${className} inline-block`}>
-        <form dir="rtl" className="flex justify-between px-5  items-center bg-[#FAFAFA] rounded-xl h-[64px] w-[100%]" onSubmit={handleSearch}>
+        <form dir="rtl" className="flex justify-between px-5 relative items-center bg-[#FAFAFA] rounded-xl h-[64px] w-[100%]" onSubmit={handleSearch}>
             {children}
             <input maxLength="1000"
             type="text"
