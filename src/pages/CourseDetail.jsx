@@ -6,6 +6,11 @@ import AccordionCourse from "@/component/Accordion/AccordionCourse.jsx";
 import Comment from "@/component/Comments/Comment.jsx";
 import {useParams} from 'react-router-dom';
 import {apiGetCourseDetail} from "@/api/course.js";
+import PriceCard from "@/component/PriceCard/PriceCard.jsx";
+import CourseInfo from "@/component/CourseInfo/CourseInfo.jsx";
+import folderIcon from "@/assets/images/CourseDetail/folder.png";
+import videoIcon from "@/assets/images/CourseDetail/videos.png";
+import  watchIcon from "@/assets/images/CourseDetail/watch.png"
 
 function CourseDetail() {
     const {id} = useParams();
@@ -53,20 +58,15 @@ function CourseDetail() {
                             <a href={"#section3"}>مدرس </a>
                             <a href={"#section3"}>نظرات</a>
                         </div>
-
                         <Description description={courseDetail.description}/>
-
-
                         <div className={"mt-12"}>
                             <div className={"flex flex-row justify-between"}>
                                 <span className={"text-xl font-bold"}>سرفصل‌ها</span>
-
                                 <div className={"flex gap-x-6"}>
                                     <span>{courseDetail.section} بخش</span>
                                     <span>{courseDetail.videos} ویدیو</span>
                                     <span>{courseDetail.watchTime} ساعت</span>
                                 </div>
-
                             </div>
                             <div className={"mt-8"}>
 
@@ -74,7 +74,6 @@ function CourseDetail() {
                                     courseDetail.sections?.map((item) => (
                                         <AccordionCourse {...item}
                                         />
-
                                     ))}
 
                             </div>
@@ -85,9 +84,14 @@ function CourseDetail() {
                         </div>
                     </div>
                     <div className={"mt-44"}>
-                        {/*<PriceCard*/}
-                        {/*    {...item}*/}
-                        {/*/>*/}
+                        <PriceCard
+                            offPrice={courseDetail.offPrice}
+                            off={courseDetail.off}
+                            price={courseDetail.price}
+                            student={courseDetail.student}
+                            level={courseDetail.level}
+                            deadline={courseDetail.deadline}
+                        />
                     </div>
                 </div>
             )}
