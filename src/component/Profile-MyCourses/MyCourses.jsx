@@ -21,7 +21,7 @@ function MyCourses(props) {
             }
             <Sidebar className={"md:flex  md:basis-1/5 hidden"}/>
         <div className={"bg-[#F3F5FF]  flex-col h-full"}>
-            <header className={"flex md:items-start items-center  p-4 justify-between w-full "}>
+            <header className={"flex md:items-start items-center p-4 justify-between w-full "}>
                 <button onClick={toggleMenu } className={"md:hidden block"}>
                     <img src={menuIcon} alt={"menu-icon"} className={"w-[24px] h-[24px]"}/>
                 </button>

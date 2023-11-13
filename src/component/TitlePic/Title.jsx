@@ -11,7 +11,7 @@ function Title(props) {
         <div>
 <div className={"md:flex md:flex-row flex flex-col-reverse justify-between mt-2 items-center font-bold"}>
     <div className={"flex flex-col w-[100%] md:me-[150px] leading-loose md:text-[30px] text-2xl"}>
-  <div className={"typing-demo text-gray-800 md:text-[40px] text-[25px]"}>ما به هر قیمتی
+  <div className={"typing-demo text-gray-800 w-[90%] md:w-full md:text-[40px] text-[25px]"}>ما به هر قیمتی
 دوره تولید نمی کنیم!
   </div>
         <div>
