@@ -8,10 +8,15 @@ function CardTwo(props) {
     return (
         <div className={"rounded-[12px] gap-4 p-4"}>
             <div className={"flex w-[100%] items-center justify-between"}>
-                <h3>دوره های شما</h3>
-                <Button variant={"gray"}>نمایش همه </Button>
+                <div className={"flex items-center"}>
+                    <div className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}></div>
+                    <span className={"text-black ms-3 font-bold text-2xl"}>
+دوره های شما
+                </span>
+                </div>
+                <Button className={"mt-10"} variant={"gray"}>نمایش همه </Button>
             </div>
-            <div className={"flex flex-col items-center justify-around w-full md:grid md:grid-cols-1 lg:grid lg:grid-cols-2 lg:gap-4  gap-4 md:gap-4 mx-auto mt-5 flex-wrap"}>
+            <div className={"flex flex-col items-center justify-around w-full md:grid md:grid-cols-1 lg:grid lg:grid-cols-2 lg:gap-4  gap-4 md:gap-4 mx-auto flex-wrap"}>
                 {
                     cardtowarray.map((item)=>(
                         <CardTwoItem

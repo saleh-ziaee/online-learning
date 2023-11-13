@@ -19,8 +19,8 @@ function Home(props) {
             <SearchPanel></SearchPanel>
             <div className={"flex items-center"}>
                 <div className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}></div>
-                <span className={"text-black ms-3 font-bold text-[20px]"}>
-دوره های جدید
+                <span className={"text-black ms-3 font-bold text-2xl"}>
+جدیدترین دوره ها
                 </span>
             </div>
             <Cards></Cards>

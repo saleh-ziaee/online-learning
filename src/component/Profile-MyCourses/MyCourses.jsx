@@ -43,10 +43,6 @@ function MyCourses(props) {
                 <CardTwoItem></CardTwoItem>
                 <CardTwoItem></CardTwoItem>
                 <CardTwoItem></CardTwoItem>
-                <CardTwoItem></CardTwoItem>
-                <CardTwoItem></CardTwoItem>
-                <CardTwoItem></CardTwoItem>
-                <CardTwoItem></CardTwoItem>
             </div>
         </div>
         </div>
