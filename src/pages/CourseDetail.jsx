@@ -68,9 +68,11 @@ function CourseDetail() {
                         </div>
                         <Description description={courseDetail.description}/>
 
+
                         <div className={"mt-12"}>
                             <div className={"flex flex-row justify-between"}>
                                 <span className={"text-xl font-bold"}>سرفصل‌ها</span>
+
                                 <div className={"flex gap-x-6"}>
                                     <span className={"flex items-center gap-1"}>
                                         <img src={folderIcon}/>
@@ -83,6 +85,7 @@ function CourseDetail() {
                                         <img src={watchIcon}/>
                                         {courseDetail.watchTime} ساعت</span>
                                 </div>
+
                             </div>
                             <div className={"mt-8"}>
 

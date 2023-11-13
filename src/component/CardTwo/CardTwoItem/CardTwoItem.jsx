@@ -12,10 +12,10 @@ import InfoCard from '@/component/InfoCard/InfoCard';
 function CardTwoItem({img,title,student,level,lesson,score,days,children, className, props}) {
     return (
         <div
-            className={`${className} flex  flex-col gap-4 md:flex md:flex-row md:gap-2 items-center bg-[#FAFAFA] rounded-[12px] w-[100%]  p-2`}>
-            <img src={cardImg} className={"w-full md:w-[50%] basis-1/2 rounded-[12px]"} alt={"card-img"}/>
+            className={`${className} flex mt-8  flex-col gap-4 md:flex md:flex-row md:gap-2 items-center bg-[#FAFAFA] rounded-[12px] w-[100%] border-2 p-2`}>
+            <img src={img} className={"w-full md:w-[50%] basis-1/2 rounded-[12px]"} alt={"card-img"}/>
 
-            <div className={"flex flex-col w-[100%] gap-2 h-[100%] basis-1/2"}>
+            <div className={"flex flex-col w-[100%] gap-6 h-[100%] basis-1/2"}>
                 <h2 className={"text-[16px] font-semibold"}>Learn Figma - UI/UX Design Essential Training</h2>
                 <div className={"flex items-center gap-2 justify-between"}>
                     <div className={"flex gap-2"}>
@@ -51,12 +51,12 @@ function CardTwoItem({img,title,student,level,lesson,score,days,children, classN
                     <div className={"flex items-center gap-2"}>
                         <img src={teacherImg}/>
                         <div className={"text-center"}>
-                            <h3 className={"text-[14px] text-center"}>Jon Kantner</h3>
+                            <h3 className={"text-[14px] font-bold text-center"}>Jon Kantner</h3>
                             <span className={"text-[12px]"}>Design teacher</span>
                         </div>
 
                     </div>
-                    <Button variant={"fill"}> بزن بریم <img src={nextIcon} className={"rotate-180"}/> </Button>
+                    <Button size={"sm"} variant={"fill"}> بزن بریم <img src={nextIcon} className={"rotate-180"}/> </Button>
                 </div>
             </div>
         </div>
