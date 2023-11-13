@@ -19,7 +19,7 @@ function Sidebar({className,onClick, ...props}) {
                     <img src={closeIcon}/>
                 </button>
             </div>
-            <div className={"flex flex-col items-start gap-[16px] mt-[40px]"}>
+            <div className={"flex flex-col items-start gap-[30px] mt-20"}>
                 <div className={"flex items-center gap-4 cursor-pointer mr-4 w-[100%]"}>
                     <img src={bookIcon}/>
                     <p className={"text-[16px] text-gary-700"}>دوره‌های من</p>
@@ -34,7 +34,7 @@ function Sidebar({className,onClick, ...props}) {
                 </div>
                 <div className={"flex items-center gap-4 cursor-pointer mr-4 w-[100%]"}>
                     <img src={exitIcon}/>
-                    <p className={"text-[16px] text-gary-700"}>خروج</p>
+                    <p className={"text-[16px] text-red-700"}>خروج</p>
                 </div>
             </div>
         </div>
