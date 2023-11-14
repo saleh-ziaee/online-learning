@@ -42,8 +42,8 @@ function Navbar( {onClick}) {
         //     </div>
         // </nav>
 
-        <nav role="navigation " className={"navigation bg-white h-[100vh] absolute right-0 top-0 z-50 w-[80%]"}>
-            <div id="menuToggle" className={"flex flex-col items-center gap-4"}>
+        <nav role="navigation " className={"navigation bg-white h-[100vh] transition ease-in-out delay-150 absolute right-0 top-0 z-50 w-[80%]"}>
+            <div id="menuToggle" className={"flex flex-col items-center  gap-4"}>
 
                 <div className={"flex gap-4 px-4 w-full justify-between items-center cursor-pointer "}>
                     <img src={closeIcon} className={"w-[10%] cursor-pointer"} onClick={onClick}/>

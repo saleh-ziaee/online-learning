@@ -36,6 +36,7 @@ function CardTwo(props) {
 
                 )
             </div>
+
         </div>
     );
 }
