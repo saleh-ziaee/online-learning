@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Sidebar from "@/component/Sidebar/Sidebar.jsx";
 import menuIcon from "@/assets/images/navbar/menu.png";
 import userImg from "@/assets/images/Header/Profile.svg";
@@ -6,13 +6,45 @@ import notifeIcon from "@/assets/images/Header/nortife.svg";
 import CardTwoItem from "@/component/CardTwo/CardTwoItem/CardTwoItem.jsx";
 import ProfileCourseUi from "@/component/Ui/ProfileCourse/ProfileCourseUi.jsx";
 import ProfileCourseSection1 from "@/component/ProfileCourse/ProfileCourseSection1.jsx";
+import {useParams} from "react-router-dom";
+import {apiGetCourseDetail} from "@/api/course.js";
+import {apiGetYourCourse} from "@/api/yourcourse.js";
 
 function ProfileCourse(props) {
+    const {id} = useParams();
+    const [loading, setLoading] = useState(false)
+    const [yourCourse, setYourCourse] = useState(null)
+    console.log(yourCourse);
+
     const [isClicked, setIsClicked] = useState(false)
     const toggleMenu = () => {
         setIsClicked(!isClicked)
     }
+    const getyourCourse = async () =>{
+        if (loading) return
+
+        try {
+            setLoading(true)
+            const result = await apiGetYourCourse(id)
+
+            setYourCourse(result)
+        } catch (error) {
+            console.error(error)
+        } finally {
+            setLoading(false)
+        }
+    }
+    useEffect(() => {
+        if (id) {
+            getyourCourse(id)
+        }
+    }, [id]);
+
     return (
+        <div className={""}>
+            {loading || !yourCourse ? (
+                <div>loading ...</div>
+            ) : (
             <div className={"md:flex w-full md:items-center bg-[#F3F5FF] h-[100vh] relative md:overflow-hidden"}>
                 {
                     isClicked&&(
@@ -44,7 +76,8 @@ function ProfileCourse(props) {
                     </div>
                 </div>
             </div>
+            )}
+        </div>
     );
 }
-
 export default ProfileCourse;

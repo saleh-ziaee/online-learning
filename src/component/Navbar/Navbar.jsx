@@ -7,6 +7,7 @@ import closeIcon from "@/assets/images/navbar/XCircle.svg"
 import {Link} from "react-router-dom";
 import Button from "@/component/Ui/Button/Button.jsx";
 import {useAuthContext} from "@/providers/AuthProvider.jsx";
+import "./Navbar.css"
 
 function Navbar( {onClick}) {
     const { isLoggedIn, currentUser, logout } = useAuthContext();
@@ -42,7 +43,7 @@ function Navbar( {onClick}) {
         //     </div>
         // </nav>
 
-        <nav role="navigation " className={"navigation bg-white h-[100vh] transition ease-in-out delay-150 absolute right-0 top-0 z-50 w-[80%]"}>
+        <nav role="navigation " className={"navigation bg-white h-[100vh] absolute right-0 top-0 z-50 w-[80%]"}>
             <div id="menuToggle" className={"flex flex-col items-center  gap-4"}>
 
                 <div className={"flex gap-4 px-4 w-full justify-between items-center cursor-pointer "}>
