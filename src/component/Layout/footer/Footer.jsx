@@ -56,9 +56,7 @@ function Footer(props) {
         </div>
         <div className={"section2-footer md:ms-[50px] w-full md:w-[15%]"}>
           <div className={"flex items-center"}>
-            <div
-              className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}
-            ></div>
+
             <span className={"text-black ms-3 font-bold text-[20px]"}>
               دسته بندی
             </span>
