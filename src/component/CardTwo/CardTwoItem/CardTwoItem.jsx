@@ -8,8 +8,9 @@ import cardImg from "@/assets/images/unsplash_7uSKXpksCKg.svg"
 import nextIcon from "@/assets/icon/next.svg"
 import points from "@/assets/images/points.svg"
 import InfoCard from '@/component/InfoCard/InfoCard';
+import {Link} from "react-router-dom";
 
-function CardTwoItem({img,title,student,level,lesson,score,days,children, className, props}) {
+function CardTwoItem({id,img,title,student,level,lesson,score,days,children, className, props}) {
     return (
         <div
             className={`${className} flex mt-8  flex-col gap-4 md:flex md:flex-row md:gap-2 items-center bg-[#FAFAFA] rounded-[12px] w-[100%] border-2 p-2`}>
@@ -56,8 +57,11 @@ function CardTwoItem({img,title,student,level,lesson,score,days,children, classN
                         </div>
 
                     </div>
-                    <Button size={"sm"} variant={"fill"}> بزن بریم <img src={nextIcon} className={"rotate-180"}/> </Button>
-                </div>
+                    <Link to={`/your-course/${id}`}>
+                        <Button size={"sm"} variant={"fill"}> بزن بریم <img src={nextIcon} className={"rotate-180"}/> </Button>
+                    </Link>
+                    </div>
+
             </div>
         </div>
     );

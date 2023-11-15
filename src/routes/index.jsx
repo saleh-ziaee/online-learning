@@ -70,6 +70,10 @@ const router = createBrowserRouter([
         element:<CourseDetail/>,
     },
     {
+        path:"/your-course/:id",
+        element:<ProfileCourse/>,
+    },
+    {
         path: "/ui",
         element:<Ui/>,
     },
