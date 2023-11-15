@@ -9,9 +9,19 @@ const apiSearchPost = async (filters) => {
     // if (filters?.q) {
     //     data = product.filter((post) => post.title.includes(filters.q));
     // }
+
     if (filters?.q) {
         data = product.filter((post) => post.title.includes(filters.q));
     }
+
+    if (filters?.c) {
+        data = product.filter((post) => post.category?.includes(filters.c));
+    }
+
+    // else if (filters?.c) {
+    //     category1 = product.filter((post) => post.category.includes(filters.category));
+    // }
+
     const result = await fakeRequest(data);
     // console.log(result)
 

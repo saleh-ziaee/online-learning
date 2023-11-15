@@ -15,7 +15,7 @@ const sizes = {
 };
 
 function Button({
-  className,
+  className, onclick,
   variant = "fill",
   children,
   size = "md",
@@ -23,7 +23,7 @@ function Button({
   ...props
 }) {
   return (
-    <button
+    <button onClick={onclick}
       type={type}
       className={`${className} ${variants[variant]} ${sizes[size]} flex justify-center text-center items-center gap-4 rounded-xl cursor-pointer`}
       {...props}

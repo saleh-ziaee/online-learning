@@ -9,9 +9,9 @@ import Button from "@/component/Ui/Button/Button.jsx";
 
 function PriceCard({offPrice,off,price,student,deadline,level,props}) {
     return (
-        <div className={"flex py-[24px] rounded-xl gap-[24px] border-2 p-5 mx-auto"}>
-            <div className={"flex-col card-price"}>
-                <div className={"flex gap-1 justify-center"}>
+        <div className={"flex py-[24px] rounded-xl gap-[24px] border-2 p-5 mx-auto "}>
+            <div className={"flex-col card-price w-full"}>
+                <div className={"flex gap-1 justify-center w-full"}>
                     <span>{offPrice} تومان</span>
                     <del className={"text-secondary-200 text-sm ms-2"}>{price} تومان</del>
                     <div className={"bg-orange-200 flex justify-center rounded-[8px] p-1 w-[100px]"}>

@@ -9,15 +9,12 @@ function Search(props) {
     const [searchData, setSearchData] = useState([]);
     // const [searchParams] = useSearchParams();
     const [searchParams,setSearchParams] =useSearchParams()
-
     const [click, SetClick] = useState(false);
     const [query,setQuery]= useState(()=>searchParams.get("q"))
-
     // const handleClick = () => {
     //     SetClick(true);
     // };
     //
-
     return (
         <div className={"w-[85%] mx-auto"}>
             <Header/>

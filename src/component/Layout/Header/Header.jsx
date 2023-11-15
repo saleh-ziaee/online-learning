@@ -6,7 +6,7 @@ import arrow from "../../../assets/images/Header/row.svg"
 import "./Header.css";
 import Search from "../../Ui/SearchInput/Search.jsx";
 import menuIcon from "@/assets/images/navbar/menu.png";
-import {Link} from "react-router-dom";
+import {Link, useSearchParams} from "react-router-dom";
 import Navbar from "@/component/Navbar/Navbar.jsx";
 import {useNavigate, useParams} from "react-router-dom";
 import {useAuthContext} from "@/providers/AuthProvider";
@@ -18,7 +18,19 @@ function Header(props) {
     const {userId} = useParams();
     const [isHovered, setIsHovered] = useState(false)
     const [isClicked, setIsClicked] = useState(false)
+    const [searchParams,setSearchParams] =useSearchParams()
+    const [query,setQuery]= useState(()=>searchParams.get("q"))
+    const handleSearch=(event)=>{
+        event.preventDefault();
+        navigate("/search")
+
+        searchParams.set("q",query)
+        setSearchParams((s)=>({...s,q:query}))
+
+        console.log(query)
+    }
     const handleMouseEnter = () => {
+
         setIsHovered(true);
     };
     const toggleMenu = () => {
@@ -49,26 +61,26 @@ function Header(props) {
                         </Link>
                     }
 
-                    <div className={"lg:flex lg:items-center hidden lg:gap-24"}>
+                    <div className={"lg:flex lg:items-center hidden lg:gap-16"}>
                         <div className={"cursor-pointer mr-[20px] text-[16px] text-[#080808] opacity-80"}>ارتباط با ما
                         </div>
-                        <div className={"cursor-pointer text-[16px] text-[#080808] opacity-80"}>فن آوری</div>
-                        <div className={"cursor-pointer text-[16px] text-[#080808] opacity-80"}>درباره ما</div>
-                        <div className={"z-40 cursor-pointer text-[16px] flex items-center category relative"}
+                        <div className={"cursor-pointer min-w-fit text-[16px] text-[#080808] opacity-80"}>فن آوری</div>
+                        <div className={"cursor-pointer min-w-fit text-[16px] text-[#080808] opacity-80"}>درباره ما</div>
+                        <div className={"z-40 cursor-pointer min-w-fit text-[16px] flex items-center category relative"}
                              onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                            <div className={"cursor-pointer text-[16px]  text-[#080808] opacity-80  capitalize"}>
+                            <div className={"cursor-pointer min-w-fit text-[16px]  text-[#080808] opacity-80  capitalize"}>
                                 دسته بندی
                             </div>
                             <img src={arrow} className={"arrow"}/>
                             {
                                 isHovered && (
                                     <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
-                                         className={"p-[20px] flex flex-col nested-category__section items-center justify-center absolute top-[25px] gap-[20px] w-100"}>
-                                        <div className="nested-item text-[13px] text-[#080808BF] opacity-75">Development
+                                         className={"p-[20px] flex flex-col nested-category__section items-center bg-white justify-center rounded-2xl absolute top-[25px] gap-[20px] w-100"}>
+                                        <div className="nested-item text-[13px] text-[#080808BF] hover:text-primary-500">Development
                                         </div>
-                                        <div className="nested-item text-[13px] text-[#080808BF] opacity-75">Development
+                                        <div className="nested-item text-[13px] text-[#080808BF] hover:text-primary-500">Development
                                         </div>
-                                        <div className="nested-item text-[13px] text-[#080808BF] opacity-75">Development
+                                        <div className="nested-item text-[13px] text-[#080808BF] hover:text-primary-500 ">Development
                                         </div>
                                     </div>
                                 )
@@ -77,7 +89,10 @@ function Header(props) {
                     </div>
                 </div>
                 <div className={"md:flex md:items-center md:justify-between left-header hidden md:gap-[40px]"}>
-                    <Search></Search>
+                    <Search
+                    onSubmit={handleSearch}
+                    onChange={(e) => setQuery(e.target.value)}
+                    />
                     <div className={"flex gap-4 items-center  "}>
                         {isLoggedIn ? (
                             <>
@@ -88,6 +103,9 @@ function Header(props) {
                                     {/*<span className={"text-dark"}>Behzad pashaei</span>*/}
                                     {/*<span className={"text-dark opacity-80"}>ui & ux designer</span>*/}
                                 </div>
+                                <Button variant="fill" onClick={logout}>
+                                    خروج از حساب
+                                </Button>
                             </>
                         ) : (
                             <div className="ml-auto">
