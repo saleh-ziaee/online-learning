@@ -12,7 +12,6 @@ function ProfileCourseSection1(props) {
                     title={detail.title}
                     video={detail.video}
                     description={detail.description}
-
                     />
                 ))
             }

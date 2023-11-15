@@ -3,23 +3,25 @@ import arrow from "../../assets/icon/arrows.svg";
 import Search from "../Ui/SearchInput/Search.jsx";
 import Button from "@/component/Ui/Button/Button.jsx";
 import SearchIcon from "@/assets/icon/SearchIcon.svg"
-import {useSearchParams} from "react-router-dom";
+import {useNavigate, useSearchParams} from "react-router-dom";
 function SearchPanel() {
+    const navigate = useNavigate()
+
     const [isClicked, setIsClicked] = useState(false)
     const [searchParams,setSearchParams] =useSearchParams()
-    const [query,setQuery]= useState(()=>searchParams.get("category"))
+    const [query,setQuery]= useState(()=>searchParams.get("c"))
 
     const handleSearch = (e) => {
         e.preventDefault();
         searchParams.set("q", query);
         setSearchParams((s) => ({ ...s, q: query }));
-        // Perform the search or any other necessary actions
     };
 
     const handleCategory = (selectedCategory) => {
-        searchParams.set("category", selectedCategory);
-        setSearchParams((s) => ({ ...s, category: selectedCategory }));
-        // Perform the search or any other necessary actions based on the selected category
+        navigate({
+            pathname: "/search",
+            search: 'c=' + selectedCategory
+        });
     };
     const toggleCategory = () => {
         setIsClicked(!isClicked)
@@ -41,7 +43,8 @@ function SearchPanel() {
                     isClicked&&(
                         <div  className={"flex flex-col w-[150px] items-start  justify-center gap-2 rounded-2xl bg-[#FAFAFA] top-24 p-4 absolute "}>
                             <div  onClick={ () => handleCategory("programing")}>برنامه نویسی</div>
-                            <div onClick={() => handleCategory("Category2")}>Category 2</div>                        </div>
+                            <div onClick={() => handleCategory("Category2")}>Category 2</div>
+                        </div>
                     )
                 }
             </Search>

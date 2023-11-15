@@ -21,14 +21,12 @@ function Cards({className, props}) {
     // const data = await apiSearchPost()
     // setSearchData(data)
     const q = searchParams.get("q");
-    const c = searchParamsCategory.get("category");
-    console.log(c)
+    const c = searchParamsCategory.get("c");
 
     const getSearchData = async ()=>{
         try {
             setIsLoading(true);
             const data = await apiSearchPost({ q ,c});
-
             setSearchData(data);
         } catch (error) {
             console.log(error);
@@ -49,7 +47,6 @@ function Cards({className, props}) {
                     <LoadingProduct/>
                     <LoadingProduct/>
                     </>
-                    
                 ) : searchData.length === 0 ? (
                     "چیزی یافت نشد."
                     ):(
