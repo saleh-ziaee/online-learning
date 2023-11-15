@@ -8,6 +8,7 @@ import {apiSearchPost} from  "@/api/search.js"
 import {useSearchParams} from "react-router-dom";
 import {Button} from "@mui/material";
 import {useNavigate} from "react-router";
+import LoadingProduct from "@/component/Loading/LoadingProduct.jsx";
 
 function Cards({className, props}) {
     const [searchData, setSearchData] = useState([]);
@@ -43,16 +44,14 @@ function Cards({className, props}) {
     return (
             <div className={ `${className} flex flex-col items-center justify-around w-full lg:grid lg:grid-cols-3 lg:gap-4 xl:grid xl:grid-cols-3 xl:gap-4 gap-4 md:gap-4 mx-auto mt-5 flex-wrap`}>
                 {isLoading?(
-                    <div className="animate-pulse mx-auto flex flex-col items-center gap-4 w-60">
-                        <div>
-                            <div className="w-48 h-6 bg-slate-400 rounded-md"></div>
-                            <div className="w-28 h-4 bg-slate-400 mx-auto mt-3 rounded-md"></div>
-                        </div>
-                        <div className="h-7 bg-slate-400 w-full rounded-md"></div>
-                        <div className="h-7 bg-slate-400 w-full rounded-md"></div>
-                        <div className="h-7 bg-slate-400 w-full rounded-md"></div>
-                        <div className="h-7 bg-slate-400 w-1/2 rounded-md"></div>
-                    </div>
+                    <>
+                    <LoadingProduct/>
+                    <LoadingProduct/>
+                    <LoadingProduct/>
+                    </>
+                    
+                ) : searchData.length === 0 ? (
+                    "چیزی یافت نشد."
                     ):(
                     searchData.map((item)=>(
                             <Card key={item.id} {...item}

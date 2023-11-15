@@ -57,6 +57,9 @@ function Navbar( {onClick}) {
                                 {/*<span className={"text-dark"}>Behzad pashaei</span>*/}
                                 {/*<span className={"text-dark opacity-80"}>ui & ux designer</span>*/}
                             </div>
+                            <Button variant="fill" onClick={logout}>
+                                خروج از حساب
+                            </Button>
                         </>
                     ): (
                         <div className="ml-auto">
