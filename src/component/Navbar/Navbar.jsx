@@ -7,6 +7,7 @@ import closeIcon from "@/assets/images/navbar/XCircle.svg"
 import {Link} from "react-router-dom";
 import Button from "@/component/Ui/Button/Button.jsx";
 import {useAuthContext} from "@/providers/AuthProvider.jsx";
+import exitIcon from "@/assets/images/sidebar/exit.svg"
 import "./Navbar.css"
 
 function Navbar( {onClick}) {
@@ -59,7 +60,7 @@ function Navbar( {onClick}) {
                                 {/*<span className={"text-dark opacity-80"}>ui & ux designer</span>*/}
                             </div>
                             <Button variant="fill" onClick={logout}>
-                                خروج از حساب
+                                <img src={exitIcon} alt=""/>
                             </Button>
                         </>
                     ): (

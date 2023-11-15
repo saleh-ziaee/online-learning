@@ -45,7 +45,7 @@ function ProfileCourse(props) {
             {loading || !yourCourse ? (
                 <div>loading ...</div>
             ) : (
-            <div className={"md:flex w-full md:items-center bg-[#F3F5FF] h-[100vh] relative "}>
+            <div className={"md:flex w-full md:items-center bg-[#F3F5FF] h-[100vh] relative md:overflow-hidden"}>
                 {
                     isClicked&&(
                         <Sidebar onClick={toggleMenu} className={"flex z-50 absolute right-0 top-0 w-[60%] md:hidden"}></Sidebar>
@@ -71,7 +71,16 @@ function ProfileCourse(props) {
                     {/* */}
                     {/*</div>*/}
                     <div className={"mt-5"}>
-                        <ProfileCourseSection1/>
+                        {
+                            yourCourse.map((detail)=>(
+                                <ProfileCourseUi
+                                    key={detail.id}
+                                    title={detail.title}
+                                    video={detail.video}
+                                    description={detail.description}
+                                />
+                            ))
+                        }
                     </div>
                 </div>
             </div>

@@ -11,6 +11,7 @@ import Navbar from "@/component/Navbar/Navbar.jsx";
 import {useNavigate, useParams} from "react-router-dom";
 import {useAuthContext} from "@/providers/AuthProvider";
 import Button from "@/component/Ui/Button/Button.jsx";
+import exitIcon from "@/assets/images/sidebar/exit.svg";
 
 function Header(props) {
     const {isLoggedIn, currentUser, logout} = useAuthContext();
@@ -103,8 +104,8 @@ function Header(props) {
                                     {/*<span className={"text-dark"}>Behzad pashaei</span>*/}
                                     {/*<span className={"text-dark opacity-80"}>ui & ux designer</span>*/}
                                 </div>
-                                <Button variant="fill" onClick={logout}>
-                                    خروج از حساب
+                                <Button size={"sm"} variant="fill" onClick={logout}>
+                                    <img src={exitIcon} alt=""/>
                                 </Button>
                             </>
                         ) : (
