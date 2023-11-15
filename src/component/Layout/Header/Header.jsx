@@ -6,7 +6,7 @@ import arrow from "../../../assets/images/Header/row.svg"
 import "./Header.css";
 import Search from "../../Ui/SearchInput/Search.jsx";
 import menuIcon from "@/assets/images/navbar/menu.png";
-import {Link} from "react-router-dom";
+import {Link, useSearchParams} from "react-router-dom";
 import Navbar from "@/component/Navbar/Navbar.jsx";
 import {useNavigate, useParams} from "react-router-dom";
 import {useAuthContext} from "@/providers/AuthProvider";
@@ -18,6 +18,17 @@ function Header(props) {
     const {userId} = useParams();
     const [isHovered, setIsHovered] = useState(false)
     const [isClicked, setIsClicked] = useState(false)
+    const [searchParams,setSearchParams] =useSearchParams()
+    const [query,setQuery]= useState(()=>searchParams.get("q"))
+    const handleSearch=(event)=>{
+        event.preventDefault();
+        navigate("/search")
+
+        searchParams.set("q",query)
+        setSearchParams((s)=>({...s,q:query}))
+
+        console.log(query)
+    }
     const handleMouseEnter = () => {
 
         setIsHovered(true);
@@ -78,7 +89,10 @@ function Header(props) {
                     </div>
                 </div>
                 <div className={"md:flex md:items-center md:justify-between left-header hidden md:gap-[40px]"}>
-                    <Search></Search>
+                    <Search
+                    onSubmit={handleSearch}
+                    onChange={(e) => setQuery(e.target.value)}
+                    />
                     <div className={"flex gap-4 items-center  "}>
                         {isLoggedIn ? (
                             <>

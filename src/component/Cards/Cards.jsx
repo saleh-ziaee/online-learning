@@ -14,16 +14,19 @@ function Cards({className, props}) {
     const [isLoading, setIsLoading] = useState(false);
 
     const [searchParams] = useSearchParams();
+    const [searchParamsCategory] = useSearchParams()
 
 
     // const data = await apiSearchPost()
     // setSearchData(data)
     const q = searchParams.get("q");
+    const c = searchParamsCategory.get("category");
+    console.log(c)
 
     const getSearchData = async ()=>{
         try {
             setIsLoading(true);
-            const data = await apiSearchPost({ q });
+            const data = await apiSearchPost({ q ,c});
 
             setSearchData(data);
         } catch (error) {
@@ -34,7 +37,7 @@ function Cards({className, props}) {
     }
     useEffect(() => {
         getSearchData();
-    }, [q]);
+    }, [q ,c]);
     // console.log(getSearchData)
 
     return (
