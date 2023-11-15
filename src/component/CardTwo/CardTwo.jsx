@@ -21,6 +21,7 @@ function CardTwo(props) {
                     cardtowarray.map((item)=>(
                         <CardTwoItem
                             key={item.id}
+                            id={item.id}
                             img={item.image}
                             title={item.title}
                             student={item.student}
@@ -36,6 +37,7 @@ function CardTwo(props) {
 
                 )
             </div>
+
         </div>
     );
 }
