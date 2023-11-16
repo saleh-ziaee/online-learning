@@ -2,9 +2,9 @@ import React from 'react';
 import ProfileCourseSection1 from "@/component/ProfileCourse/ProfileCourseSection1.jsx";
 import videoOne from "@/assets/videos/15-working-with-props.mp4"
 
-function ProfileCourseUi({title,description,videoSrc}) {
+function ProfileCourseUi({title,description,videoSrc,url}) {
     return (
-        <div className={" "}>
+        <div className={""}>
             <div className={"flex flex-col basis-1/2"}>
                 <div className={"flex flex-row items-center gap-x-2"}>
                     <div className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}></div>
@@ -13,7 +13,7 @@ function ProfileCourseUi({title,description,videoSrc}) {
                 <div>
                     {/*<img className={"mt-10"} src={Trailer} alt=""/>*/}
                     <video className={'w-full'} controls="controls">
-                        <source type="video/mp4" src={videoSrc}/>
+                        <source type="video/mp4" url={url} src={videoSrc}/>
                     </video>
                 </div>
                 <div className={"text-right text-gray-500 mt-10"}>

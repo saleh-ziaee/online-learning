@@ -3,7 +3,6 @@ export const profilecourse = [
     {
         id:"1",
         title:"دوره مقدماتی برنامه نویسی فرانت‌اند - 11111111111111React, NextJs",
-        video:"",
         description:"لی برنامه‌نویسی فرانت‌اند رو از صفر تا حل چالش‌های واقعی یاد می‌گیری." +
             "قسمت رابط کاربری یک نرم افزار می‌تواند پیچیدگی‌های زیادی داشته باشد. به عنوان مثال، ممکن است المنت‌های زیادی بعد از درخواست‌های HTTP به سرور دچار تغییر شوند. در چنین مواردی کتابخانه React به عنوان یک راه حل در نظر گرفته می‌شود. معماری این کتابخانه به گونه‌ای توسعه داده شده که بتواند تغییرات قسمت فرانت‌اند را با سرعت بیشتری پیاده سازی کند. به همین دلیل React به یکی از ابزارهای محبوب توسعه فرانت‌اند برای بسیاری از شرکت‌های نرم افزاری تبدیل شده است. محبوبیت بالای React باعث شده است تا شرکت‌های بزرگی همانند Instagram ،Netflix ،Uber و … از آن برای ایجاد و توسعه سایت‌های خود استفاده کنند. همینطور استارت‌اپ‌های اسنپ، دیوار، رده‌اند.hjhkhkhjkhjhhk",
         sections: [
@@ -11,12 +10,13 @@ export const profilecourse = [
                 title: 'شروع ماجراجویی توسعه وب با HTML/CSS',
                 videos: 3,
                 watchTime: 5,
-                subsections: [
+                subSection: [
                     {
                         id:1,
                         title: 'Ijs.',
-                        videoSrc:videosOne,
+                        video:  videosOne ,
                         watchTime: 1,
+                        description: 'asdasdadsasdasdasd'
                     },
                     {
                         id:2,
@@ -35,7 +35,7 @@ export const profilecourse = [
                 title: 'شروع ماجراجویی توسعه وب با ',
                 videos: 3,
                 watchTime: 7,
-                subsections: [
+                subSection: [
                     {
                         id: 1,
                         title: 'Introduction to HTML: Basic syntax, tags, elements, and attributes.',
@@ -58,7 +58,7 @@ export const profilecourse = [
                 title: 'شروع ماجراجویی توسعه وب با HTML/CSS',
                 videos: 3,
                 watchTime: 5,
-                subsections: [
+                subSection: [
                     {
                         id: 1,
                         title: 'Introduction to HTML: Basic syntax, tags, elements, and attributes.',

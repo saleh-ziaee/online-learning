@@ -96,7 +96,7 @@ function CourseDetail() {
                             </div>
                             <div className={"mt-8"}>
                                 {
-                                    courseDetail.sections?.map((item) => (
+                                    courseDetail.sections.map((item) => (
                                         <AccordionCourse {...item}
                                         />
                                     ))}

@@ -11,10 +11,12 @@ import {apiGetCourseDetail} from "@/api/course.js";
 import {apiGetYourCourse} from "@/api/yourcourse.js";
 import AccordionCourse from "@/component/Accordion/AccordionCourse.jsx";
 
+
 function ProfileCourse(props) {
     const {id} = useParams();
     const [loading, setLoading] = useState(false)
     const [yourCourse, setYourCourse] = useState(null)
+    const [accordionData, setAccordionData] = useState(null)
 
     const [isClicked, setIsClicked] = useState(false)
     const toggleMenu = () => {
@@ -40,8 +42,10 @@ function ProfileCourse(props) {
             getyourCourse(id)
         }
     }, [id]);
-
-    // console.log(yourCourse);
+    const getAccordionData=(item)=>{
+        setAccordionData(item)
+    }
+    console.log(accordionData);
 
     return (
         <div className={""}>
@@ -89,8 +93,12 @@ function ProfileCourse(props) {
                         {/*}*/}
                         {
                             <ProfileCourseUi
-                            description={yourCourse.description}
-                            title={yourCourse.title}
+                            // description={yourCourse.description}
+                            // title={yourCourse.title}
+                            title={accordionData?.title}
+                            videoSrc={accordionData?.video}
+                            description={accordionData?.description}
+                            url={accordionData?.video}
                             // videoSrc={yourCourse.sections.map((section)=>(
                             //     section.videoSrc
                             // ))}
@@ -100,7 +108,10 @@ function ProfileCourse(props) {
                 <div className={" basis-1/2"}>
                     {
                         yourCourse.sections.map((item) => (
-                            <AccordionCourse  {...item}/>
+                            <AccordionCourse  {...item}
+                            onClick={getAccordionData}
+                            />
+
                         ))
 
                     }

@@ -37,7 +37,7 @@ export const product =[
                 title: 'شروع ماجراجویی توسعه وب با HTML/CSS',
                 videos: 3,
                 watchTime: 5,
-                subsections: [
+                subSection: [
                     {
                         title: 'Introduction to vcbcvbcvbcelements, and attributes.',
                         watchTime: 1,
@@ -57,7 +57,7 @@ export const product =[
                 title: 'شروع ماجراجویی توسعه وب با ',
                 videos: 3,
                 watchTime: 7,
-                subsections: [
+                subSection: [
                     {
                         title: 'Introduction to HTML: Basic syntax, tags, elements, and attributes.',
                         watchTime: 1,
@@ -77,7 +77,7 @@ export const product =[
                 title: 'شروع ماجراجویی توسعه وب با HTML/CSS',
                 videos: 3,
                 watchTime: 5,
-                subsections: [
+                subSection: [
                     {
                         title: 'Introduction to HTML: Basic syntax, tags, elements, and attributes.',
                         watchTime: 1,

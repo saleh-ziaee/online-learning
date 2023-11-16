@@ -9,7 +9,7 @@ const accordion = async () => {
 
     const result = await fakeRequest(data);
 
-    console.log(result)
+    // console.log(result)
     return result;
 }
 
