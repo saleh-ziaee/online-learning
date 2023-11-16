@@ -9,6 +9,7 @@ const apiGetCourseDetail = async (course_id) => {
 
     const result = await fakeRequest(data);
 
+    console.log(result)
     return result;
 }
 

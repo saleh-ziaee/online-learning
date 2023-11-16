@@ -1,10 +1,84 @@
+import videosOne from "@/assets/videos/15-working-with-props.mp4"
 export const profilecourse = [
     {
         id:"1",
         title:"دوره مقدماتی برنامه نویسی فرانت‌اند - 11111111111111React, NextJs",
         video:"",
         description:"لی برنامه‌نویسی فرانت‌اند رو از صفر تا حل چالش‌های واقعی یاد می‌گیری." +
-            "قسمت رابط کاربری یک نرم افزار می‌تواند پیچیدگی‌های زیادی داشته باشد. به عنوان مثال، ممکن است المنت‌های زیادی بعد از درخواست‌های HTTP به سرور دچار تغییر شوند. در چنین مواردی کتابخانه React به عنوان یک راه حل در نظر گرفته می‌شود. معماری این کتابخانه به گونه‌ای توسعه داده شده که بتواند تغییرات قسمت فرانت‌اند را با سرعت بیشتری پیاده سازی کند. به همین دلیل React به یکی از ابزارهای محبوب توسعه فرانت‌اند برای بسیاری از شرکت‌های نرم افزاری تبدیل شده است. محبوبیت بالای React باعث شده است تا شرکت‌های بزرگی همانند Instagram ،Netflix ،Uber و … از آن برای ایجاد و توسعه سایت‌های خود استفاده کنند. همینطور استارت‌اپ‌های اسنپ، دیوار، رده‌اند.hjhkhkhjkhjhhk"
+            "قسمت رابط کاربری یک نرم افزار می‌تواند پیچیدگی‌های زیادی داشته باشد. به عنوان مثال، ممکن است المنت‌های زیادی بعد از درخواست‌های HTTP به سرور دچار تغییر شوند. در چنین مواردی کتابخانه React به عنوان یک راه حل در نظر گرفته می‌شود. معماری این کتابخانه به گونه‌ای توسعه داده شده که بتواند تغییرات قسمت فرانت‌اند را با سرعت بیشتری پیاده سازی کند. به همین دلیل React به یکی از ابزارهای محبوب توسعه فرانت‌اند برای بسیاری از شرکت‌های نرم افزاری تبدیل شده است. محبوبیت بالای React باعث شده است تا شرکت‌های بزرگی همانند Instagram ،Netflix ،Uber و … از آن برای ایجاد و توسعه سایت‌های خود استفاده کنند. همینطور استارت‌اپ‌های اسنپ، دیوار، رده‌اند.hjhkhkhjkhjhhk",
+        sections: [
+            {
+                title: 'شروع ماجراجویی توسعه وب با HTML/CSS',
+                videos: 3,
+                watchTime: 5,
+                subsections: [
+                    {
+                        id:1,
+                        title: 'Ijs.',
+                        videoSrc:videosOne,
+                        watchTime: 1,
+                    },
+                    {
+                        id:2,
+                        title: 'Introduction to CSS: vbcvbc styling, selectors, properties, and values.',
+                        watchTime: '1:30',
+                    },
+                    {
+                        id:3,
+                        title: 'Introduction to CSS: Basic styling, selectors, properties, and values.',
+                        watchTime: '1:30',
+                    },
+                    // Add more subsections here if needed
+                ],
+            },
+            {
+                title: 'شروع ماجراجویی توسعه وب با ',
+                videos: 3,
+                watchTime: 7,
+                subsections: [
+                    {
+                        id: 1,
+                        title: 'Introduction to HTML: Basic syntax, tags, elements, and attributes.',
+                        watchTime: 1,
+                    },
+                    {
+                        id: 2,
+                        title: 'Introduction to CSS: Basic styling, selectors, properties, and values.',
+                        watchTime: '1:30',
+                    },
+                    {
+                        id: 3,
+                        title: 'Introduction to CSS: Basic styling, selectors, properties, and values.',
+                        watchTime: '1:30',
+                    },
+                    // Add more subsections here if needed
+                ],
+            },
+            {
+                title: 'شروع ماجراجویی توسعه وب با HTML/CSS',
+                videos: 3,
+                watchTime: 5,
+                subsections: [
+                    {
+                        id: 1,
+                        title: 'Introduction to HTML: Basic syntax, tags, elements, and attributes.',
+                        watchTime: 1,
+                    },
+                    {
+                        id: 2,
+                        title: 'Introduction to CSS: Basic styling, selectors, properties, and values.',
+                        watchTime: '1:30',
+                    },
+                    {
+                        id: 3,
+                        title: 'Introduction to CSS: Basic styling, selectors, properties, and values.',
+                        watchTime: '1:30',
+                    },
+                    // Add more subsections here if needed
+                ],
+            },
+        ],
+
     },
     {
         id:"2",

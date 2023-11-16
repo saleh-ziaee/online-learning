@@ -27,7 +27,7 @@ function CourseDetail() {
             setLoading(true)
 
             const result = await apiGetCourseDetail(id)
-
+            // console.log(result.sections)
             setCourseDetail(result)
 
         } catch (error) {
@@ -95,7 +95,6 @@ function CourseDetail() {
 
                             </div>
                             <div className={"mt-8"}>
-
                                 {
                                     courseDetail.sections?.map((item) => (
                                         <AccordionCourse {...item}

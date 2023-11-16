@@ -1,16 +1,16 @@
 import {fakeRequest} from "@/fake-date/utils.js"
 import {profilecourse} from "@/fake-array/profilecourse.js"
 
-const apiGetYourCourse = async (yourcourse_id) => {
+const accordion = async () => {
 
     // const result = await apiClient.get(`/course/${course_id}`)
 
-    var data = profilecourse.find((y) => y.id == yourcourse_id)
+    var data = Object(profilecourse)
 
     const result = await fakeRequest(data);
-    // console.log(result)
 
+    console.log(result)
     return result;
 }
 
-export {apiGetYourCourse}
+export {accordion}

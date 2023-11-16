@@ -9,12 +9,12 @@ import ProfileCourseSection1 from "@/component/ProfileCourse/ProfileCourseSectio
 import {useParams} from "react-router-dom";
 import {apiGetCourseDetail} from "@/api/course.js";
 import {apiGetYourCourse} from "@/api/yourcourse.js";
+import AccordionCourse from "@/component/Accordion/AccordionCourse.jsx";
 
 function ProfileCourse(props) {
     const {id} = useParams();
     const [loading, setLoading] = useState(false)
     const [yourCourse, setYourCourse] = useState(null)
-    console.log(yourCourse);
 
     const [isClicked, setIsClicked] = useState(false)
     const toggleMenu = () => {
@@ -26,6 +26,7 @@ function ProfileCourse(props) {
         try {
             setLoading(true)
             const result = await apiGetYourCourse(id)
+            console.log(result)
 
             setYourCourse(result)
         } catch (error) {
@@ -40,8 +41,11 @@ function ProfileCourse(props) {
         }
     }, [id]);
 
+    // console.log(yourCourse);
+
     return (
         <div className={""}>
+
             {loading || !yourCourse ? (
                 <div>loading ...</div>
             ) : (
@@ -70,21 +74,43 @@ function ProfileCourse(props) {
                     {/*    " coursesSection flex flex-col items-center justify-center w-full md:grid md:grid-cols-1 lg:grid lg:grid-cols-2 lg:gap-4  gap-4 md:gap-4 mx-auto mt-5 pb-24 scrollNone  md:h-[100vh] md:overflow-scroll md:pb-24 md:justify-start  flex-wrap md:scrollNone"}>*/}
                     {/* */}
                     {/*</div>*/}
-                    <div className={"mt-5"}>
+                    <div className={"flex items-center justify-center p-8 gap-8"}>
+
+                    <div className={"mt-5 basis-1/2"}>
+                        {/*{*/}
+                        {/*    yourCourse.map((detail)=>(*/}
+                        {/*        <ProfileCourseUi*/}
+                        {/*            key={detail.id}*/}
+                        {/*            title={detail.title}*/}
+                        {/*            video={detail.video}*/}
+                        {/*            description={detail.description}*/}
+                        {/*        />*/}
+                        {/*    ))*/}
+                        {/*}*/}
                         {
-                            yourCourse.map((detail)=>(
-                                <ProfileCourseUi
-                                    key={detail.id}
-                                    title={detail.title}
-                                    video={detail.video}
-                                    description={detail.description}
-                                />
-                            ))
+                            <ProfileCourseUi
+                            description={yourCourse.description}
+                            title={yourCourse.title}
+                            // videoSrc={yourCourse.sections.map((section)=>(
+                            //     section.videoSrc
+                            // ))}
+                            />
                         }
                     </div>
+                <div className={" basis-1/2"}>
+                    {
+                        yourCourse.sections.map((item) => (
+                            <AccordionCourse  {...item}/>
+                        ))
+
+                    }
+                </div>
+                </div>
                 </div>
             </div>
             )}
+
+
         </div>
     );
 }
