@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../component/Ui/Button/Button';
 import {Helmet} from "react-helmet";
+import DescriptionCards from "@/component/DescriptionCards /DescriptionCards.jsx";
 
 // import HeaderProduct from '@/component/HeaderProduct/HeaderProduct';
 // import CourseInfo from '@/component/CourseInfo/CourseInfo';
