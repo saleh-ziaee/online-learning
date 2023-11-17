@@ -76,7 +76,6 @@ export default function AccordionCourse({title,videos,watchTime,subSection, onCl
                     <Typography>
                         <div className={"flex flex-col gap-y-4 " +
                             ""}>
-
                         {subSection.map((item) => (
                                 <div className={"flex justify-between"} key={item.id}>
                                     <img src={videoIcon} alt={"video-icon"}/>

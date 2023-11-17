@@ -43,7 +43,7 @@ function SearchPanel() {
                     isClicked&&(
                         <div  className={"flex flex-col w-[150px] items-start  justify-center gap-2 rounded-2xl bg-[#FAFAFA] top-24 p-4 absolute "}>
                             <div  onClick={ () => handleCategory("programing")}>برنامه نویسی</div>
-                            <div onClick={() => handleCategory("Category2")}>Category 2</div>
+                            <div onClick={() => handleCategory("graphic")}>گرافیک</div>
                         </div>
                     )
                 }

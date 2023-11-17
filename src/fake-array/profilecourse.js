@@ -1,4 +1,5 @@
 import videosOne from "@/assets/videos/15-working-with-props.mp4"
+import videosTwo from "@/assets/videos/16-using-children-prop.mp4"
 export const profilecourse = [
     {
         id:"1",
@@ -14,18 +15,21 @@ export const profilecourse = [
                     {
                         id:1,
                         title: 'Ijs.',
-                        video:  videosOne ,
+                        videoSrc: { url: videosOne }  ,
                         watchTime: 1,
+
                         description: 'asdasdadsasdasdasd'
                     },
                     {
                         id:2,
+                        videoSrc: videosTwo,
                         title: 'Introduction to CSS: vbcvbc styling, selectors, properties, and values.',
                         watchTime: '1:30',
                     },
                     {
                         id:3,
                         title: 'Introduction to CSS: Basic styling, selectors, properties, and values.',
+                        videoSrc: "/src/assets/videos/16-using-children-prop.mp4",
                         watchTime: '1:30',
                     },
                     // Add more subsections here if needed
@@ -58,6 +62,30 @@ export const profilecourse = [
                 title: 'شروع ماجراجویی توسعه وب با HTML/CSS',
                 videos: 3,
                 watchTime: 5,
+                subSection: [
+                    {
+                        id: 1,
+                        title: 'Introduction to HTML: Basic syntax, tags, elements, and attributes.',
+                        watchTime: 1,
+                    },
+                    {
+                        id: 2,
+                        title: 'Introduction to CSS: Basic styling, selectors, properties, and values.',
+                        watchTime: '1:30',
+                    },
+                    {
+                        id: 3,
+                        title: 'Introduction to CSS: Basic styling, selectors, properties, and values.',
+                        watchTime: '1:30',
+                    },
+
+                    // Add more subsections here if needed
+                ],
+            },
+            {
+                title: 'شروع ماجراجویی توسعه وب با ',
+                videos: 3,
+                watchTime: 7,
                 subSection: [
                     {
                         id: 1,

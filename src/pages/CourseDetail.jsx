@@ -12,6 +12,8 @@ import folderIcon from "@/assets/images/CourseDetail/folder.png";
 import videoIcon from "@/assets/images/CourseDetail/videos.png";
 import  watchIcon from "@/assets/images/CourseDetail/watch.png"
 import TeacherCards from "@/component/teacherCards/TeacherCards.jsx";
+import Header from "@/component/Layout/Header/Header.jsx";
+import Footer from "@/component/Layout/footer/Footer.jsx";
 
 function CourseDetail() {
     const {id} = useParams();
@@ -47,7 +49,8 @@ function CourseDetail() {
 
     }
     return (
-        <div className={""}>
+        <div className={"w-[85%] mx-auto"}>
+            <Header/>
             {loading || !courseDetail ? (
                 <div>loading ...</div>
             ) : (
@@ -130,6 +133,7 @@ function CourseDetail() {
                     </div>
                 </div>
             )}
+            <Footer/>
         </div>
     );
 }

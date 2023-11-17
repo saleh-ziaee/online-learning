@@ -21,10 +21,8 @@ function Cards({className, props}) {
     const c = searchParamsCategory.get("c");
     const {data , isLoading}=useQuery({
         queryKey:["cards"],
-        // queryFn:apiSearchPost({q,c})
         queryFn: () => apiSearchPost({q,c})
     })
-    // console.log(result)
     // const [searchData, setSearchData] = useState([]);
     // const [isLoading, setIsLoading] = useState(false);
 
@@ -69,15 +67,6 @@ function Cards({className, props}) {
 
                     ))
                 )}
-            {/*<Card></Card>*/}
-            {/*<Card></Card>*/}
-            {/*<Card></Card>*/}
-            {/*<Card></Card>*/}
-            {/*<Card></Card>*/}
-            {/*<Card></Card>*/}
-            {/*<Card></Card>*/}
-            {/*<Card></Card>*/}
-
             </div>
 
     );

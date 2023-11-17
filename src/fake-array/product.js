@@ -113,7 +113,7 @@ export const product =[
                 title: 'شروع ماجراجویی توسعه وب با HTML/CSS',
                 videos: 3,
                 watchTime: 5,
-                subsections: [
+                subSection: [
                     {
                         title: 'Introduction to vcbcvbcvbcelements, and attributes.',
                         watchTime: 1,
@@ -133,7 +133,7 @@ export const product =[
                 title: 'شروع ماجراجویی توسعه وب با ',
                 videos: 3,
                 watchTime: 7,
-                subsections: [
+                subSection: [
                     {
                         title: 'Introduction to HTML: Basic syntax, tags, elements, and attributes.',
                         watchTime: 1,
@@ -153,7 +153,7 @@ export const product =[
                 title: 'شروع ماجراجویی توسعه وب با HTML/CSS',
                 videos: 3,
                 watchTime: 5,
-                subsections: [
+                subSection: [
                     {
                         title: 'Introduction to HTML: Basic syntax, tags, elements, and attributes.',
                         watchTime: 1,
@@ -178,6 +178,7 @@ export const product =[
         title: 'آموزش گرافیک',
         student:60,
         lesson:50,
+        category:"graphic",
         level :'حرفه ای ',
         point :3,
         descriptions:'تو این دوره، به صورت تیمی، با کسایی مثل خودت که علاقه به یادگیری دارند، در کنار منتورهای دوره، روی پروژه‌های عملی برنامه‌نویسی فرانت‌اند رو از صفر تا حل چالش‌های واقعی یاد می‌گیری.' +
@@ -197,7 +198,7 @@ export const product =[
                 title: 'شروع ماجراجویی توسعه وب با HTML/CSS',
                 videos: 3,
                 watchTime: 5,
-                subsections: [
+                subSection: [
                     {
                         title: 'Introduction to vcbcvbcvbcelements, and attributes.',
                         watchTime: 1,
@@ -217,7 +218,7 @@ export const product =[
                 title: 'شروع ماجراجویی توسعه وب با ',
                 videos: 3,
                 watchTime: 7,
-                subsections: [
+                subSection: [
                     {
                         title: 'Introduction to HTML: Basic syntax, tags, elements, and attributes.',
                         watchTime: 1,
@@ -237,7 +238,7 @@ export const product =[
                 title: 'شروع ماجراجویی توسعه وب با HTML/CSS',
                 videos: 3,
                 watchTime: 5,
-                subsections: [
+                subSection: [
                     {
                         title: 'Introduction to HTML: Basic syntax, tags, elements, and attributes.',
                         watchTime: 1,
@@ -259,6 +260,7 @@ export const product =[
         id:4,
         image: img1,
         title: 'آموزش برنامه نویسی فرانت',
+        category:"programing",
         student:80,
         lesson:110,
         level :'مبتدی',
@@ -283,6 +285,8 @@ export const product =[
         id:6,
         image: img3,
         title: 'آموزش گرافیک',
+        category:"graphic",
+
         student:60,
         lesson:50,
         level :'متوسط',
