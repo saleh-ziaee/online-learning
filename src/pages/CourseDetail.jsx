@@ -12,6 +12,7 @@ import folderIcon from "@/assets/images/CourseDetail/folder.png";
 import videoIcon from "@/assets/images/CourseDetail/videos.png";
 import  watchIcon from "@/assets/images/CourseDetail/watch.png"
 import TeacherCards from "@/component/teacherCards/TeacherCards.jsx";
+import LoadingCourseDetail from "@/component/Loading/LoadingCourseDetail.jsx";
 
 function CourseDetail() {
     const {id} = useParams();
@@ -49,7 +50,10 @@ function CourseDetail() {
     return (
         <div className={""}>
             {loading || !courseDetail ? (
-                <div>loading ...</div>
+                <div className={"flex justify-center items-center h-[900px]"}>
+
+                    <LoadingCourseDetail></LoadingCourseDetail>
+                </div>
             ) : (
                 <div className={"container w-[85%] mx-auto flex flex-col-reverse md:flex-row justify-between"}>
                     <div className={"mt-24 basis-2/3"}>
