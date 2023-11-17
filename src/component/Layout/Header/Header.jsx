@@ -103,9 +103,11 @@ function Header(props) {
                                     {/*<span className={"text-dark"}>Behzad pashaei</span>*/}
                                     {/*<span className={"text-dark opacity-80"}>ui & ux designer</span>*/}
                                 </div>
-                                <Button size={"sm"} variant="fill" onClick={logout}>
-                                    <img src={exitIcon} alt=""/>
-                                </Button>
+                                <div
+                                    onClick={logout}
+                                    className={"cursor-pointer flex items-center justify-center bg-red-100 border-2 border-red-400 rounded-2xl w-[70px] h-[70px]"}>
+                                    <img className={"w-[45%]"} src={exitIcon}/>
+                                </div>
                             </>
                         ) : (
                             <div className="ml-auto">

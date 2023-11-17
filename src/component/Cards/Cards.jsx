@@ -67,6 +67,17 @@ function Cards({className, props}) {
 
                     ))
                 )}
+
+            {/*<Card></Card>*/}
+            {/*<Card></Card>*/}
+            {/*<Card></Card>*/}
+            {/*<Card></Card>*/}
+            {/*<Card></Card>*/}
+            {/*<Card></Card>*/}
+            {/*<Card></Card>*/}
+            {/*<Card>
+            7</Card>*/}
+
             </div>
 
     );
