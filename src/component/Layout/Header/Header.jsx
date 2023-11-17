@@ -43,7 +43,7 @@ function Header(props) {
     return (
         <header
             className={"fixed shadow-xl top-0 mx-auto px-4 py-4 w-[100%] bg-white mb-8 left-0 right-0  z-[999999999999]"}>
-            <div className={"flex items-center mx-auto justify-between w-[100%] relative gap-[40px]"}>
+            <div className={"flex items-center mx-auto justify-between w-[85%] relative gap-[40px]"}>
                 <div className={"flex flex-col items-center gap-4 md:hidden"}>
                     <button onClick={toggleMenu}>
                         <img src={menuIcon} alt={"menu-icon"} className={"w-[24px] h-[24px]"}/>
@@ -61,7 +61,6 @@ function Header(props) {
                             <img src={Logo} alt={"logo"}/>
                         </Link>
                     }
-
                     <div className={"lg:flex lg:items-center hidden lg:gap-16"}>
                         <div className={"cursor-pointer mr-[20px] text-[16px] text-[#080808] opacity-80"}>ارتباط با ما
                         </div>

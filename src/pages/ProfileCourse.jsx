@@ -9,12 +9,16 @@ import ProfileCourseSection1 from "@/component/ProfileCourse/ProfileCourseSectio
 import {useParams} from "react-router-dom";
 import {apiGetCourseDetail} from "@/api/course.js";
 import {apiGetYourCourse} from "@/api/yourcourse.js";
+import AccordionCourse from "@/component/Accordion/AccordionCourse.jsx";
+import videiOne from "@/assets/videos/16-using-children-prop.mp4"
+import VideoPlayer from "@/component/video/VideoPlayer.jsx";
+
 
 function ProfileCourse(props) {
     const {id} = useParams();
     const [loading, setLoading] = useState(false)
     const [yourCourse, setYourCourse] = useState(null)
-    console.log(yourCourse);
+    const [accordionData, setAccordionData] = useState(null)
 
     const [isClicked, setIsClicked] = useState(false)
     const toggleMenu = () => {
@@ -26,6 +30,7 @@ function ProfileCourse(props) {
         try {
             setLoading(true)
             const result = await apiGetYourCourse(id)
+            console.log(result)
 
             setYourCourse(result)
         } catch (error) {
@@ -39,13 +44,18 @@ function ProfileCourse(props) {
             getyourCourse(id)
         }
     }, [id]);
+    const getAccordionData=(item)=>{
+        setAccordionData(item)
+    }
+    console.log(accordionData);
 
     return (
-        <div className={""}>
+        <div className={"md:flex w-full md:items-center bg-[#F3F5FF]  relative "}>
+
             {loading || !yourCourse ? (
                 <div>loading ...</div>
             ) : (
-            <div className={"md:flex w-full md:items-center bg-[#F3F5FF] h-[100vh] relative md:overflow-hidden"}>
+            <div className={"md:flex w-full md:items-center bg-[#F3F5FF]  relative "}>
                 {
                     isClicked&&(
                         <Sidebar onClick={toggleMenu} className={"flex z-50 absolute right-0 top-0 w-[60%] md:hidden"}></Sidebar>
@@ -70,21 +80,53 @@ function ProfileCourse(props) {
                     {/*    " coursesSection flex flex-col items-center justify-center w-full md:grid md:grid-cols-1 lg:grid lg:grid-cols-2 lg:gap-4  gap-4 md:gap-4 mx-auto mt-5 pb-24 scrollNone  md:h-[100vh] md:overflow-scroll md:pb-24 md:justify-start  flex-wrap md:scrollNone"}>*/}
                     {/* */}
                     {/*</div>*/}
-                    <div className={"mt-5"}>
+                    <div className={"flex flex-col md:flex md:flex-row md:basis-4/5 items-center justify-center p-8 gap-8"}>
+
+                    <div className={"mt-5 basis-1/2"}>
+                        {/*{*/}
+                        {/*    yourCourse.map((detail)=>(*/}
+                        {/*        <ProfileCourseUi*/}
+                        {/*            key={detail.id}*/}
+                        {/*            title={detail.title}*/}
+                        {/*            video={detail.video}*/}
+                        {/*            description={detail.description}*/}
+                        {/*        />*/}
+                        {/*    ))*/}
+                        {/*}*/}
                         {
-                            yourCourse.map((detail)=>(
-                                <ProfileCourseUi
-                                    key={detail.id}
-                                    title={detail.title}
-                                    video={detail.video}
-                                    description={detail.description}
-                                />
-                            ))
+                            <ProfileCourseUi
+                            title={accordionData?.title}
+                            videoSrc={accordionData?.videoSrc}
+                            description={accordionData?.description}
+                            />
+
                         }
+                        {/*{*/}
+                        {/*    accordionData?.map((accordion)=>(*/}
+                        {/*        <VideoPlayer*/}
+                        {/*            videoSrc={accordion?.video}*/}
+                        {/*        />*/}
+                        {/*    ))*/}
+                        {/*}*/}
+                        {/*<VideoPlayer*/}
+                        {/*videoSrc={accordionData?.videoSrc}*/}
+                        {/*/>*/}
                     </div>
+                <div className={" basis-1/2"}>
+                    {
+                        yourCourse.sections.map((item) => (
+                            <AccordionCourse  {...item}
+                            onClick={getAccordionData}
+                            />
+                        ))
+                    }
+                </div>
+                </div>
                 </div>
             </div>
             )}
+
+
         </div>
     );
 }

@@ -7,7 +7,8 @@ const apiGetYourCourse = async (yourcourse_id) => {
 
     var data = profilecourse.find((y) => y.id == yourcourse_id)
 
-    const result = await fakeRequest([data]);
+    const result = await fakeRequest(data);
+    // console.log(result)
 
     return result;
 }

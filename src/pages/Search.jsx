@@ -3,6 +3,7 @@ import Header from "@/component/Layout/Header/Header.jsx";
 import Cards from "@/component/Cards/Cards.jsx";
 import {useSearchParams} from "react-router-dom";
 import {apiSearchPost} from "@/api/search.js";
+import Footer from "@/component/Layout/footer/Footer.jsx";
 
 function Search(props) {
     const [isLoading, setIsLoading] = useState(false)
@@ -18,7 +19,8 @@ function Search(props) {
     return (
         <div className={"w-[85%] mx-auto"}>
             <Header/>
-            <Cards className = {"mt-[100px]"}/>
+            <Cards className = {"mt-[120px]"}/>
+            <Footer/>
         </div>
     );
 }

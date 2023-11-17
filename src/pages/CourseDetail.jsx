@@ -12,6 +12,9 @@ import folderIcon from "@/assets/images/CourseDetail/folder.png";
 import videoIcon from "@/assets/images/CourseDetail/videos.png";
 import  watchIcon from "@/assets/images/CourseDetail/watch.png"
 import TeacherCards from "@/component/teacherCards/TeacherCards.jsx";
+import Header from "@/component/Layout/Header/Header.jsx";
+import Footer from "@/component/Layout/footer/Footer.jsx";
+
 import LoadingCourseDetail from "@/component/Loading/LoadingCourseDetail.jsx";
 
 function CourseDetail() {
@@ -28,7 +31,7 @@ function CourseDetail() {
             setLoading(true)
 
             const result = await apiGetCourseDetail(id)
-
+            // console.log(result.sections)
             setCourseDetail(result)
 
         } catch (error) {
@@ -48,7 +51,8 @@ function CourseDetail() {
 
     }
     return (
-        <div className={""}>
+        <div className={"w-[85%] mx-auto"}>
+            <Header/>
             {loading || !courseDetail ? (
                 <div className={"flex justify-center items-center h-[900px]"}>
 
@@ -99,9 +103,8 @@ function CourseDetail() {
 
                             </div>
                             <div className={"mt-8"}>
-
                                 {
-                                    courseDetail.sections?.map((item) => (
+                                    courseDetail.sections.map((item) => (
                                         <AccordionCourse {...item}
                                         />
                                     ))}
@@ -135,6 +138,7 @@ function CourseDetail() {
                     </div>
                 </div>
             )}
+            <Footer/>
         </div>
     );
 }

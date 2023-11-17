@@ -25,6 +25,13 @@ function Home(props) {
                 </span>
             </div>
             <Cards></Cards>
+            <div className={"flex items-center mt-10"}>
+                <div className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}></div>
+                <span className={"text-black ms-3 font-bold md:text-2xl"}>
+دوره های شما
+                </span>
+            </div>
+
             <DescriptionCards></DescriptionCards>
             <CardTwo></CardTwo>
             <Footer/>

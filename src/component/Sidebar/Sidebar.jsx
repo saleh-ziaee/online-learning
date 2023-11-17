@@ -6,6 +6,7 @@ import logo from "@/assets/images/logo.svg"
 import exitIcon from "@/assets/images/sidebar/exit.svg"
 import notifeImg from "@/assets/images/Header/nortife.svg";
 import closeIcon from "@/assets/images/navbar/XCircle.svg";
+import {Link} from "react-router-dom";
 
 function Sidebar({className,onClick, ...props}) {
     const [isClicked, setIsClicked] = useState(false)
@@ -14,7 +15,9 @@ function Sidebar({className,onClick, ...props}) {
         <div className={`${className} top-0 right-0  h-full overflow-y-auto overflow-x-hidden`}>
         <div className={` bg-gray w-[100%] bg-white h-[100%] flex  flex-col items-start`}>
             <div className={"mt-4 flex items-center justify-between w-[90%]"}>
-            <img src={logo} className={"w-[180px] md:w-fit"}/>
+                <Link to={"/"}>
+                    <img src={logo} className={"w-[180px] md:w-fit"}/>
+                </Link>
                 <button onClick={onClick} className={"min-w- md:hidden"}>
                     <img src={closeIcon}/>
                 </button>
