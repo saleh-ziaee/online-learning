@@ -15,6 +15,8 @@ import TeacherCards from "@/component/teacherCards/TeacherCards.jsx";
 import Header from "@/component/Layout/Header/Header.jsx";
 import Footer from "@/component/Layout/footer/Footer.jsx";
 
+import LoadingCourseDetail from "@/component/Loading/LoadingCourseDetail.jsx";
+
 function CourseDetail() {
     const {id} = useParams();
     const [loading, setLoading] = useState(false)
@@ -49,7 +51,10 @@ function CourseDetail() {
         <div className={"w-[85%] mx-auto"}>
             <Header/>
             {loading || !courseDetail ? (
-                <div>loading ...</div>
+                <div className={"flex justify-center items-center h-[900px]"}>
+
+                    <LoadingCourseDetail></LoadingCourseDetail>
+                </div>
             ) : (
                 <div className={"container w-[85%] mx-auto flex flex-col-reverse md:flex-row justify-between"}>
                     <div className={"mt-24 basis-2/3"}>

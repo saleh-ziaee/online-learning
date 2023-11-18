@@ -21,6 +21,10 @@ function ProfileCourse(props) {
     const [accordionData, setAccordionData] = useState(null)
 
     const [isClicked, setIsClicked] = useState(false)
+
+
+
+
     const toggleMenu = () => {
         setIsClicked(!isClicked)
     }

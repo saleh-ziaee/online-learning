@@ -28,7 +28,7 @@ function SearchPanel() {
     }
 
     return (
-    <div className="md:mt-8 mt-20">
+    <div className="md:mt-8 mt-20 ">
       <div className="flex flex-col items-center gap-y-5">
         <div className="">
           <h1 className="md:text-3xl text-2xl font-bold text-center">
