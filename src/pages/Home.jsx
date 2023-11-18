@@ -10,7 +10,7 @@ import Cards from "@/component/Cards/Cards.jsx";
 import NewsLetters from "@/component/NewsLetters/NewsLetters.jsx";
 import PriceCard from "@/component/PriceCard/PriceCard.jsx";
 import Title from "@/component/TitlePic/Title.jsx";
-import DescriptionCards from "@/component/DescriptionCards /DescriptionCards.jsx";
+import DescriptionCards from "@/component/DescriptionCards/DescriptionCards.jsx";
 function Home(props) {
     return (
         <div className={"container w-[95%] md:w-[85%]  mx-auto"}>
