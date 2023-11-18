@@ -19,9 +19,6 @@ function CourseDetail() {
     const {id} = useParams();
     const [loading, setLoading] = useState(false)
     const [courseDetail, setCourseDetail] = useState(null)
-
-
-
     const getCourse = async () => {
         if (loading) return
 
@@ -103,7 +100,6 @@ function CourseDetail() {
                                         <AccordionCourse {...item}
                                         />
                                     ))}
-
                             </div>
                         </div>
                         <div className={" w-full md:w-[40%] mt-12"}>

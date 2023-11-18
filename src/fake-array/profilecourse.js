@@ -15,7 +15,7 @@ export const profilecourse = [
                     {
                         id:1,
                         title: 'Ijs.',
-                        videoSrc: { url: videosOne }  ,
+                        videoSrc: videosOne  ,
                         watchTime: 1,
 
                         description: 'asdasdadsasdasdasd'

@@ -20,7 +20,7 @@ function Cards({className, props}) {
     const q = searchParams.get("q");
     const c = searchParamsCategory.get("c");
     const {data , isLoading}=useQuery({
-        queryKey:["cards"],
+        queryKey:["cards",{q,c}],
         queryFn: () => apiSearchPost({q,c})
     })
     // const [searchData, setSearchData] = useState([]);
@@ -48,7 +48,6 @@ function Cards({className, props}) {
     //     getSearchData();
     // }, [q ,c]);
     // console.log(getSearchData)
-
     return (
             <div className={ `${className} flex flex-col items-center justify-around w-full lg:grid lg:grid-cols-3 lg:gap-4 xl:grid xl:grid-cols-3 xl:gap-4 gap-4 md:gap-4 mx-auto mt-5 flex-wrap`}>
                 {isLoading?(
@@ -62,9 +61,7 @@ function Cards({className, props}) {
                     ):(
                     data.map((item)=>(
                             <Card key={item.id} {...item}
-
                             />
-
                     ))
                 )}
             </div>

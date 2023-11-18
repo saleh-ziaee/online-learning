@@ -6,7 +6,8 @@ import arrow from "../../../assets/images/Header/row.svg"
 import "./Header.css";
 import Search from "../../Ui/SearchInput/Search.jsx";
 import menuIcon from "@/assets/images/navbar/menu.png";
-import {Link, useSearchParams} from "react-router-dom";
+import { useSearchParams} from "react-router-dom";
+import {Link} from 'react-router-dom'
 import Navbar from "@/component/Navbar/Navbar.jsx";
 import {useNavigate, useParams} from "react-router-dom";
 import {useAuthContext} from "@/providers/AuthProvider";
@@ -56,10 +57,16 @@ function Header(props) {
                 </div>
                 <div className={"flex"}>
                     {
-                        <Link to={"/"} className={"flex items-center gap-4"}>
-                            <h2 className={"text-[#080808] font-black uppercase text-[32px]"}>academy</h2>
-                            <img src={Logo} alt={"logo"}/>
+<>
+                        <Link to={"/"}>
+                            sefssdfs
                         </Link>
+                        {/*<Link to={"/"} className={"flex items-center gap-4"}>*/}
+                        {/*    <h2 className={"text-[#080808] font-black uppercase text-[32px]"}>academy</h2>*/}
+                        {/*    <img src={Logo} alt={"logo"}/>*/}
+                        {/*</Link>*/}
+</>
+
                     }
                     <div className={"lg:flex lg:items-center hidden lg:gap-16"}>
                         <div className={"cursor-pointer mr-[20px] text-[16px] text-[#080808] opacity-80"}>ارتباط با ما
