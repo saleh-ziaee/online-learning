@@ -7,13 +7,13 @@ function Comment({className}) {
     <div className="border-b-2 border-gray-200 pb-4">
       <div className={['flex justify-between  ',className]}>
         <div  className="flex items-center gap-x-3 justify-center">
-          <img src={face} />
+          <img src={face.src} />
           <h4 className="font-bold"> متین قطبی</h4>
           <div className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}></div>
           <h5 className="gap-1.5 text-gray-500">۱ هفته پیش</h5>
         </div>
         <div>
-        <img src={rating} className="" />
+        <img src={rating.src} className="" />
         </div>
       </div>
       <div className="flex mt-3">

@@ -90,14 +90,14 @@ function CourseDetail() {
 
                                 <div className={"flex gap-x-6"}>
                                     <span className={"flex items-center gap-1"}>
-                                        <img src={folderIcon}/>
+                                        <img src={folderIcon.src}/>
                                         {courseDetail.section} بخش
                                     </span>
                                     <span className={"flex items-center gap-1"}>
-                                        <img src={videoIcon}/>
+                                        <img src={videoIcon.src}/>
                                         {courseDetail.videos} ویدیو</span>
                                     <span className={"flex items-center gap-1"}>
-                                        <img src={watchIcon}/>
+                                        <img src={watchIcon.src}/>
                                         {courseDetail.watchTime} ساعت</span>
                                 </div>
 
