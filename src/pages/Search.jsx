@@ -3,14 +3,15 @@ import Header from "@/component/Layout/Header/Header.jsx";
 import Cards from "@/component/Cards/Cards.jsx";
 import { apiSearchPost } from "@/api/search.js";
 import Footer from "@/component/Layout/footer/Footer.jsx";
+import { useRouter } from "next/router";
 
 function Search(props) {
+  const router = useRouter()
   const [isLoading, setIsLoading] = useState(false);
   const [searchData, setSearchData] = useState([]);
   // const [searchParams] = useSearchParams();
-  const [searchParams, setSearchParams] = useSearchParams();
   const [click, SetClick] = useState(false);
-  const [query, setQuery] = useState(() => searchParams.get("q"));
+  const [query, setQuery] = useState(() => router.query.q);
   // const handleClick = () => {
   //     SetClick(true);
   // };

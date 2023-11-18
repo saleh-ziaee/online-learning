@@ -15,10 +15,12 @@ function Cards({ className, props }) {
 
   const q = router.query.q;
   const c = router.query.c;
+
   const { data, isLoading } = useQuery({
-    queryKey: ["cards"],
+    queryKey: ["cards", { q, c }],
     queryFn: () => apiSearchPost({ q, c }),
   });
+
   // const [searchData, setSearchData] = useState([]);
   // const [isLoading, setIsLoading] = useState(false);
 
