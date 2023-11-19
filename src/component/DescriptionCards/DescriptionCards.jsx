@@ -28,7 +28,7 @@ function DescriptionCards(props) {
                                         <div className="px-4 py-5 flex-auto border-r-2 border-r-yellow-400">
                                             <div
                                                 className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-yellow-300">
-                                                <img src={PencilLine}/>
+                                                <img src={PencilLine.src}/>
                                             </div>
                                             <h6 className="text-xl mb-1 font-semibold">اجازه تدریس
                                             </h6>
@@ -41,7 +41,7 @@ function DescriptionCards(props) {
                                         <div className="px-4 py-5 flex-auto border-r-2 border-r-red-400">
                                             <div
                                                 className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-300">
-                                                <img src={PencilLine}/>
+                                                <img src={PencilLine.src}/>
                                             </div>
                                             <h6 className="text-xl mb-1 font-semibold">
                                                 اولویت بندی به ترتیب منافع
@@ -57,7 +57,7 @@ function DescriptionCards(props) {
                                         <div className="px-4 py-5 flex-auto border-r-2 border-r-sky-400">
                                             <div
                                                 className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-sky-300">
-                                                <img src={PencilLine}/>
+                                                <img src={PencilLine.src}/>
                                             </div>
                                             <h6 className="text-xl mb-1 font-semibold">هدایت به بازار کار
                                             </h6>
@@ -70,7 +70,7 @@ function DescriptionCards(props) {
                                         <div class="px-4 py-5 flex-auto border-r-2 border-r-green-400">
                                             <div
                                                 class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
-                                                <img src={PencilLine}/>
+                                                <img src={PencilLine.src}/>
                                             </div>
                                             <h6 class="text-xl mb-1 font-semibold">گارانتی بازگشت وجه
                                             </h6>

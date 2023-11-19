@@ -11,8 +11,8 @@ function NewsLetters(props) {
             <Search className={"z-40 ml-8"} placeholder={"آدرس ایمیل ..."}>
                 <Button>تایید</Button>
             </Search>
-            <img src={box} className={"absolute left-8"}/>
-            <img src={box2} className={"absolute left-0"}/>
+            <img src={box.src} className={"absolute left-8"}/>
+            <img src={box2.src} className={"absolute left-0"}/>
         </div>
     );
 }

@@ -5,7 +5,7 @@ import teacherImage from "@/assets/images/CourseDetail/4597b4e10ba34611af39b83d5
 export const product =[
     {
         id:1,
-        image: img1,
+        image: img1.src,
         title: 'آموزش برنامه نویسی فرانت',
         subTitle: 'شامل ۱۴۴ ساعت آموزش همراه با تمرین و پروژه‌های عملی',
         student:80,
@@ -26,7 +26,7 @@ export const product =[
         teachers:[
             {
                 name: 'ماش همدانی',
-                teacherImage:teacherImage,
+                teacherImage:teacherImage.src,
                 category:"مدرس فرانت‌اند",
                 comment:400,
                 description:"\"مدرس فرانت‌اند با بیش از هفت سال تجربه. علاقه‌مند به ارائه دانش و توانایی‌های خود در توسعه وب و برنامه‌نویسی. هدفم ارائه یادگیری مفید و کاربردی برای دانشجویان به شکلی ساده و قابل فهم است.\""
@@ -100,7 +100,7 @@ export const product =[
     },
     {
         id:2,
-        image: img2,
+        image: img2.src,
         title: 'آموزش هوش مصنوعی ',
         student:10,
         lesson:250,
@@ -174,7 +174,7 @@ export const product =[
     },
     {
         id:3,
-        image: img3,
+        image: img3.src,
         title: 'آموزش گرافیک',
         student:60,
         lesson:50,
@@ -186,7 +186,7 @@ export const product =[
         teachers:[
             {
                 name: 'ماش همدانی',
-                teacherImage:teacherImage,
+                teacherImage:teacherImage.src,
                 category:"مدرس فرانت‌اند",
                 comment:400,
                 description:"\"مدرس فرانت‌اند با بیش از هفت سال تجربه. علاقه‌مند به ارائه دانش و توانایی‌های خود در توسعه وب و برنامه‌نویسی. هدفم ارائه یادگیری مفید و کاربردی برای دانشجویان به شکلی ساده و قابل فهم است.\""
@@ -258,7 +258,7 @@ export const product =[
     },
     {
         id:4,
-        image: img1,
+        image: img1.src,
         title: 'آموزش برنامه نویسی فرانت',
         category:"programing",
         student:80,
@@ -271,7 +271,7 @@ export const product =[
     },
     {
         id:5,
-        image: img2,
+        image: img2.src,
         title: 'آموزش هوش مصنوعی ',
         student:10,
         lesson:250,
@@ -283,7 +283,7 @@ export const product =[
     },
     {
         id:6,
-        image: img3,
+        image: img3.src,
         title: 'آموزش گرافیک',
         category:"graphic",
 

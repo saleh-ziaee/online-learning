@@ -30,6 +30,6 @@ const createRequest = (baseURL)=> {
 }
 // const searchApiClient = createRequest("http://demo2578450.mockable.io/")
 
-const apiClient = createRequest(import.meta.env.VITE_API_BASE_URL);
+const apiClient = createRequest(process.env.NEXT_PUBLIC_API_BASE_URL);
 
 export  {apiClient};

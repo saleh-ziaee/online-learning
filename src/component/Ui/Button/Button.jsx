@@ -1,7 +1,4 @@
-import React from 'react';
-import "./Button.css"
 import PropTypes from "prop-types";
-
 
 const variants = {
   fill: "hover:bg-[#9988aa] bg-black text-white",
@@ -15,7 +12,8 @@ const sizes = {
 };
 
 function Button({
-  className, onclick,
+  className,
+  onclick,
   variant = "fill",
   children,
   size = "md",
@@ -23,7 +21,8 @@ function Button({
   ...props
 }) {
   return (
-    <button onClick={onclick}
+    <button
+      onClick={onclick}
       type={type}
       className={`${className} ${variants[variant]} ${sizes[size]} flex justify-center text-center items-center gap-4 rounded-xl cursor-pointer`}
       {...props}

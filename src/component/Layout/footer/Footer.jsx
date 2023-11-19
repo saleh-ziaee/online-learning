@@ -33,7 +33,7 @@ function Footer(props) {
           قرار گیرد.
         </div>
         <div className={"md:mx-0 mx-auto"}>
-          <img src={logo} alt={"logo"} />
+          <img src={logo.src} alt={"logo"} />
         </div>
       </div>
       <div
@@ -51,7 +51,7 @@ function Footer(props) {
             </span>
           </div>
           <div className={"mt-[30px]"}>
-            <img src={imagef} alt={"image"} />
+            <img src={imagef.src} alt={"image"} />
           </div>
         </div>
         <div className={"section2-footer md:ms-[50px] w-full md:w-[15%]"}>
