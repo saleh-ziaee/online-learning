@@ -1,6 +1,5 @@
 import React from 'react';
 import ProfileCourseSection1 from "@/component/ProfileCourse/ProfileCourseSection1.jsx";
-import videoOne from "@/assets/videos/15-working-with-props.mp4"
 import VideoPlayer from "@/component/video/VideoPlayer.jsx";
 
 function ProfileCourseUi({title,description,videoSrc}) {
