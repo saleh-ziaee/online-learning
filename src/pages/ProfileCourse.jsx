@@ -69,14 +69,14 @@ function ProfileCourse(props) {
                 <div className={"bg-[#F3F5FF]  flex-col w-full h-full"}>
                     <header className={"flex md:items-start items-center  p-4 justify-between w-full border-b-2"}>
                         <button onClick={toggleMenu } className={"md:hidden block"}>
-                            <img src={menuIcon} alt={"menu-icon"} className={"w-[24px] h-[24px]"}/>
+                            <img src={menuIcon.src} alt={"menu-icon"} className={"w-[24px] h-[24px]"}/>
                         </button>
                         <div className={"flex items-center justify-center gap-4"}>
-                            <img src={userImg} alt={"user-image"}/>
+                            <img src={userImg.src} alt={"user-image"}/>
                             <span className={"text-dark"}> بهزاد پاشایی</span>
                         </div>
                         <div className={"flex items-center justify-center rounded-xl bg-[#9E5CF20D] w-[64px] h-[64px]"}>
-                            <img src={notifeIcon} alt={"notife- icon"}/>
+                            <img src={notifeIcon.src} alt={"notife- icon"}/>
                         </div>
                     </header>
 

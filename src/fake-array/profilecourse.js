@@ -15,14 +15,14 @@ export const profilecourse = [
                     {
                         id:1,
                         title: 'Ijs.',
-                        videoSrc: videosOne  ,
+                        videoSrc: { url: videosOne.src }  ,
                         watchTime: 1,
 
                         description: 'asdasdadsasdasdasd'
                     },
                     {
                         id:2,
-                        videoSrc: videosTwo,
+                        videoSrc: videosTwo.src,
                         title: 'Introduction to CSS: vbcvbc styling, selectors, properties, and values.',
                         watchTime: '1:30',
                     },

@@ -77,7 +77,7 @@
 
 /* Dark theme */
 @media (prefers-color-scheme: dark) {
-    :root {
+    .book {
         --bg: #9988aa;
         --fg: hsl(var(--hue),10%,90%);
     }

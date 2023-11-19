@@ -1,17 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face{
-    font-family: "Estedad";
-    src: url("../src/assets/fonts/Estedad[wght,kshd].woff2");
+@font-face {
+  font-family: "Estedad";
+  src: url("../src/assets/fonts/Estedad[wght,kshd].woff2");
 }
-body{
-    direction: rtl;
-    font-family: "Estedad";
+body {
+  direction: rtl;
+  font-family: "Estedad";
+  overflow: scroll;
 }
-:root{
-    overflow: scroll;
+
+body::-webkit-scrollbar {
+  display: none;
 }
-body::--webkit-scrollbar{
-    display: none;
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
 }
