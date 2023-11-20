@@ -5,6 +5,8 @@ import notifeImg from "../../../assets/images/Header/nortife.svg";
 import arrow from "../../../assets/images/Header/row.svg";
 import Search from "../../Ui/SearchInput/Search.jsx";
 import menuIcon from "@/assets/images/navbar/menu.png";
+import { useSearchParams} from "react-router-dom";
+import {Link} from 'react-router-dom'
 import Navbar from "@/component/Navbar/Navbar.jsx";
 import { useAuthContext } from "@/providers/AuthProvider";
 import Button from "@/component/Ui/Button/Button.jsx";
