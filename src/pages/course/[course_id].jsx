@@ -54,15 +54,18 @@ function CourseDetail() {
             {/*/>*/}
             <img className={"mx-auto mt-10 w-full"} src={Trailer.src} alt="" />
             <div className={"flex justify-between mt-16"}>
-              <a href={"#section1"} className={""}>
+              <a className={"font-bold"} href={"#section1"} >
                 توضیحات
               </a>
-              <a href={"#section2"}>سرفصل ها</a>
-              <a href={"#section3"}>مدرس </a>
-              <a href={"#section3"}>نظرات</a>
+              <a className={"font-bold"} href={"#section2"}>سرفصل ها</a>
+              <a className={"font-bold"} href={"#section3"}>مدرس </a>
+              <a className={"font-bold"} href={"#section4"}>نظرات</a>
             </div>
-            <Description description={courseDetail.description} />
-            <div className={"mt-12"}>
+              <div id={"section1"} className={"leading-10 bg-purple-100 rounded-2xl mt-10 px-10 py-14"}>
+                  <span className={"text-xl font-bold"}>توضیحات</span>
+                  <Description description={courseDetail.description} />
+              </div>
+            <div className={"py-10"} id={"section2"}>
               <div className={"flex flex-row justify-between"}>
                 <span className={"text-xl font-bold"}>سرفصل‌ها</span>
 
@@ -87,7 +90,7 @@ function CourseDetail() {
                 ))}
               </div>
             </div>
-            <div className={" w-full md:w-[40%] mt-12"}>
+            <div id={"section3"} className={" w-full md:w-[40%] mt-12 py-10"}>
               <h2
                 className={"text-[#1D2026] text-[24px] w-full font-bold mb-8"}
               >
@@ -99,7 +102,7 @@ function CourseDetail() {
               ))}
             </div>
 
-            <div id="section4" className={"mt-10"}>
+            <div id="section4" className={"mt-10 py-10"}>
               <span className={"font-bold text-xl"}>نظرات شرکت کنندگان</span>
               <Comment></Comment>
             </div>
