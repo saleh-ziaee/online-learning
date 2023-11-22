@@ -39,7 +39,7 @@ function Title(props) {
           >
             {/*<Button size={"sm"} className={"mx-auto"}><img  src={nextIcon}  className={""}/><span className={"text-xl md:text-2xl"}>از اینجا شروع کن</span></Button>*/}
             <button
-              className={"button-53 mx-auto md:w-[75%] w-[80%] font-bold"}
+              className={styles["button-53"] + " " + "mx-auto md:w-[75%] w-[80%] font-bold"}
               role="button"
             >
               {" "}
