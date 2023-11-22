@@ -11,7 +11,7 @@ import Header from "@/component/Layout/Header/Header.jsx";
 import Footer from "@/component/Layout/footer/Footer.jsx";
 import React from "react";
 import Login from "@/pages/Login.jsx";
-import Search from "@/pages/Search.jsx";
+import Search from "@/pages/search.jsx";
 import CourseDetail from "@/pages/CourseDetail.jsx";
 import YourCourse_id from "@/pages/yourCourse/[yourCourse_id].jsx"
 
