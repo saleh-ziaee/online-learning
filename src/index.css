@@ -18,3 +18,9 @@ body::-webkit-scrollbar {
 .hide-scroll::-webkit-scrollbar {
   display: none;
 }
+.own-course__section::-webkit-scrollbar{
+  display: none;
+}
+.coursesSection::-webkit-scrollbar{
+  display: none;
+}

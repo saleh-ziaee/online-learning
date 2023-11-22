@@ -57,8 +57,11 @@ function CardTwoItem({id,img,title,student,level,lesson,score,days,children, cla
                         </div>
 
                     </div>
-                    <Link href={`/your-course/${id}`}>
-                        <Button size={"sm"} variant={"fill"}> بزن بریم <img src={nextIcon.src} className={"rotate-180"}/> </Button>
+                    <Link href={`/yourCourse/${id}`}>
+                        <Button size={"sm"}
+                                variant={"fill"}> بزن بریم <img src={nextIcon.src} className={"rotate-180"}/>
+                            {" "}
+                        </Button>
                     </Link>
                     </div>
 

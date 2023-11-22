@@ -27,7 +27,7 @@ function CardTwo(props) {
             days={item.days}
           />
         ))}
-        )
+
       </div>
     </div>
   );

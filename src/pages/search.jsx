@@ -5,7 +5,7 @@ import { apiSearchPost } from "@/api/search.js";
 import Footer from "@/component/Layout/footer/Footer.jsx";
 import { useRouter } from "next/router";
 
-function Search(props) {
+function search(props) {
   const router = useRouter()
   const [isLoading, setIsLoading] = useState(false);
   const [searchData, setSearchData] = useState([]);
@@ -25,4 +25,4 @@ function Search(props) {
   );
 }
 
-export default Search;
+export default search;

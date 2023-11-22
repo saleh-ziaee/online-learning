@@ -38,7 +38,6 @@ function Card({ image, title, student, level, lesson, id, ...props }) {
               </div>
             </div>
             <div className={"flex items-center justify-between mt-4"}>
-              {/*<button>{button}</button>*/}
               <Link href={`/course/${id}`}>
                 <Button variant={"fill"}>
                   {" "}

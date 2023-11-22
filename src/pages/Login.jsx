@@ -37,7 +37,7 @@ function Login() {
       </div>
 
       <div>
-        <img className={"h-[400px] w-[400px] md:w-[800px] md:h-[800px]"} src={loginpic} alt="" />
+        <img className={"h-[400px] w-[400px] md:w-[800px] md:h-[800px]"} src={loginpic.src} alt="" />
       </div>
     </div>
   );

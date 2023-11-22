@@ -11,6 +11,7 @@ import Link from 'next/link';
 function Sidebar({className,onClick, ...props}) {
     const [isClicked, setIsClicked] = useState(false)
 
+
     return (
         <div className={`${className} top-0 right-0  h-full overflow-y-auto overflow-x-hidden`}>
         <div className={` bg-gray w-[100%] bg-white h-[100%] flex  flex-col items-start`}>
@@ -42,7 +43,6 @@ function Sidebar({className,onClick, ...props}) {
             </div>
         </div>
         </div>
-
     );
 }
 
