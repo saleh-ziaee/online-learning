@@ -90,7 +90,7 @@ function CourseDetail() {
                 ))}
               </div>
             </div>
-            <div id={"section3"} className={" w-full md:w-[40%] mt-12 py-10"}>
+            <div className={" w-full md:w-[40%] mt-12"}>
               <h2
                 className={"text-[#1D2026] text-[24px] w-full font-bold mb-8"}
               >
@@ -102,7 +102,7 @@ function CourseDetail() {
               ))}
             </div>
 
-            <div id="section4" className={"mt-10 py-10"}>
+            <div id="section4" className={"mt-10"}>
               <span className={"font-bold text-xl"}>نظرات شرکت کنندگان</span>
               <Comment></Comment>
             </div>

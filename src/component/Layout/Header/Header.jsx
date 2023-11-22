@@ -143,7 +143,7 @@ function Header(props) {
               <>
                 <div className={"border-2 p-1 rounded-2xl"}>
                   <img
-                    src={profileImg}
+                    src={profileImg.src}
                     alt={"profile-img"}
                     className={"cursor-pointer"}
                   />
@@ -158,7 +158,7 @@ function Header(props) {
                     "cursor-pointer flex items-center justify-center bg-red-100 border-2 border-red-400 rounded-2xl w-[70px] h-[70px]"
                   }
                 >
-                  <img className={"w-[45%]"} src={exitIcon} />
+                  <img className={"w-[45%]"} src={exitIcon.src} />
                 </div>
               </>
             ) : (

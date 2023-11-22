@@ -23,9 +23,6 @@ function YourCourse_id(props) {
 
     const [isClicked, setIsClicked] = useState(false)
 
-
-
-
     const toggleMenu = () => {
         setIsClicked(!isClicked)
     }
