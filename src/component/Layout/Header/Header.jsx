@@ -6,13 +6,13 @@ import arrow from "../../../assets/images/Header/row.svg";
 import Search from "../../Ui/SearchInput/Search.jsx";
 import menuIcon from "@/assets/images/navbar/menu.png";
 import { useSearchParams} from "react-router-dom";
-import {Link} from 'react-router-dom'
 import Navbar from "@/component/Navbar/Navbar.jsx";
 import { useAuthContext } from "@/providers/AuthProvider";
 import Button from "@/component/Ui/Button/Button.jsx";
 import exitIcon from "@/assets/images/sidebar/exit.svg";
 import { useRouter } from "next/router";
 import Link from "next/link";
+
 
 function Header(props) {
   const { isLoggedIn, currentUser, logout } = useAuthContext();
@@ -53,7 +53,7 @@ function Header(props) {
         <div className={"flex flex-col items-center gap-4 md:hidden"}>
           <button onClick={toggleMenu}>
             <img
-              src={menuIcon}
+              src={menuIcon.src}
               alt={"menu-icon"}
               className={"w-[24px] h-[24px]"}
             />

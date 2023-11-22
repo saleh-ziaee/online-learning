@@ -6,16 +6,17 @@ import notifeIcon from "@/assets/images/Header/nortife.svg";
 import CardTwoItem from "@/component/CardTwo/CardTwoItem/CardTwoItem.jsx";
 import ProfileCourseUi from "@/component/Ui/ProfileCourse/ProfileCourseUi.jsx";
 import ProfileCourseSection1 from "@/component/ProfileCourse/ProfileCourseSection1.jsx";
-import {useParams} from "react-router-dom";
 import {apiGetCourseDetail} from "@/api/course.js";
 import {apiGetYourCourse} from "@/api/yourcourse.js";
 import AccordionCourse from "@/component/Accordion/AccordionCourse.jsx";
 import videiOne from "@/assets/videos/16-using-children-prop.mp4"
 import VideoPlayer from "@/component/video/VideoPlayer.jsx";
+import {useRouter} from "next/router";
 
 
-function ProfileCourse(props) {
-    const {id} = useParams();
+function YourCourse_id(props) {
+    const router = useRouter();
+   const  yourCourseId=router.query.yourCourse_id;
     const [loading, setLoading] = useState(false)
     const [yourCourse, setYourCourse] = useState(null)
     const [accordionData, setAccordionData] = useState(null)
@@ -33,7 +34,7 @@ function ProfileCourse(props) {
 
         try {
             setLoading(true)
-            const result = await apiGetYourCourse(id)
+            const result = await apiGetYourCourse(yourCourseId)
             console.log(result)
 
             setYourCourse(result)
@@ -44,10 +45,10 @@ function ProfileCourse(props) {
         }
     }
     useEffect(() => {
-        if (id) {
-            getyourCourse(id)
+        if (yourCourseId) {
+            getyourCourse(yourCourseId)
         }
-    }, [id]);
+    }, [yourCourseId]);
     const getAccordionData=(item)=>{
         setAccordionData(item)
     }
@@ -129,9 +130,7 @@ function ProfileCourse(props) {
                 </div>
             </div>
             )}
-
-
         </div>
     );
 }
-export default ProfileCourse;
+export default YourCourse_id;

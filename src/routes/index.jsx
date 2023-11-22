@@ -4,7 +4,7 @@ import {
 import App from "../App.jsx";
 import Home from "../pages/Home.jsx";
 import Auth from "../pages/Auth.jsx";
-import Profile from "../pages/Profile.jsx";
+import Profile from "../pages/profile.jsx";
 import Ui from "../pages/Ui.jsx";
 import UiP from "../pages/UiP.jsx";
 import Header from "@/component/Layout/Header/Header.jsx";
@@ -13,7 +13,7 @@ import React from "react";
 import Login from "@/pages/Login.jsx";
 import Search from "@/pages/Search.jsx";
 import CourseDetail from "@/pages/CourseDetail.jsx";
-import ProfileCourse from "@/pages/ProfileCourse.jsx"
+import YourCourse_id from "@/pages/yourCourse/[yourCourse_id].jsx"
 
 const router = createBrowserRouter([
     // {
@@ -58,8 +58,8 @@ const router = createBrowserRouter([
         element:<Profile/>,
     },
     {
-        path: "/profile-course",
-        element:<ProfileCourse/>,
+        path: "/yourCourse",
+        element:<YourCourse_id/>,
     },
     {
       path:"/course/",
@@ -69,10 +69,10 @@ const router = createBrowserRouter([
         path:"/course/:id",
         element:<CourseDetail/>,
     },
-    {
-        path:"/your-course/:id",
-        element:<ProfileCourse/>,
-    },
+    // {
+    //     path:"/your-course/:id",
+    //     element:<YourCourse_id/>,
+    // },
     {
         path: "/ui",
         element:<Ui/>,

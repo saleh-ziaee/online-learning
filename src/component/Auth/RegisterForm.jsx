@@ -5,11 +5,11 @@ import axios from "axios";
 import { useAuthContext } from "@/providers/AuthProvider";
 
 import {registerSchema}  from "./schema.js"
-import {useNavigate} from "react-router";
 import {apiRegisterUSer} from "@/api/user.js";
+import {useRouter} from "next/router";
 
 const RegisterForm = () => {
-    const navigate = useNavigate()
+    const router = useRouter();
     const { saveAccessToken } = useAuthContext();
     const [unlnowError, setUnknownError] = useState(null);
     const [loading, setLoading] = useState(false);
@@ -46,8 +46,7 @@ const RegisterForm = () => {
           //     "http://demo2578450.mockable.io/auth/register",
           //     data
           // );
-
-          navigate("/")
+          router.push("/")
           saveAccessToken(result.token.accessToken);
       } catch (error) {
           console.log(error);
@@ -58,7 +57,7 @@ const RegisterForm = () => {
     console.log(registerForm);
   };
 
-  console.log(error);
+  console.log(registerForm);
   return (
     <form className="flex flex-col gap-5 mt-5" onSubmit={handleRegister}>
       <Input

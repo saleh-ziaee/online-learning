@@ -6,9 +6,11 @@ import Footer from "@/component/Layout/footer/Footer.jsx";
 import Cards from "@/component/Cards/Cards.jsx";
 import Title from "@/component/TitlePic/Title.jsx";
 import DescriptionCards from "@/component/DescriptionCards/DescriptionCards.jsx";
+import {useAuthContext} from "@/providers/AuthProvider";
 
 function Home() {
-  return (
+    const { isLoggedIn } = useAuthContext();
+    return (
     <div className={"container w-[95%] md:w-[85%]  mx-auto"}>
       <Header></Header>
       <CategoryPanel></CategoryPanel>
@@ -29,7 +31,16 @@ function Home() {
       </div>
 
       <DescriptionCards></DescriptionCards>
-      <CardTwo></CardTwo>
+        {isLoggedIn?(
+            <>
+            <CardTwo></CardTwo>
+            </>
+
+        ):(
+            <></>
+        )
+
+        }
       <Footer />
     </div>
   );

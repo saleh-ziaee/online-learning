@@ -18,32 +18,6 @@ function Navbar({ onClick }) {
     setIsClicked(false);
   };
   return (
-    // <nav className="menu--left w-[80%] relative" role="navigation">
-    //     <div className="flex flex-col gap-4 text-center items-center w-[100%] absolute left-0 top-0">
-    //         <div className={"flex gap-4 items-center  "}>
-    //             <img src={profileImg.src} alt={"profile-img"} className={"cursor-pointer"}/>
-    //
-    //             <div className={"flex flex-col items-center gap-4"}>
-    //                 <span className={"text-dark"}>Behzad pashaei</span>
-    //                 <span className={"text-dark opacity-80"}>ui & ux designer</span>
-    //             </div>
-    //
-    //         </div>
-    //         <div className={"cursor-pointer flex items-center justify-center bg-[#9E5CF20D] rounded-[12px] w-[64px] h-[64px]"}>
-    //             <img src={notifeImg.src}/>
-    //         </div>
-    //         <Search></Search>
-    //
-    //         <ul className="menuItem gap-4 ">
-    //             <li className={"cursor-pointer  text-[16px] text-[#080808] opacity-80"}><a href="#">خانه</a></li>
-    //             <li className={"cursor-pointer  text-[16px] text-[#080808] opacity-80"}><a href="#">خانه</a></li>
-    //             <li className={"cursor-pointer  text-[16px] text-[#080808] opacity-80"}><a href="#">خانه</a></li>
-    //             <li className={"cursor-pointer  text-[16px] text-[#080808] opacity-80"}><a href="#">خانه</a></li>
-    //             <li className={"cursor-pointer  text-[16px] text-[#080808] opacity-80"}><a href="#">خانه</a></li>
-    //         </ul>
-    //     </div>
-    // </nav>
-
     <nav
       role="navigation "
       className={
@@ -58,7 +32,7 @@ function Navbar({ onClick }) {
           }
         >
           <img
-            src={closeIcon}
+            src={closeIcon.src}
             className={"w-[10%] cursor-pointer"}
             onClick={onClick}
           />
