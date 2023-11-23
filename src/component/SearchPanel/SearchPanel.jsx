@@ -51,7 +51,7 @@ function SearchPanel() {
           >
             <Button
               size={"sm"}
-              className={"h-[80%] w-[100%] relative text-[15px] text-center"}
+              className={"h-[80%] w-[100%] relative text-[15px] text-center focus:bg-[#9988aa]"}
               onclick={toggleCategory}
             >
               دسته بندی
@@ -62,10 +62,10 @@ function SearchPanel() {
                   "flex flex-col w-[150px] items-start  justify-center gap-2 rounded-2xl bg-[#FAFAFA] top-24 p-4 absolute "
                 }
               >
-                <div onClick={() => handleCategory("programing")}>
+                <div className={"cursor-pointer hover:text-primary-500"} onClick={() => handleCategory("programing")}>
                   برنامه نویسی
                 </div>
-                <div onClick={() => handleCategory("graphic")}>گرافیک</div>
+                <div className={"cursor-pointer hover:text-primary-500"} onClick={() => handleCategory("graphic")}>گرافیک</div>
               </div>
             )}
           </Search>

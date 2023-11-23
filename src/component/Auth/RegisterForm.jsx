@@ -16,7 +16,7 @@ const RegisterForm = () => {
   const [registerForm, setRegisterForm] = useState({
     username: "",
     password: "",
-    confirm_password: "",
+      password_confirmation: "",
   });
 
   const [error, setError] = useState({});
@@ -47,7 +47,8 @@ const RegisterForm = () => {
           //     data
           // );
           router.push("/")
-          saveAccessToken(result.token.accessToken);
+          console.log(result)
+          saveAccessToken(result.token);
       } catch (error) {
           console.log(error);
           setUnknownError("Something wrong, please try again.");
@@ -82,10 +83,10 @@ const RegisterForm = () => {
       <Input
         type="password"
         label="تکرار رمز عبور"
-        name="confirm_password"
+        name="password_confirmation"
         onChange={handleChangeLoginForm}
-        value={registerForm.confirm_password}
-        error={error.confirm_password?.[0]}
+        value={registerForm.password_confirmation}
+        error={error.password_confirmation?.[0]}
         placeholder="رمز عبور خود را مجدد وارد کنید"
       />
 
