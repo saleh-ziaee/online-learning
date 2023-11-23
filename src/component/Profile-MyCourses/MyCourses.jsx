@@ -10,18 +10,18 @@ import CardTwo from "@/component/CardTwo/CardTwo.jsx";
 
 function MyCourses(props) {
     const [isClicked, setIsClicked] = useState(false)
-
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const toggleMenu = () => {
-        setIsClicked(!isClicked)
+        setIsSidebarOpen(!isSidebarOpen);
     }
     return (
         <div className={"md:flex  md:items-center bg-[#F3F5FF] h-[100vh] relative md:overflow-hidden"}>
             {
-                isClicked&&(
-                    <Sidebar onClick={toggleMenu} className={"flex z-50 absolute right-0 top-0 w-[60%] md:hidden"}></Sidebar>
+                isSidebarOpen&&(
+                    <Sidebar onClick={toggleMenu} isOpen={!isSidebarOpen}  className={"flex z-50 absolute right-0 top-0 w-[60%] md:hidden"}></Sidebar>
                 )
             }
-            <Sidebar className={"md:flex  md:basis-1/5 hidden"}/>
+            <Sidebar className={"md:flex  md:basis-1/5 hidden"} isOpen={!isSidebarOpen} />
         <div className={"bg-[#F3F5FF]  flex-col basis-4/5 h-full"}>
             <header className={"flex md:items-start items-center p-4 justify-between w-full "}>
                 <button onClick={toggleMenu } className={"md:hidden block"}>

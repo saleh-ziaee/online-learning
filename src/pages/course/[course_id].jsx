@@ -18,18 +18,20 @@ import LoadingCourseDetail from "@/component/Loading/LoadingCourseDetail.jsx";
 import { useRouter } from "next/router";
 import useGetCourseDetails from "@/api/hooks/use-get-course-details";
 
-function CourseDetail() {
+function CourseDetail(props) {
   const router = useRouter();
   const courseId = router.query.course_id;
 
-  const { data, isLoading } = useGetCourseDetails({ courseId });
+  const { data, isLoading } = useGetCourseDetails({ courseId} , {
+        initialData: props.courseDetail
+    });
 
   const courseDetail = useMemo(() => data, [data]);
 
   return (
     <div className={"w-[85%] mx-auto"}>
       <Header />
-      {isLoading || !courseDetail ? (
+      {!courseDetail ? (
         <div className={"flex justify-center items-center h-[900px]"}>
           <LoadingCourseDetail></LoadingCourseDetail>
         </div>
@@ -118,4 +120,24 @@ function CourseDetail() {
   );
 }
 
+
+const getServerSideProps = async ({query}) => {
+    let courseDetail = null
+
+    try {
+        const result = await apiGetCourseDetail(query.course_id)
+
+        courseDetail = result
+    } catch (err) {
+        console.error(err)
+    }
+
+
+    return {
+        props: {
+            courseDetail
+        }
+    }
+}
 export default CourseDetail;
+export {getServerSideProps}
