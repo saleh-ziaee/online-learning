@@ -41,6 +41,7 @@ function Sidebar({className,onClick,isOpen ,...props}) {
                     <p className={"text-[16px] text-red-700"}>خروج</p>
                 </div>
             </div>
+
         </div>
         </div>
 
