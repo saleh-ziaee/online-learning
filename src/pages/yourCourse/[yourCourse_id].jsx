@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import Sidebar from "@/component/Sidebar/Sidebar.jsx";
 import menuIcon from "@/assets/images/navbar/menu.png";
 import userImg from "@/assets/images/Header/Profile.svg";
@@ -12,44 +12,49 @@ import AccordionCourse from "@/component/Accordion/AccordionCourse.jsx";
 import videiOne from "@/assets/videos/16-using-children-prop.mp4"
 import VideoPlayer from "@/component/video/VideoPlayer.jsx";
 import {useRouter} from "next/router";
+import useGetCourseDetails from "@/api/hooks/use-get-course-details";
+import useGetYourCourseDetails from "@/api/hooks/use-get-yourCourse-details";
 
 
 function YourCourse_id(props) {
     const router = useRouter();
    const  yourCourseId=router.query.yourCourse_id;
-    const [loading, setLoading] = useState(false)
-    const [yourCourse, setYourCourse] = useState(null)
+    // const [loading, setLoading] = useState(false)
+    // const [yourCourse, setYourCourse] = useState(null)
     const [accordionData, setAccordionData] = useState(null)
 
     const [isClicked, setIsClicked] = useState(false)
 
+    const { data, loading } = useGetYourCourseDetails({ yourCourseId });
+    const yourCourse = useMemo(() => data, [data]);
+
     const toggleMenu = () => {
         setIsClicked(!isClicked)
     }
-    const getyourCourse = async () =>{
-        if (loading) return
-
-        try {
-            setLoading(true)
-            const result = await apiGetYourCourse(yourCourseId)
-            console.log(result)
-
-            setYourCourse(result)
-        } catch (error) {
-            console.error(error)
-        } finally {
-            setLoading(false)
-        }
-    }
-    useEffect(() => {
-        if (yourCourseId) {
-            getyourCourse(yourCourseId)
-        }
-    }, [yourCourseId]);
+    // const getyourCourse = async () =>{
+    //     if (loading) return
+    //
+    //     try {
+    //         setLoading(true)
+    //         const result = await apiGetYourCourse(yourCourseId)
+    //         console.log(result)
+    //
+    //         setYourCourse(result)
+    //     } catch (error) {
+    //         console.error(error)
+    //     } finally {
+    //         setLoading(false)
+    //     }
+    // }
+    // useEffect(() => {
+    //     if (yourCourseId) {
+    //         getyourCourse(yourCourseId)
+    //     }
+    // }, [yourCourseId]);
     const getAccordionData=(item)=>{
         setAccordionData(item)
     }
-    console.log(accordionData);
+    // console.log(accordionData);
 
     return (
         <div className={"md:flex w-full md:items-center bg-[#F3F5FF]  relative "}>
@@ -78,23 +83,10 @@ function YourCourse_id(props) {
                         </div>
                     </header>
 
-                    {/*<div className={*/}
-                    {/*    " coursesSection flex flex-col items-center justify-center w-full md:grid md:grid-cols-1 lg:grid lg:grid-cols-2 lg:gap-4  gap-4 md:gap-4 mx-auto mt-5 pb-24 scrollNone  md:h-[100vh] md:overflow-scroll md:pb-24 md:justify-start  flex-wrap md:scrollNone"}>*/}
-                    {/* */}
-                    {/*</div>*/}
                     <div className={"flex flex-col md:flex md:flex-row md:basis-4/5 items-center justify-center p-8 gap-8"}>
 
                     <div className={"mt-5 basis-1/2"}>
-                        {/*{*/}
-                        {/*    yourCourse.map((detail)=>(*/}
-                        {/*        <ProfileCourseUi*/}
-                        {/*            key={detail.id}*/}
-                        {/*            title={detail.title}*/}
-                        {/*            video={detail.video}*/}
-                        {/*            description={detail.description}*/}
-                        {/*        />*/}
-                        {/*    ))*/}
-                        {/*}*/}
+
                         {
                             <ProfileCourseUi
                             title={accordionData?.title}
@@ -103,16 +95,7 @@ function YourCourse_id(props) {
                             />
 
                         }
-                        {/*{*/}
-                        {/*    accordionData?.map((accordion)=>(*/}
-                        {/*        <VideoPlayer*/}
-                        {/*            videoSrc={accordion?.video}*/}
-                        {/*        />*/}
-                        {/*    ))*/}
-                        {/*}*/}
-                        {/*<VideoPlayer*/}
-                        {/*videoSrc={accordionData?.videoSrc}*/}
-                        {/*/>*/}
+
                     </div>
                 <div className={" basis-1/2"}>
                     {

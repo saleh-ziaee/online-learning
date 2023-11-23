@@ -30,22 +30,29 @@ const AuthProvider = ({ children, isProtectedPage }) => {
   };
 
   const fetchCurrentUser = async () => {
-    if (isLoading) return;
-    setLoading(true);
-    const result = await apiGetCurrentUSer();
-    // const result1 =await apiClient.get("/auth/me",{
-    //     headers: {
-    //         Authorization: `Bearer ${accessToken}`,
-    //     },
-    // })
-    // const result2 = await axios.get(`${baseUrl}/auth/me`, {
-    //     headers: {
-    //         Authorization: `Bearer ${accessToken}`,
-    //     },
-    // });
+    try {
+      if (isLoading) return;
+      setLoading(true);
+      const result = await apiGetCurrentUSer();
+      // const result1 =await apiClient.get("/auth/me",{
+      //     headers: {
+      //         Authorization: `Bearer ${accessToken}`,
+      //     },
+      // })
+      // const result2 = await axios.get(`${baseUrl}/auth/me`, {
+      //     headers: {
+      //         Authorization: `Bearer ${accessToken}`,
+      //     },
+      // });
+      console.log(result);
 
-    setCurrentUser(result);
-    setLoading(false);
+      setCurrentUser(result);
+      setLoading(false);
+    }
+    catch (err) {
+      console.log(err)
+    }
+
   };
 
   useEffect(() => {
