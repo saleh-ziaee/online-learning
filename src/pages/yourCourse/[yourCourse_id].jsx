@@ -1,36 +1,32 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useMemo, useState} from 'react';
 import Sidebar from "@/component/Sidebar/Sidebar.jsx";
 import menuIcon from "@/assets/images/navbar/menu.png";
 import userImg from "@/assets/images/Header/Profile.svg";
 import notifeIcon from "@/assets/images/Header/nortife.svg";
-import CardTwoItem from "@/component/CardTwo/CardTwoItem/CardTwoItem.jsx";
 import ProfileCourseUi from "@/component/Ui/ProfileCourse/ProfileCourseUi.jsx";
-import ProfileCourseSection1 from "@/component/ProfileCourse/ProfileCourseSection1.jsx";
-import {apiGetCourseDetail} from "@/api/course.js";
-import {apiGetYourCourse} from "@/api/yourcourse.js";
 import AccordionCourse from "@/component/Accordion/AccordionCourse.jsx";
-import videiOne from "@/assets/videos/16-using-children-prop.mp4"
-import VideoPlayer from "@/component/video/VideoPlayer.jsx";
 import {useRouter} from "next/router";
-import useGetCourseDetails from "@/api/hooks/use-get-course-details";
 import useGetYourCourseDetails from "@/api/hooks/use-get-yourCourse-details";
+import LoadingCourseDetail from "@/component/Loading/LoadingCourseDetail";
+import cx from 'clsx'
+import ProfileLayout from "@/component/Layout/profile";
 
 
 function YourCourse_id(props) {
     const router = useRouter();
-   const  yourCourseId=router.query.yourCourse_id;
+    const yourCourseId = router.query.yourCourse_id;
     // const [loading, setLoading] = useState(false)
     // const [yourCourse, setYourCourse] = useState(null)
     const [accordionData, setAccordionData] = useState(null)
 
-    const [isClicked, setIsClicked] = useState(false)
 
-    const { data, loading } = useGetYourCourseDetails({ yourCourseId });
+    const {data, loading} = useGetYourCourseDetails({yourCourseId});
     const yourCourse = useMemo(() => data, [data]);
-
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const toggleMenu = () => {
-        setIsClicked(!isClicked)
+        setIsSidebarOpen(!isSidebarOpen);
     }
+
     // const getyourCourse = async () =>{
     //     if (loading) return
     //
@@ -51,67 +47,76 @@ function YourCourse_id(props) {
     //         getyourCourse(yourCourseId)
     //     }
     // }, [yourCourseId]);
-    const getAccordionData=(item)=>{
+    const getAccordionData = (item) => {
         setAccordionData(item)
+        router.push({
+            query: {
+                ...router.query,
+                sub_section: item.id
+            }
+        })
     }
+
+    const selectedSection = useMemo(() => {
+        const _data = yourCourse?.sections || []
+
+        return _data.find((section) => {
+            return section.subSection.some((sub) => {
+                return sub.id == router.query.sub_section
+            })
+        })
+
+    }, [yourCourse, router.query.sub_section]);
+
+    console.log(selectedSection)
     console.log(accordionData);
 
     return (
-        <div className={"md:flex w-full md:items-center bg-[#F3F5FF]  relative "}>
-
+        <div className={"w-full bg-[#F3F5FF] relative"}>
             {loading || !yourCourse ? (
-                <div>loading ...</div>
+                <div className={"flex w-full justify-center items-center h-[600px]"}>
+                    <LoadingCourseDetail/>
+                </div>
             ) : (
-            <div className={"md:flex w-full md:items-center bg-[#F3F5FF]  relative "}>
-                {
-                    isClicked&&(
-                        <Sidebar onClick={toggleMenu} className={"flex z-50 absolute right-0 top-0 w-[60%] md:hidden"}></Sidebar>
-                    )
-                }
-                <Sidebar className={"md:flex  md:basis-1/5 hidden"}/>
-                <div className={"bg-[#F3F5FF]  flex-col w-full h-full"}>
-                    <header className={"flex md:items-start items-center  p-4 justify-between w-full border-b-2"}>
-                        <button onClick={toggleMenu } className={"md:hidden block"}>
-                            <img src={menuIcon.src} alt={"menu-icon"} className={"w-[24px] h-[24px]"}/>
-                        </button>
-                        <div className={"flex items-center justify-center gap-4"}>
-                            <img src={userImg.src} alt={"user-image"}/>
-                            <span className={"text-dark"}> بهزاد پاشایی</span>
-                        </div>
-                        <div className={"flex items-center justify-center rounded-xl bg-[#9E5CF20D] w-[64px] h-[64px]"}>
-                            <img src={notifeIcon.src} alt={"notife- icon"}/>
-                        </div>
-                    </header>
-
-                    <div className={"flex flex-col md:flex md:flex-row md:basis-4/5 items-center justify-center p-8 gap-8"}>
-
+                <div className={"flex flex-col md:flex md:flex-row md:basis-4/5 justify-center p-8 gap-8"}>
                     <div className={"mt-5 basis-1/2"}>
 
                         {
-                            <ProfileCourseUi
-                            title={accordionData?.title}
-                            videoSrc={accordionData?.videoSrc}
-                            description={accordionData?.description}
-                            />
-
+                            accordionData ? (
+                                <ProfileCourseUi
+                                    title={accordionData?.title}
+                                    videoSrc={accordionData?.videoSrc}
+                                    description={accordionData?.description}
+                                />
+                            ) : (
+                                <ProfileCourseUi
+                                    title={yourCourse?.title}
+                                    description={yourCourse?.description}
+                                />
+                            )
                         }
 
                     </div>
-                <div className={" basis-1/2"}>
-                    {
-                        yourCourse.sections.map((item) => (
-                            <AccordionCourse  {...item}
-                            onClick={getAccordionData}
-                            />
-                        ))
-                    }
+                    <div className={" basis-1/2"}>
+                        {
+                            yourCourse.sections.map((item) => (
+                                <AccordionCourse
+                                    {...item}
+                                    key={item.id}
+                                    onClick={getAccordionData}
+                                    isOpen={item.id == selectedSection?.id}
+                                    selectedSubSectionId={router.query.sub_section}
+                                />
+                            ))
+                        }
+                    </div>
                 </div>
-                </div>
-                </div>
-            </div>
             )}
         </div>
     );
 }
+
 YourCourse_id.isprotected = true;
+
+YourCourse_id.Layout = ProfileLayout
 export default YourCourse_id;

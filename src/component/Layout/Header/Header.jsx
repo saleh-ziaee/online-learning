@@ -6,13 +6,13 @@ import arrow from "../../../assets/images/Header/row.svg";
 import Search from "../../Ui/SearchInput/Search.jsx";
 import menuIcon from "@/assets/images/navbar/menu.png";
 import { useSearchParams} from "react-router-dom";
-// import {Link} from 'react-router-dom'
 import Navbar from "@/component/Navbar/Navbar.jsx";
 import { useAuthContext } from "@/providers/AuthProvider";
 import Button from "@/component/Ui/Button/Button.jsx";
 import exitIcon from "@/assets/images/sidebar/exit.svg";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import userIcon from "@/assets/images/Header/User.png"
 
 
 function Header(props) {
@@ -152,7 +152,7 @@ function Header(props) {
                 <div className={"border-2 p-1 rounded-2xl"}>
                   <Link href={"/profile"}>
                   <img
-                    src={profileImg.src}
+                    src={userIcon.src}
                     alt={"profile-img"}
                     className={"cursor-pointer"}
                   />

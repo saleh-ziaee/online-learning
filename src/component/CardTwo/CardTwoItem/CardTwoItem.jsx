@@ -10,35 +10,28 @@ import points from "@/assets/images/points.svg"
 import InfoCard from '@/component/InfoCard/InfoCard';
 import Link from 'next/link';
 
-function CardTwoItem({id,img,title,student,level,lesson,score,days,children, className, props}) {
+function CardTwoItem({id,image,title,student,level,lesson,score,days,children, className, props}) {
     return (
         <div
-            className={`${className} flex mt-8  flex-col gap-4 md:flex md:flex-row md:gap-2 items-center bg-[#FAFAFA] rounded-[12px] w-[100%] border-2 p-2`}>
-            <img src={img.src} className={"w-full md:w-[50%] basis-1/2 rounded-[12px]"} alt={"card-img"}/>
+            className={`${className} flex mt-8 flex-col gap-4 md:flex md:flex-row md:gap-2 bg-[#FAFAFA] rounded-[12px] w-[100%] border-2 p-2`}>
+            <img src={image} className={"w-full xs:w-1/2 md:w-1/3 rounded-[12px] object-cover"} alt={"card-img"}/>
 
-            <div className={"flex flex-col w-[100%] gap-6 h-[100%] basis-1/2"}>
+            <div className={"flex flex-col w-[100%] gap-6 h-[100%] basis-1/2 flex-grow"}>
                 <h2 className={"text-[16px] font-semibold"}>Learn Figma - UI/UX Design Essential Training</h2>
-                <div className={"flex items-center gap-2 justify-between"}>
+                <div className={"flex items-center gap-2 justify-between text-xs"}>
                     <div className={"flex gap-2"}>
-                        <img src={levelIcon.src}/>
+                        <img className={"w-4.5"} src={levelIcon.src}/>
                         <span>{level}</span>
                     </div>
                     <div className={"flex gap-2"}>
-                        <img src={userIcon.src}/>
+                        <img className={"w-3"} src={userIcon.src}/>
                         <span> دانش آموز : {student} </span>
                     </div>
                     <div className={"flex gap-2"}>
-                        <img src={lessonIcon.src}/>
+                        <img className={"w-3"} src={lessonIcon.src}/>
                         <span> درس : {lesson}  </span>
                     </div>
                 </div>
-                {/*<div className={"flex items-center gap-2"}>*/}
-                {/*    /!*<InfoCard src={levelIcon} title={level}/>*!/*/}
-                {/*    /!*<InfoCard src={userIcon} title={student ` دانش آموز : `}/>*!/*/}
-                {/*    /!*<InfoCard src={lessonIcon}  title={lesson ` درس : `}/>*!/*/}
-                {/*    */}
-                {/*</div>*/}
-                {/*hladkfsk*/}
                 <img src={points.src} alt={"points"}/>
                 <div className={"flex items-center justify-between"}>
                     <div className={"flex items-center"}>
@@ -64,7 +57,6 @@ function CardTwoItem({id,img,title,student,level,lesson,score,days,children, cla
                         </Button>
                     </Link>
                     </div>
-
             </div>
         </div>
     );

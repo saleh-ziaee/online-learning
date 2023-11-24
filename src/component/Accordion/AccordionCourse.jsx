@@ -14,7 +14,7 @@ import { accordion } from "@/api/accordion.js";
 import { profilecourse } from "@/fake-array/profilecourse.js";
 
 export default function AccordionCourse(
-  { title, videos, watchTime, subSection, onClick },
+  { title, videos, watchTime, subSection, onClick, isOpen, selectedSubSectionId },
   ...props
 ) {
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -25,22 +25,23 @@ export default function AccordionCourse(
 
   return (
     <>
-      <Accordion>
+      <Accordion defaultExpanded={isOpen}>
         <AccordionSummary
           // expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
           <div className={"flex flex-row w-full justify-between"}>
-            <Typography className={"title"} expandIcon={<ExpandMoreIcon />}>
+            <div>
               {title}
-            </Typography>
-            <div className={"flex flex-row gap-x-1.5"}>
-              <div className={"flex flex-row gap-x-2"}>
+            </div>
+
+            <div className={"flex gap-4"}>
+              <div className={"flex items-center gap-x-2 whitespace-nowrap"}>
                 <img src={watch.src} alt="" />
                 <span>{watchTime} ساعت</span>
               </div>
-              <div className={"flex flex-row gap-x-2"}>
+              <div className={"flex items-center flex-row gap-x-2 whitespace-nowrap"}>
                 <img src={video.src} alt="" />
                 <span>{videos} ویدیو</span>
               </div>
@@ -48,22 +49,37 @@ export default function AccordionCourse(
           </div>
         </AccordionSummary>
         <AccordionDetails>
-            <div className={"flex flex-col gap-y-4 " + ""}>
-              {subSection.map((item) => (
-                <div className={"flex justify-between"} key={item.id}>
+          <div className={"flex flex-col gap-y-2"}>
+            {subSection.map((item) => (
+                <div
+                    className={`flex gap-4 py-1 ${
+                        selectedSubSectionId == item.id
+                            ? "bg-purple-300 px-2 rounded" // Apply your selected styles here
+                            : ""
+                    }`}
+                    onClick={() => {
+                      handleAccordionTitleClick(item);
+                      onClick(item);
+                    }}
+                    key={item.id}
+                >
                   <img src={videoIcon.src} alt={"video-icon"} />
                   <span
-                    className={"text-gray-500 cursor-pointer"}
-                    onClick={() => onClick(item)}
-                    key={item.id}
+                      className={`text-gray-500 cursor-pointer ${
+                          selectedSubSectionId == item.id
+                              ? "pl-0" // Apply your selected styles here
+                              : "pl-4"
+                      }`}
+
+                      key={item.id}
                   >
                     {item.title}
                   </span>
 
-                  <span className={"text-gray-500"}>{item.watchTime}</span>
+                  <span className={"text-gray-500 mr-auto"}>{item.watchTime}</span>
                 </div>
-              ))}
-            </div>
+            ))}
+          </div>
         </AccordionDetails>
       </Accordion>
     </>

@@ -1,6 +1,8 @@
 import img1 from "@/assets/images/product/learning-education-ideas-insight-intelligence-study-concept.png"
 import img2 from "@/assets/images/product/unsplash_5QgIuuBxKwM.png";
 import img3 from "@/assets/images/product/unsplash_5J3G5E6Brgg.png";
+import animationImg from "@/assets/images/CourseDetail/unsplash_bOKIptPzdPk.png"
+import backendImage from "@/assets/images/CourseDetail/07.png"
 import teacherImage from "@/assets/images/CourseDetail/4597b4e10ba34611af39b83d5ade2c32.jpg"
 import teacherImage2 from "@/assets/images/CourseDetail/30ad48bcfe7dd58a6fe95bec9530c846.jpg"
 export const product =[
@@ -311,7 +313,7 @@ export const product =[
     },
     {
         id:4,
-        image: img1.src,
+        image: backendImage.src,
         title: 'آموزش برنامه نویسی بک ',
         category:"programing",
         student:35,
@@ -409,14 +411,86 @@ export const product =[
     },
     {
         id:5,
-        image: img2.src,
-        title: 'آموزش هوش مصنوعی ',
-        student:10,
-        lesson:250,
+        image: animationImg.src,
+        title: 'آموزش انیمیشن ',
+        student:20,
+        lesson:170,
         level :'پیشرفته',
-        point :5,
-        descriptions:'تو این دوره، به صورت تیمی، با کسایی مثل خودت که علاقه به یادگیری دارند، در کنار منتورهای دوره، روی پروژه‌های عملی برنامه‌نویسی فرانت‌اند رو از صفر تا حل چالش‌های واقعی یاد می‌گیری.' +
-            'قسمت رابط کاربری یک نرم افزار می‌تواند پیچیدگی‌های زیادی داشته باشد. به عنوان مثال، ممکن است المنت‌های زیادی بعد از درخواست‌های HTTP به سرور دچار تغییر شوند. در چنین مواردی کتابخانه React به عنوان یک راه حل در نظر گرفته می‌شود. معماری این کتابخانه به گونه‌ای توسعه داده شده که بتواند تغییرات قسمت فرانت‌اند را با سرعت بیشتری پیاده سازی کند. به همین دلیل React به یکی از ابزارهای محبوب توسعه فرانت‌اند برای بسیاری از شرکت‌های نرم افزاری تبدیل شده است. محبوبیت بالای React باعث شده است تا شرکت‌های بزرگی همانند Instagram ،Netflix ،Uber و … از آن برای ایجاد و توسعه سایت‌های خود استفاده کنند. همینطور استارت‌اپ‌های اسنپ، دیوار، سازیتو و … نیز از نمونه‌های موفق داخلی هستند که از این ابزار استفاده کرده‌اند.',
+        point :4,
+        descriptions: "آموزش از صفر تا صد طراحی انیمیشن دو بعدی با نرم افزار های روز دنیا برای ورود به بازار کار",
+        teachers:[
+            {
+                name: '  محمد نسیمی فر',
+                teacherImage:teacherImage2,
+                category:"مدرس انیمیشن ",
+                comment:212,
+                description: "حدود 4 سال است که در حوزه طراحی انمیشین دو بعدی و سه بعدی مشغول به فعالیت هستم و حدودا یک سال تجربه تدریس در این حوزه را دارم "
+            }
+        ],
+        sections: [
+            {
+                title: 'درس یکم: کار با فضای سه بعدی (3D)\n',
+                videos: 4,
+                watchTime: 11,
+                subSection: [
+                    {
+                        title: 'ایجاد حالت سه بعدی مجازی\n',
+                        watchTime: 3,
+                    },
+                    {
+                        title: 'کار با دوربین ها (Cameras)\n',
+                        watchTime: 1,
+                    },
+                    {
+                        title: 'کار با تنظیمات نورپردازی (Lights) و مواد (Material)\n',
+                        watchTime: '2:30',
+                    },
+                    {
+                        title: 'ایجاد افکت Depth of field\n',
+                        watchTime: '1:30',
+                    },
+                ],
+            },
+            {
+                title: 'درس دوم: خروجی و رندرینگ (Rendering)\n ',
+                videos: 2,
+                watchTime: 4,
+                subSection: [
+                    {
+                        title: 'رندرینگ با Adobe Media Encoder\n',
+                        watchTime: 2,
+                    },
+                    {
+                        title: 'آرشیو کردن پروژه و کامپوزیشن ها\n',
+                        watchTime: 2,
+                    },
+                ],
+            },
+            {
+                title: 'درس سوم: متحرک سازی نوشته (Type)\n',
+                videos: 4,
+                watchTime: 3,
+                subSection: [
+                    {
+                        title: 'کار با Type Animator\n',
+                        watchTime: 1,
+                    },
+                    {
+                        title: 'متحرک سازی نوشته روی یک مسیر (Path)\n',
+                        watchTime: '00:30',
+                    },
+                    {
+                        title: 'کار با Text Presets\n',
+                        watchTime: '00:45',
+                    },
+                    {
+                        title: 'متحرک سازی Brush Strokes با ابزار Paint\n',
+                        watchTime: '00:25',
+                    },
+
+                ],
+            },
+        ],
 
     },
     {

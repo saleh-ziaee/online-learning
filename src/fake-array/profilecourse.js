@@ -1,106 +1,127 @@
 import videosOne from "@/assets/videos/15-working-with-props.mp4"
 import videosTwo from "@/assets/videos/16-using-children-prop.mp4"
+import img2 from "@/assets/images/product/cardtwo1.png";
+import img1 from "@/assets/images/product/learning-education-ideas-insight-intelligence-study-concept.png";
 export const profilecourse = [
     {
         id:"1",
-        title:"دوره مقدماتی برنامه نویسی فرانت‌اند - 11111111111111React, NextJs",
+        image:img2.src,
+        title: 'آموزش برنامه نویسی فرانت',
+        student:80,
+        lesson:100,
+        level :'حرفه ای',
+        score :75,
+        days:320,
         description:"لی برنامه‌نویسی فرانت‌اند رو از صفر تا حل چالش‌های واقعی یاد می‌گیری." +
             "قسمت رابط کاربری یک نرم افزار می‌تواند پیچیدگی‌های زیادی داشته باشد. به عنوان مثال، ممکن است المنت‌های زیادی بعد از درخواست‌های HTTP به سرور دچار تغییر شوند. در چنین مواردی کتابخانه React به عنوان یک راه حل در نظر گرفته می‌شود. معماری این کتابخانه به گونه‌ای توسعه داده شده که بتواند تغییرات قسمت فرانت‌اند را با سرعت بیشتری پیاده سازی کند. به همین دلیل React به یکی از ابزارهای محبوب توسعه فرانت‌اند برای بسیاری از شرکت‌های نرم افزاری تبدیل شده است. محبوبیت بالای React باعث شده است تا شرکت‌های بزرگی همانند Instagram ،Netflix ،Uber و … از آن برای ایجاد و توسعه سایت‌های خود استفاده کنند. همینطور استارت‌اپ‌های اسنپ، دیوار، رده‌اند.hjhkhkhjkhjhhk",
         sections: [
             {
-                title: 'شروع ماجراجویی توسعه وب با HTML/CSS',
+                id: 1,
+                title: 'معرفی و آشنایی با Figma',
                 videos: 3,
                 watchTime: 5,
                 subSection: [
                     {
                         id:1,
-                        title: 'Ijs.',
+                        title: 'معرفی نرم افزار فیگما',
                         videoSrc:  videosOne   ,
                         watchTime: 1,
-
-                        description: 'asdasdadsasdasdasd'
+                        description: 'فیگما چیست؟'
                     },
                     {
                         id:2,
-                        videoSrc: videosTwo,
-                        title: 'Introduction to CSS: vbcvbc styling, selectors, properties, and values.',
+                        title: '\n' +
+                            'ثبت نام و شروع طراحی با فیگما',
                         watchTime: '1:30',
+                        description: "چگونه از فیگما استفاده کنیم"
                     },
                     {
                         id:3,
-                        title: 'Introduction to CSS: Basic styling, selectors, properties, and values.',
+                        title: '\n' +
+                            'آشنایی با محیط فیگما',
                         videoSrc: "/src/assets/videos/16-using-children-prop.mp4",
                         watchTime: '1:30',
+                        description: "آشنایی اولیه برای استفاده از فیگما"
+
                     },
                     // Add more subsections here if needed
                 ],
             },
             {
-                title: 'شروع ماجراجویی توسعه وب با ',
-                videos: 3,
+                id: 2,
+                title: 'معرفی ابزارهای فیگما',
+                videos: 4,
                 watchTime: 7,
                 subSection: [
                     {
-                        id: 1,
-                        title: 'Introduction to HTML: Basic syntax, tags, elements, and attributes.',
+                        id: 21,
+                        title: '\n' +
+                            'ابزارهای Move, Scale, Frame, Slice',
                         watchTime: 1,
+                        videoSrc: videosTwo,
+
                     },
                     {
-                        id: 2,
-                        title: 'Introduction to CSS: Basic styling, selectors, properties, and values.',
-                        watchTime: '1:30',
+                        id: 22,
+                        title: '\n' +
+                            'ابزارهای Arrow, Ellipse, Polygon + مینی پروژه طراحی لوگو',
+                        watchTime: '2:30',
                     },
                     {
-                        id: 3,
-                        title: 'Introduction to CSS: Basic styling, selectors, properties, and values.',
-                        watchTime: '1:30',
+                        id: 23,
+                        title: '\n' +
+                            'پنل لایه‌ها',
+                        watchTime: '3:15',
+                    },
+                    {
+                        id: 24,
+                        title: '\n' +
+                            'ابزارهای Star و Place image + مینی پروژه طراحی لوگو',
+                        watchTime: 4,
                     },
                     // Add more subsections here if needed
                 ],
             },
             {
-                title: 'شروع ماجراجویی توسعه وب با HTML/CSS',
-                videos: 3,
+                id: 3,
+                title: 'افکت‌ها در Figma',
+                videos: 2,
                 watchTime: 5,
                 subSection: [
                     {
-                        id: 1,
-                        title: 'Introduction to HTML: Basic syntax, tags, elements, and attributes.',
+                        id: 31,
+                        title: 'افکت Shadow',
                         watchTime: 1,
                     },
                     {
-                        id: 2,
-                        title: 'Introduction to CSS: Basic styling, selectors, properties, and values.',
+                        id: 32,
+                        title: 'افکت Background blur و Layer blur',
                         watchTime: '1:30',
                     },
-                    {
-                        id: 3,
-                        title: 'Introduction to CSS: Basic styling, selectors, properties, and values.',
-                        watchTime: '1:30',
-                    },
-
-                    // Add more subsections here if needed
                 ],
             },
             {
-                title: 'شروع ماجراجویی توسعه وب با ',
+                id: 4,
+                title: 'کامپوننت‌ (Component) ',
                 videos: 3,
                 watchTime: 7,
                 subSection: [
                     {
-                        id: 1,
-                        title: 'Introduction to HTML: Basic syntax, tags, elements, and attributes.',
-                        watchTime: 1,
+                        id: 41,
+                        title: '\n' +
+                            'کامپوننت‌ها در فیگما',
+                        watchTime: 2,
                     },
                     {
-                        id: 2,
-                        title: 'Introduction to CSS: Basic styling, selectors, properties, and values.',
+                        id: 42,
+                        title: 'پنل Assets و Global Style',
                         watchTime: '1:30',
                     },
                     {
-                        id: 3,
-                        title: 'Introduction to CSS: Basic styling, selectors, properties, and values.',
-                        watchTime: '1:30',
+                        id: 43,
+                        title: '\n' +
+                            'ویژگی Variants',
+                        watchTime: '1:10',
                     },
                     // Add more subsections here if needed
                 ],
@@ -109,6 +130,13 @@ export const profilecourse = [
 
     },
     {
+        image: img1.src,
+        student:80,
+        lesson:110,
+        level :'مبتدی',
+        score :75,
+        days:320,
+
         id:"2",
         title:"دوره مقدماتی برنامه نویسی فرانت‌اند - React, NextJs",
         video:"",
@@ -117,10 +145,28 @@ export const profilecourse = [
     },
     {
         id:"3",
-        title:"دوره مقدماتی برنامه نویسی فرانت‌اند - React, NextJs",
+        image: img1.src,
+        title: 'آموزش برنامه نویسی فرانت',
+        student:80,
+        lesson:110,
+        level :'مبتدی',
+        score :75,
+        days:320,
         video:"",
         description:"تو این دوره، به صورت تیمی، با کسایی مثل خودت که علاقه به یادگیری دارند، در کنار منتورهای دوره، روی پروژه‌های عملی برنامه‌نویسی فرانت‌اند رو از صفر تا حل چالش‌های واقعی یاد می‌گیری." +
             "قسمت رابط کاربری یک نرم افزار می‌تواند پیچیدگی‌های زیادی داشته باشد. به عنوان مثال، ممکن است المنت‌های زیادی بعد از درخواست‌های HTTP به سرور دچار تغییر شوند. در چنین مواردی کتابخانه React به عنوان یک راه حل در نظر گرفته می‌شود. معماری این کتابخانه به گونه‌ای توسعه داده شده که بتواند تغییرات قسمت فرانت‌اند را با سرعت بیشتری پیاده سازی کند. به همین دلیل React به یکی از ابزارهای محبوب توسعه فرانت‌اند برای بسیاری از شرکت‌های نرم افزاری تبدیل شده است. محبوبیت بالای React باعث شده است تا شرکت‌های بزرگی همانند Instagram ،Netflix ،Uber و … از آن برای ایجاد و توسعه سایت‌های خود استفاده کنند. همینطور استارت‌اپ‌های اسنپ، دیوار، سازیتو و … نیز از نمونه‌های موفق داخلی هستند که از این ابزار استفاده کرده‌اند."
     },
-
+    {
+        id:"4",
+        image: img1.src,
+        title: 'آموزش برنامه نویسی فرانت',
+        student:80,
+        lesson:110,
+        level :'مبتدی',
+        score :75,
+        days:320,
+        video:"",
+        description:"تو این دوره، به صورت تیمی، با کسایی مثل خودت که علاقه به یادگیری دارند، در کنار منتورهای دوره، روی پروژه‌های عملی برنامه‌نویسی فرانت‌اند رو از صفر تا حل چالش‌های واقعی یاد می‌گیری." +
+            "قسمت رابط کاربری یک نرم افزار می‌تواند پیچیدگی‌های زیادی داشته باشد. به عنوان مثال، ممکن است المنت‌های زیادی بعد از درخواست‌های HTTP به سرور دچار تغییر شوند. در چنین مواردی کتابخانه React به عنوان یک راه حل در نظر گرفته می‌شود. معماری این کتابخانه به گونه‌ای توسعه داده شده که بتواند تغییرات قسمت فرانت‌اند را با سرعت بیشتری پیاده سازی کند. به همین دلیل React به یکی از ابزارهای محبوب توسعه فرانت‌اند برای بسیاری از شرکت‌های نرم افزاری تبدیل شده است. محبوبیت بالای React باعث شده است تا شرکت‌های بزرگی همانند Instagram ،Netflix ،Uber و … از آن برای ایجاد و توسعه سایت‌های خود استفاده کنند. همینطور استارت‌اپ‌های اسنپ، دیوار، سازیتو و … نیز از نمونه‌های موفق داخلی هستند که از این ابزار استفاده کرده‌اند."
+    },
 ]

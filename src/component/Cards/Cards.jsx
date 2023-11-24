@@ -3,7 +3,6 @@ import Card from "@/component/Ui/Card-course/Card.jsx";
 import imagef from "@/assets/images/footer/bigImage.svg";
 import { product } from "@/fake-array/product.js";
 import { apiSearchPost } from "@/api/search.js";
-import { Button } from "@mui/material";
 import LoadingProduct from "@/component/Loading/LoadingProduct.jsx";
 import { useQuery } from "react-query";
 import { useRouter } from "next/router";

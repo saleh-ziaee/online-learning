@@ -1,11 +1,11 @@
 import {fakeRequest} from "@/fake-date/utils.js"
-import {cardtowarray} from "@/fake-array/cardtowarray.js";
+import {profilecourse} from "@/fake-array/profilecourse";
 
 const apiSearchPost = async (filters) => {
 
     // const result = await apiClient.get('/search', {params: filters})
 
-    var data = cardtowarray
+    var data = profilecourse
     // if (filters?.q) {
     //     data = product.filter((post) => post.title.includes(filters.q));
     // }
@@ -19,3 +19,4 @@ const apiSearchPost = async (filters) => {
 
     return result;
 }
+export {apiSearchPost}

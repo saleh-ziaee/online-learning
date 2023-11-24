@@ -1,8 +1,8 @@
 import styles from "./LoadingCourseDetail.module.css";
 
-function LoadingCourseDetail(props) {
+function LoadingCourseDetail({className}) {
   return (
-    <div className={"flex"}>
+    <div className={`${className} flex`}>
       <div className={styles.book}>
         <div className={styles["book__pg-shadow"]}></div>
         <div className={styles["book__pg"]}></div>
