@@ -13,7 +13,10 @@ export default function App({ Component, pageProps }) {
     <QueryClientProvider client={queryClient}>
       <AuthProvider isProtectedPage={isProtected}>
         <Component {...pageProps} />
-          <Toaster />
+          <Toaster
+              position="bottom-left"
+              reverseOrder={false}
+          />
       </AuthProvider>
     </QueryClientProvider>
   );

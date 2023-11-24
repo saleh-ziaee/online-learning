@@ -47,6 +47,7 @@ const LoginForm = () => {
           //     data
           // );
           router.push("/")
+          toast.success("خوش آمدید")
           console.log(result.token)
           saveAccessToken(result.token);
       } catch (error) {

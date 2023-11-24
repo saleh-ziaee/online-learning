@@ -54,7 +54,7 @@ function YourCourse_id(props) {
     const getAccordionData=(item)=>{
         setAccordionData(item)
     }
-    // console.log(accordionData);
+    console.log(accordionData);
 
     return (
         <div className={"md:flex w-full md:items-center bg-[#F3F5FF]  relative "}>
@@ -113,4 +113,5 @@ function YourCourse_id(props) {
         </div>
     );
 }
+YourCourse_id.isprotected = true;
 export default YourCourse_id;
