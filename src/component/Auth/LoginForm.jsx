@@ -6,6 +6,7 @@ import {apiLoginUSer, apiRegisterUSer} from "@/api/user";
 import {useAuthContext} from "@/providers/AuthProvider";
 import {useRouter} from "next/router";
 import Toast from "@/component/Toast/Toast";
+import toast, {Toaster} from "react-hot-toast";
 
 const LoginForm = () => {
     const [loading, setLoading] = useState(false);
@@ -13,8 +14,6 @@ const LoginForm = () => {
     const { saveAccessToken } = useAuthContext();
     const [error, setError] = useState({});
     const router = useRouter();
-    const [message, setMessage] = useState('');
-    const [type, setType] = useState('');
     const [loginForm, setLoginForm] = useState({
     username: "",
     password: "",
@@ -25,16 +24,6 @@ const LoginForm = () => {
     setLoginForm((s) => ({ ...s, [e.target.name]: e.target.value }));
   };
 
-
-    const handleShowMessage = (msg, msgType) => {
-        setMessage(msg);
-        setType(msgType);
-    };
-
-    const handleCloseMessage = () => {
-        setMessage('');
-        setType('');
-    };
   const handleLogin = async (event) => {
     event.preventDefault();
 
@@ -64,7 +53,7 @@ const LoginForm = () => {
           console.log(error);
           setUnknownError("Something wrong, please try again.");
           if (error.response.status===401){
-              handleShowMessage("نام کاربری یا رمز عبور اشتباه است ", "error");
+              toast.error("نام کاربری یا رمز عبور صحیح نمی باشد ")
           }
       } finally {
           setLoading(false);
@@ -72,8 +61,7 @@ const LoginForm = () => {
   };
 
   return (
-      <>
-      {message && <Toast message={message} type={type} onClose={handleCloseMessage} />};
+
 
     <form className="flex flex-col gap-5 mt-5" onSubmit={handleLogin}>
       <Input
@@ -100,7 +88,7 @@ const LoginForm = () => {
         ورود
       </Button>
     </form>
-      </>
+
 
   );
 };
