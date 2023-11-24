@@ -7,6 +7,7 @@ import Cards from "@/component/Cards/Cards.jsx";
 import Title from "@/component/TitlePic/Title.jsx";
 import DescriptionCards from "@/component/DescriptionCards/DescriptionCards.jsx";
 import {useAuthContext} from "@/providers/AuthProvider";
+import Link from "next/link";
 
 function Home() {
     const { isLoggedIn } = useAuthContext();
@@ -23,21 +24,26 @@ function Home() {
         </span>
       </div>
       <Cards></Cards>
-      <div className={"flex items-center mt-10"}>
-        <div className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}></div>
-        <span className={"text-black ms-3 font-bold md:text-2xl"}>
-          دوره های شما
-        </span>
-      </div>
+
+
 
       <DescriptionCards></DescriptionCards>
         {isLoggedIn?(
+
             <>
+                <div className={"flex items-center mt-10"}>
+                    <div className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}></div>
+                    <span className={"text-black ms-3 font-bold md:text-2xl"}>
+          دوره های شما
+        </span>
+                </div>
             <CardTwo></CardTwo>
             </>
 
         ):(
-            <></>
+            <div className={"flex justify-center text-gray-500 bg-purple-200 font-bold text-2xl p-12 border-2 rounded-2xl mx-auto "}><Link href={"/Login"}>
+              برای دیدن دوره های خود وارد سایت شوید
+            </Link></div>
         )
 
         }

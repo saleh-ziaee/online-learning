@@ -10,11 +10,10 @@ function CategoryPanel(props) {
   return (
     <div
       className={
-        "flex items-center justify-center w-full overflow-y-scroll  hide-scroll mt-[130px]  gap-[30px] scroll"
+        "md:items-center md:justify-center w-full overflow-y-scroll  hide-scroll mt-[130px]  gap-[30px] flex-none md:flex"
       }
     >
       <CategoryItem variant="" className={"hide-scroll"}>
-        <img className={"w-full"} src={nextIcon} />
       </CategoryItem>
       <CategoryItem className={"mr-4"} variant="regular">
         After Effects
