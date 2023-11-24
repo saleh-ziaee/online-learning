@@ -48,7 +48,6 @@ export default function AccordionCourse(
           </div>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
             <div className={"flex flex-col gap-y-4 " + ""}>
               {subSection.map((item) => (
                 <div className={"flex justify-between"} key={item.id}>
@@ -65,7 +64,6 @@ export default function AccordionCourse(
                 </div>
               ))}
             </div>
-          </Typography>
         </AccordionDetails>
       </Accordion>
     </>

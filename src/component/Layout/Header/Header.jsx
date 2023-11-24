@@ -31,6 +31,14 @@ function Header(props) {
       },
     });
   };
+  const handleCategory = (selectedCategory) => {
+    router.push({
+      pathname: "/search",
+      query: {
+        c: selectedCategory,
+      },
+    });
+  };
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -115,14 +123,14 @@ function Header(props) {
                     "p-[20px] flex flex-col z-[999999] transition shadow-lg items-center bg-white justify-center rounded-2xl absolute top-[25px] gap-[20px] w-100"
                   }
                 >
-                  <div className="nested-item text-[13px] text-[#080808BF] hover:text-primary-500">
-                    Development
+                  <div className={"nested-item text-[13px] w-max text-[#080808BF] hover:text-primary-500"} onClick={() => handleCategory("programing")}>
+                    برنامه نویسی
                   </div>
-                  <div className="nested-item text-[13px] text-[#080808BF] hover:text-primary-500">
-                    Development
+                  <div className={"nested-item text-[13px] w-max text-[#080808BF] hover:text-primary-500"} onClick={() => handleCategory("graphic")}>
+                    گرافیک
                   </div>
-                  <div className="nested-item text-[13px] text-[#080808BF] hover:text-primary-500 ">
-                    Development
+                  <div className={"nested-item text-[13px] w-max text-[#080808BF] hover:text-primary-500"} onClick={() => handleCategory("animation")}>
+                   انیمیشن
                   </div>
                 </div>
               )}
@@ -142,11 +150,14 @@ function Header(props) {
             {isLoggedIn ? (
               <>
                 <div className={"border-2 p-1 rounded-2xl"}>
+                  <Link href={"/profile"}>
                   <img
                     src={profileImg.src}
                     alt={"profile-img"}
                     className={"cursor-pointer"}
                   />
+                  </Link>
+
                 </div>
                 <div className={"flex flex-col items-center gap-4"}>
                   {/*<span className={"text-dark"}>Behzad pashaei</span>*/}
