@@ -14,8 +14,15 @@ export default function App({ Component, pageProps }) {
       <AuthProvider isProtectedPage={isProtected}>
         <Component {...pageProps} />
           <Toaster
-              position="bottom-left"
-              reverseOrder={false}
+              toastOptions={{
+                  className:"z-[999999999999999999999999999]",
+                  style: {
+
+                  },
+              }}
+
+                  position="bottom-left"
+              reverseOrder={true}
           />
       </AuthProvider>
     </QueryClientProvider>
