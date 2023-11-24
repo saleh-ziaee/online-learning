@@ -43,8 +43,6 @@ function Sidebar({className,onClick,isOpen ,...props}) {
             </div>
         </div>
         </div>
-
-
     );
 }
 

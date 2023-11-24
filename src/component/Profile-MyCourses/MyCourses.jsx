@@ -1,13 +1,12 @@
 import React, {useState} from 'react';
 import CardTwoItem from "@/component/CardTwo/CardTwoItem/CardTwoItem.jsx";
 import Sidebar from "@/component/Sidebar/Sidebar.jsx";
-import userImg from "@/assets/images/Header/Profile.svg"
+import userImg from "@/assets/images/Header/Profile.svg";
 // import "./MyCourses.css"
 import notifeIcon from "@/assets/images/Header/nortife.svg"
 import menuIcon from "@/assets/images/navbar/menu.png";
 import Navbar from "@/component/Navbar/Navbar.jsx";
 import CardTwo from "@/component/CardTwo/CardTwo.jsx";
-
 function MyCourses(props) {
     const [isClicked, setIsClicked] = useState(false)
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -35,7 +34,6 @@ function MyCourses(props) {
                     <img src={notifeIcon.src} alt={"notife- icon"}/>
                 </div>
             </header>
-
             <div className={
                 " coursesSection flex flex-col items-center justify-center w-full  mx-auto mt-5 pb-24 scrollNone  md:h-[100vh] md:overflow-scroll md:pb-24 md:justify-start  flex-wrap md:scrollNone"}>
                 {/*<h2>دوره های من</h2>*/}
