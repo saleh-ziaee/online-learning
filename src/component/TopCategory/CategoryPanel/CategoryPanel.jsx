@@ -10,7 +10,7 @@ function CategoryPanel(props) {
   return (
     <div
       className={
-        "md:items-center md:justify-center w-full overflow-y-scroll  hide-scroll mt-[130px]  gap-[30px] flex-none md:flex"
+        "md:items-center md:justify-center w-full overflow-y-scroll  hide-scroll mt-[130px]  gap-[30px] flex flex-none md:flex-none "
       }
     >
       <CategoryItem variant="" className={"hide-scroll"}>
