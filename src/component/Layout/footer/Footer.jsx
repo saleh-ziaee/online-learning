@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "../../../assets/images/footer/logo.svg";
 import imagef from "../../../assets/images/footer/bigImage.svg";
+import enamad from "@/assets/images/footer/enamad.png";
+import samandehi from "@/assets/images/footer/samandehi.png";
 import FooterCommentBox from "@/component/FooterCommentBox/FooterCommentBox";
 
 function Footer(props) {
@@ -38,68 +40,96 @@ function Footer(props) {
       </div>
       <div
         className={
-          "flex flex-col mx-auto md:mx-0 mt-[60px] md:flex md:flex-row"
+          "flex flex-col mx-auto md:mx-0 mt-[60px] justify-between md:flex md:flex-row gap-20"
         }
       >
-        <div className={"section1-footer w-full md:w-[30%]"}>
-          <div className={"flex items-center"}>
-            <div
-              className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}
-            ></div>
-            <span className={"text-black ms-3 font-bold text-[20px]"}>
-              گواهی عضویت
-            </span>
-          </div>
-          <div className={"mt-[30px]"}>
-            <img src={imagef.src} alt={"image"} />
-          </div>
+        <div className={"md:flex flex justify-center md:flex-row gap-10 md:gap-5 border-l-2 pl-10"}>
+            <div className={"flex flex-row items-center gap-2"}>
+                <div
+                    className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}
+                ></div>
+                <span className={"font-bold"}>دوره های آموزشی</span>
+            </div>
+            <div className={"flex flex-row items-center gap-2"}>
+                <div
+                    className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}
+                ></div>
+                <span className={"font-bold"}>جستجو</span>
+            </div>
+            <div className={"flex flex-row items-center gap-2"}>
+                <div
+                    className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}
+                ></div>
+                <span className={"font-bold"}>ارتباط با ما</span>
+            </div>
         </div>
-        <div className={"section2-footer md:ms-[50px] w-full md:w-[15%]"}>
-          <div className={"flex items-center"}>
+          <div className={"md:flex flex justify-center md:flex-row px-3 gap-10 items-center"}>
+              <div className={"border-2 rounded-2xl"}>
+                  <img src={enamad.src} alt=""/>
+              </div>
+              <div className={"border-2 px-3 rounded-2xl"}>
+                  <img className={"w-[110px]"} src={samandehi.src} alt=""/>
+              </div>
+          </div>
+        {/*<div className={"section1-footer w-full md:w-[30%]"}>*/}
+        {/*  <div className={"flex items-center"}>*/}
+        {/*    <div*/}
+        {/*      className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}*/}
+        {/*    ></div>*/}
+        {/*    <span className={"text-black ms-3 font-bold text-[20px]"}>*/}
+        {/*      گواهی عضویت*/}
+        {/*    </span>*/}
+        {/*  </div>*/}
+        {/*  <div className={"mt-[30px]"}>*/}
+        {/*    <img src={imagef.src} alt={"image"} />*/}
+        {/*  </div>*/}
+        {/*</div>*/}
+        {/*<div className={"section2-footer md:ms-[50px] w-full md:w-[15%]"}>*/}
+        {/*  <div className={"flex items-center"}>*/}
 
-            <span className={"text-black ms-3 font-bold text-[20px]"}>
-              دسته بندی
-            </span>
-          </div>
-          <div className={"flex flex-col gap-2"}>
-            <span className={"mt-5"}>طراحی</span>
-            <span>برنامه نویسی</span>
-            <span>گرافیک</span>
-            <span>فرانت اند</span>
-            <span>فرانت اند</span>
-            <span>فرانت اند</span>
-            <span>فرانت اند</span>
-            <span>فرانت اند</span>
-            <span>فرانت اند</span>
-            <span>فرانت اند</span>
-            <span>فرانت اند</span>
-            <span>فرانت اند</span>
-          </div>
-        </div>
-        <div className={"section3-footer ms-[50px] w-[15%]"}>
-          <div className={"flex items-center"}>
-            <div
-              className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}
-            ></div>
-            <span className={"text-black ms-3 font-bold text-[20px]"}>
-              دسته بندی
-            </span>
-          </div>
-          <div className={"flex flex-col gap-2"}>
-            <span className={"mt-5"}>طراحی</span>
-            <span>برنامه نویسی</span>
-            <span>گرافیک</span>
-            <span>فرانت اند</span>
-            <span>فرانت اند</span>
-            <span>فرانت اند</span>
-            <span>فرانت اند</span>
-            <span>فرانت اند</span>
-            <span>فرانت اند</span>
-            <span>فرانت اند</span>
-            <span>فرانت اند</span>
-            <span>فرانت اند</span>
-          </div>
-        </div>
+        {/*    <span className={"text-black ms-3 font-bold text-[20px]"}>*/}
+        {/*      دسته بندی*/}
+        {/*    </span>*/}
+        {/*  </div>*/}
+        {/*  <div className={"flex flex-col gap-2"}>*/}
+        {/*    <span className={"mt-5"}>طراحی</span>*/}
+        {/*    <span>برنامه نویسی</span>*/}
+        {/*    <span>گرافیک</span>*/}
+        {/*    <span>فرانت اند</span>*/}
+        {/*    <span>فرانت اند</span>*/}
+        {/*    <span>فرانت اند</span>*/}
+        {/*    <span>فرانت اند</span>*/}
+        {/*    <span>فرانت اند</span>*/}
+        {/*    <span>فرانت اند</span>*/}
+        {/*    <span>فرانت اند</span>*/}
+        {/*    <span>فرانت اند</span>*/}
+        {/*    <span>فرانت اند</span>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
+        {/*<div className={"section3-footer ms-[50px] w-[15%]"}>*/}
+        {/*  <div className={"flex items-center"}>*/}
+        {/*    <div*/}
+        {/*      className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}*/}
+        {/*    ></div>*/}
+        {/*    <span className={"text-black ms-3 font-bold text-[20px]"}>*/}
+        {/*      دسته بندی*/}
+        {/*    </span>*/}
+        {/*  </div>*/}
+        {/*  <div className={"flex flex-col gap-2"}>*/}
+        {/*    <span className={"mt-5"}>طراحی</span>*/}
+        {/*    <span>برنامه نویسی</span>*/}
+        {/*    <span>گرافیک</span>*/}
+        {/*    <span>فرانت اند</span>*/}
+        {/*    <span>فرانت اند</span>*/}
+        {/*    <span>فرانت اند</span>*/}
+        {/*    <span>فرانت اند</span>*/}
+        {/*    <span>فرانت اند</span>*/}
+        {/*    <span>فرانت اند</span>*/}
+        {/*    <span>فرانت اند</span>*/}
+        {/*    <span>فرانت اند</span>*/}
+        {/*    <span>فرانت اند</span>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
         <div className={"w-[35%]"}>
           <div className={"flex items-center"}>
             <div
