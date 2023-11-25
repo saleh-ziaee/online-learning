@@ -7,7 +7,7 @@ import exitIcon from "@/assets/images/sidebar/exit.svg"
 import notifeImg from "@/assets/images/Header/nortife.svg";
 import closeIcon from "@/assets/images/navbar/XCircle.svg";
 import Link from 'next/link';
-import { animated } from '@react-spring/web';
+import { useSpring, animated } from "react-spring";
 function Sidebar({className,onClick,isOpen ,...props}) {
 
     return (

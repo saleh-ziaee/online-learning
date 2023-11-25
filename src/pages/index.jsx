@@ -41,7 +41,7 @@ function Home() {
             </>
 
         ):(
-            <div className={"flex justify-center text-gray-500 bg-purple-200 font-bold text-2xl p-12 border-2 rounded-2xl mx-auto "}><Link href={"/Login"}>
+            <div className={"flex justify-center text-gray-500 bg-purple-200 font-bold text-[18px] md:text-2xl p-12 border-2 rounded-2xl mx-auto "}><Link href={"/Login"}>
               برای دیدن دوره های خود وارد سایت شوید
             </Link></div>
         )
