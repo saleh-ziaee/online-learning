@@ -4,7 +4,7 @@ import CardTwo from "@/component/CardTwo/CardTwo.jsx";
 
 function MyCourses(props) {
     return (
-        <div className={"md:flex  md:items-center bg-[#F3F5FF] relative md:overflow-hidden"}>
+        <div className={"md:flex  md:items-center bg-[#F3F5FF] relative md:overflow-hidden myCoursers"}>
 
             {/*<h2>دوره های من</h2>*/}
             <CardTwo/>

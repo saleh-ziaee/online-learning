@@ -5,6 +5,7 @@ import menuIcon from "@/assets/images/navbar/menu.png";
 import userImg from "@/assets/images/Header/Profile.svg";
 import notifeIcon from "@/assets/images/Header/nortife.svg";
 import {useAuthContext} from "@/providers/AuthProvider";
+import userIcon from "@/assets/images/Header/User.png";
 
 function ProfileLayout({children}) {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -19,7 +20,7 @@ function ProfileLayout({children}) {
         <div className={"md:flex w-full bg-[#F3F5FF] mx-auto relative min-h-screen"}>
             <Sidebar
                 className={cx(
-                    '-right-full w-1/3 fixed transition-all top-0 bottom-0 z-30 md:relative md:right-0',
+                    '-right-full  w-1/2 md:w-1/4 fixed transition-all top-0 bottom-0 z-30 md:relative md:right-0',
                     isSidebarOpen ? '!right-0' : ''
                 )}
                 onClose={toggleMenu}
@@ -31,7 +32,7 @@ function ProfileLayout({children}) {
                         <img src={menuIcon.src} alt={"menu-icon"} className={"w-[24px] h-[24px]"}/>
                     </button>
                     <div className={"flex items-center justify-center gap-4"}>
-                        <img src={userImg.src} alt={"user-image"}/>
+                        <img src={userIcon.src} alt={"user-image"}/>
                         <span className={"text-dark"}>
                             {isLoading ? '...' : currentUser?.username}
                         </span>

@@ -58,15 +58,6 @@ function Cards({ className, props }) {
         data.map((item) => <Card key={item.id} {...item} />)
       )}
 
-      {/*<Card></Card>*/}
-      {/*<Card></Card>*/}
-      {/*<Card></Card>*/}
-      {/*<Card></Card>*/}
-      {/*<Card></Card>*/}
-      {/*<Card></Card>*/}
-      {/*<Card></Card>*/}
-      {/*<Card>
-            7</Card>*/}
     </div>
   );
 }
