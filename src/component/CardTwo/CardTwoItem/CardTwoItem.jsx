@@ -14,7 +14,7 @@ function CardTwoItem({id,image,title,student,level,lesson,score,days,children, c
     return (
         <div
             className={`${className} flex mt-8 flex-col gap-4 md:flex md:flex-row md:gap-2 bg-[#FAFAFA] rounded-[12px] w-[100%] border-2 p-2`}>
-            <img src={image} className={"w-full xs:w-1/2 md:w-1/3 rounded-[12px] object-cover"} alt={"card-img"}/>
+            <img src={image} className={"w-full xs:w-1/2 lg:w-1/2 rounded-[12px] object-cover"} alt={"card-img"}/>
             <div className={"flex flex-col w-[100%] gap-6 h-[100%] basis-1/2 flex-grow"}>
                 <h2 className={"text-[16px] font-semibold"}>{title}</h2>
                 <div className={"flex items-center gap-2 justify-between text-xs"}>
