@@ -107,7 +107,7 @@ function CourseDetail() {
                                     ))}
                             </div>
                         </div>
-                        <div className={" w-full md:w-[40%] mt-12"}>
+                        <div className={"mt-12"}>
                                     <h2 className={"text-[#1D2026] text-[24px] w-full font-bold mb-8"}> مدرس دوره</h2>
                         {
                             courseDetail.teachers?.map((item)=>(

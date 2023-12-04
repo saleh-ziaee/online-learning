@@ -14,6 +14,8 @@ function Home() {
     return (
     <div className={"container w-[95%] md:w-[85%]  mx-auto"}>
       <Header></Header>
+      <div className={"pt-[130px]"}>
+
       <CategoryPanel></CategoryPanel>
       <Title></Title>
       <SearchPanel></SearchPanel>
@@ -47,6 +49,8 @@ function Home() {
         )
 
         }
+      </div>
+
       <Footer />
     </div>
   );

@@ -28,7 +28,7 @@ function CourseDetail(props) {
     });
 
     const getAccordionData=()=>{
-        toast.error("برای مشهاده ابتدا وارد حساب کاربری خود شوید")
+        toast.error("برای مشاهده دوره ها ابتدا وارد حساب کاربری خود شوید")
 
         router.push("/login")
     }
@@ -101,7 +101,7 @@ function CourseDetail(props) {
                 ))}
               </div>
             </div>
-            <div className={" w-full md:w-[40%] mt-12"}>
+            <div className={" w-full  mt-12"}>
               <h2
                 className={"text-[#1D2026] text-[24px] w-full font-bold mb-8"}
               >

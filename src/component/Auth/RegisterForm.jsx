@@ -60,10 +60,10 @@ const RegisterForm = () => {
       } finally {
           setLoading(false);
       }
-    console.log(registerForm);
+    // console.log(registerForm);
   };
 
-  console.log(registerForm);
+  // console.log(registerForm);
   return (
     <form className="flex flex-col gap-5 mt-5" onSubmit={handleRegister}>
       <Input

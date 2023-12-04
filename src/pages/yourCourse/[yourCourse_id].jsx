@@ -10,6 +10,9 @@ import useGetYourCourseDetails from "@/api/hooks/use-get-yourCourse-details";
 import LoadingCourseDetail from "@/component/Loading/LoadingCourseDetail";
 import cx from 'clsx'
 import ProfileLayout from "@/component/Layout/profile";
+import folderIcon from "@/assets/images/CourseDetail/folder.png";
+import videoIcon from "@/assets/images/CourseDetail/videos.png";
+import watchIcon from "@/assets/images/CourseDetail/watch.png";
 
 
 function YourCourse_id(props) {
@@ -98,6 +101,24 @@ function YourCourse_id(props) {
 
                     </div>
                     <div className={" basis-1/2"}>
+                        <div className={"flex flex-row justify-between"}>
+                            <span className={"text-xl font-bold"}>سرفصل‌ها</span>
+
+                            <div className={"flex gap-x-6"}>
+                  <span className={"flex items-center gap-1"}>
+                    <img src={folderIcon.src} />
+                      {yourCourse.section} بخش
+                  </span>
+                                <span className={"flex items-center gap-1"}>
+                    <img src={videoIcon.src} />
+                                    {yourCourse.videos} ویدیو
+                  </span>
+                                <span className={"flex items-center gap-1"}>
+                    <img src={watchIcon.src} />
+                                    {yourCourse.watchTime} ساعت
+                  </span>
+                            </div>
+                        </div>
                         {
                             yourCourse.sections.map((item) => (
                                 <AccordionCourse
