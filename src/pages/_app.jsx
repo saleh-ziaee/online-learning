@@ -1,20 +1,34 @@
-import { AuthProvider } from "@/providers/AuthProvider";
-import { QueryClient, QueryClientProvider } from "react-query";
+import {AuthProvider} from "@/providers/AuthProvider";
+import {QueryClient, QueryClientProvider} from "react-query";
 
 import "../index.css";
 import {Toaster} from "react-hot-toast";
 
 const queryClient = new QueryClient();
 
-export default function App({ Component, pageProps }) {
-  const isProtected = Component.isProtected;
+const NoneLayout = ({children}) => {
+    return children
+}
+export default function App({Component, pageProps}) {
+    const isProtected = Component.isProtected;
+    const Layout = Component.Layout || NoneLayout
 
-  return (
-    <QueryClientProvider client={queryClient}>
-      <AuthProvider isProtectedPage={isProtected}>
-        <Component {...pageProps} />
-          <Toaster />
-      </AuthProvider>
-    </QueryClientProvider>
-  );
+    return (
+        <QueryClientProvider client={queryClient}>
+            <AuthProvider isProtectedPage={isProtected}>
+                <Layout>
+                    <Component {...pageProps} />
+                    <Toaster
+                        toastOptions={{
+                            className: "z-[999999999999999999999999999]",
+                            style: {},
+                        }}
+
+                        position="bottom-left"
+                        reverseOrder={true}
+                    />
+                </Layout>
+            </AuthProvider>
+        </QueryClientProvider>
+    );
 }

@@ -24,3 +24,6 @@ body::-webkit-scrollbar {
 .coursesSection::-webkit-scrollbar{
   display: none;
 }
+.myCoursers::-webkit-scrollbar{
+  display: none;
+}

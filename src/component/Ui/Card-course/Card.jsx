@@ -31,7 +31,7 @@ function Card({ image, title, student, level, lesson, id, ...props }) {
         <div className={"flex items-center rounded-[12px]  p-1 w-[100%]"}>
           <div className={"flex flex-col w-[100%] h-[100%]"}>
             <div className={"flex items-center gap-4 justify-between"}>
-              <div className={"flex justify-between w-full items-center gap-2"}>
+              <div className={"flex justify-between w-full items-center gap-2 text-xs"}>
                 <InfoCard src={levelIcon.src} title={`${level} `} />
                 <InfoCard src={userIcon.src} title={`   شرکت کننده :${student} `} />
                 <InfoCard src={lessonIcon.src} title={`درس ها :  ${lesson}`} />

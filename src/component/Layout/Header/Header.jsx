@@ -6,13 +6,14 @@ import arrow from "../../../assets/images/Header/row.svg";
 import Search from "../../Ui/SearchInput/Search.jsx";
 import menuIcon from "@/assets/images/navbar/menu.png";
 import { useSearchParams} from "react-router-dom";
-// import {Link} from 'react-router-dom'
 import Navbar from "@/component/Navbar/Navbar.jsx";
 import { useAuthContext } from "@/providers/AuthProvider";
 import Button from "@/component/Ui/Button/Button.jsx";
 import exitIcon from "@/assets/images/sidebar/exit.svg";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import userIcon from "@/assets/images/Header/User.png"
+import cx from "clsx";
 
 
 function Header(props) {
@@ -67,7 +68,13 @@ function Header(props) {
               className={"w-[24px] h-[24px]"}
             />
           </button>
-          {isClicked && <Navbar onClick={toggleMenu}></Navbar>}
+           <Navbar
+             className={cx(
+                 `-right-full  w-2/3 bg-white shadow-2xl  fixed transition-all top-0 bottom-0 z-30 `,
+                 isClicked?"!right-0":""
+             )}
+             onClose={toggleMenu}
+           />
         </div>
         <div className={"flex"}>
           {
@@ -81,7 +88,7 @@ function Header(props) {
           <div className={"lg:flex lg:items-center hidden lg:gap-16"}>
             <div
               className={
-                "cursor-pointer mr-[20px] text-[16px] text-[#080808] opacity-80"
+                "cursor-pointer mr-[20px] text-[16px] text-[#080808] opacity-80 min-w-fit"
               }
             >
               ارتباط با ما
@@ -152,7 +159,7 @@ function Header(props) {
                 <div className={"border-2 p-1 rounded-2xl"}>
                   <Link href={"/profile"}>
                   <img
-                    src={profileImg.src}
+                    src={userIcon.src}
                     alt={"profile-img"}
                     className={"cursor-pointer"}
                   />

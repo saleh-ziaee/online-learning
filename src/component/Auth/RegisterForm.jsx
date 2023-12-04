@@ -7,6 +7,7 @@ import { useAuthContext } from "@/providers/AuthProvider";
 import {registerSchema}  from "./schema.js"
 import {apiRegisterUSer} from "@/api/user.js";
 import {useRouter} from "next/router";
+import toast from "react-hot-toast";
 
 const RegisterForm = () => {
     const router = useRouter();
@@ -47,18 +48,22 @@ const RegisterForm = () => {
           //     data
           // );
           router.push("/")
+          toast.success("ثبت نام موفقیت آمیز بود")
+
           console.log(result)
           saveAccessToken(result.token);
       } catch (error) {
           console.log(error);
           setUnknownError("Something wrong, please try again.");
+          toast.error("خطا ! ثبت نام انجام نشد")
+
       } finally {
           setLoading(false);
       }
-    console.log(registerForm);
+    // console.log(registerForm);
   };
 
-  console.log(registerForm);
+  // console.log(registerForm);
   return (
     <form className="flex flex-col gap-5 mt-5" onSubmit={handleRegister}>
       <Input

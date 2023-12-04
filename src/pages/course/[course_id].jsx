@@ -17,6 +17,7 @@ import Footer from "@/component/Layout/footer/Footer.jsx";
 import LoadingCourseDetail from "@/component/Loading/LoadingCourseDetail.jsx";
 import { useRouter } from "next/router";
 import useGetCourseDetails from "@/api/hooks/use-get-course-details";
+import toast from "react-hot-toast";
 
 function CourseDetail(props) {
   const router = useRouter();
@@ -25,6 +26,12 @@ function CourseDetail(props) {
   const { data, isLoading } = useGetCourseDetails({ courseId} , {
         initialData: props.courseDetail
     });
+
+    const getAccordionData=()=>{
+        toast.error("برای مشاهده دوره ها ابتدا وارد حساب کاربری خود شوید")
+
+        router.push("/login")
+    }
 
   const courseDetail = useMemo(() => data, [data]);
 
@@ -89,11 +96,12 @@ function CourseDetail(props) {
               <div className={"mt-8"}>
                 {courseDetail.sections?.map((item) => (
                   <AccordionCourse {...item}
+                      onClick={getAccordionData}
                   />
                 ))}
               </div>
             </div>
-            <div className={" w-full md:w-[40%] mt-12"}>
+            <div className={" w-full  mt-12"}>
               <h2
                 className={"text-[#1D2026] text-[24px] w-full font-bold mb-8"}
               >

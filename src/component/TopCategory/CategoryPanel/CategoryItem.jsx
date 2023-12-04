@@ -8,7 +8,7 @@ function CategoryItem({variant,className, children, ...props}) {
         regular:"bg-[#FAFAFA]"
     }
     return (
-        <div className={`${className} ${variants[variant]} min-w-max w-fit cursor-pointer text-center text-[16px] p-4 text-black flex items-center justify-center rounded-[12px] ` }>
+        <div className={`${className} ${variants[variant]} w-fit cursor-pointer text-center text-[16px] p-4 text-black flex items-center justify-center rounded-[12px] ` }>
             {children}
         </div>
     );

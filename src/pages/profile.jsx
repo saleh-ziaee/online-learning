@@ -1,4 +1,5 @@
 import MyCourses from "@/component/Profile-MyCourses/MyCourses.jsx";
+import ProfileLayout from "@/component/Layout/profile";
 
 function Profile() {
   return (
@@ -9,5 +10,7 @@ function Profile() {
 }
 
 Profile.isProtected = true;
+
+Profile.Layout = ProfileLayout
 
 export default Profile;

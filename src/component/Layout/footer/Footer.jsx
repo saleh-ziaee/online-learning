@@ -4,9 +4,10 @@ import imagef from "../../../assets/images/footer/bigImage.svg";
 import enamad from "@/assets/images/footer/enamad.png";
 import samandehi from "@/assets/images/footer/samandehi.png";
 import FooterCommentBox from "@/component/FooterCommentBox/FooterCommentBox";
+import Link from "next/link";
 
 function Footer(props) {
-  const commentList = [{ title: "ali", subtitle: "aliii hastam" },];
+  const commentList = [{ title: "ali", subtitle: "سایت بسیار خوبی است" },];
   return (
     <div className={"all w-[100%] mx-auto mt-8 pb-8"}>
       <div
@@ -48,7 +49,7 @@ function Footer(props) {
                 <div
                     className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}
                 ></div>
-                <span className={"font-bold"}>دوره های آموزشی</span>
+                <span className={"font-bold whitespace-nowrap"}>دوره های آموزشی</span>
             </div>
             <div className={"flex flex-row items-center gap-2"}>
                 <div
@@ -60,7 +61,7 @@ function Footer(props) {
                 <div
                     className={"w-[7px] h-[7px] bg-[#9E5CF2] rounded-[100%]"}
                 ></div>
-                <span className={"font-bold"}>ارتباط با ما</span>
+                    <span className={"font-bold whitespace-nowrap"}>ارتباط با ما</span>
             </div>
         </div>
           <div className={"md:flex flex justify-center md:flex-row px-3 gap-10 items-center"}>
